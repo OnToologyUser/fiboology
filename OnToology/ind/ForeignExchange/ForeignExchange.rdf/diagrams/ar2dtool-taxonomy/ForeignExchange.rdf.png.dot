@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-ind-fx-fx:FxSpotVolatility" "fibo-ind-fx-fx:ExchangeRate" "fibo-ind-fx-fx:CurrencySpotSellRate" "fibo-ind-fx-fx:CurrencySpotMidRate" "fibo-ind-fx-fx:CurrencySpotBuyRate" "fibo-ind-fx-fx:CurrencyForwardRate" ; /*classes style*/
+	"fibo-ind-fx-fx:CurrencySpotBuyRate" -> "fibo-ind-fx-fx:ExchangeRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-fx-fx:FxSpotVolatility" -> "fibo-ind-ind-ind:Volatility" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-fx-fx:ExchangeRate" -> "fibo-ind-ind-ind:MarketRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-fx-fx:CurrencySpotSellRate" -> "fibo-ind-fx-fx:ExchangeRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-fx-fx:CurrencySpotMidRate" -> "fibo-ind-fx-fx:ExchangeRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-fx-fx:CurrencyForwardRate" -> "fibo-ind-fx-fx:ExchangeRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-fx-fx:CurrencyForwardRate" -> "fibo-fnd-utl-bt:Percentage" [ label = "rdfs:subClassOf" ];
+
+}

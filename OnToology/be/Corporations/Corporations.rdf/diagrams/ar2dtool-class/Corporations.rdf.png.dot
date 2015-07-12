@@ -1,0 +1,38 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-corp-corp:RegistrationIdentifier" "fibo-be-corp-corp:BoardAgreement" ; /*classes style*/
+	"fibo-be-corp-corp:hasIssuedCapital" -> "fibo-be-corp-corp:hasNominalCapital" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-corp-corp:hasDateOfIncorporation" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-corp-corp:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/Corporations/Corporations/" [ label = "owl:versionIRI" ];
+	"fibo-be-corp-corp:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "fibo-be-le-fbo:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "fibo-be-le-cb:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "fibo-fnd-law-jur:" [ label = "owl:imports" ];
+	"fibo-be-corp-corp:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-be-corp-corp:BoardAgreement" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-corp-corp:hasNominalCapital" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-corp-corp:hasDateOfIncorporation" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-corp-corp:hasDateOfRegistration" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-corp-corp:RegistrationIdentifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-corp-corp:hasIssuedCapital" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isGovernedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:text" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-corp-corp:hasLegalFormAbbreviation" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-fd:Date" [ label = "owl:onClass" ];
+	"fibo-be-corp-corp:hasDateOfRegistration" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-corp-corp:hasNominalCapital" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"owl:Thing" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "fibo-be-corp-corp:hasIssuedCapital" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-be-corp-corp:hasLegalFormAbbreviation" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-be-corp-corp:hasDateOfIncorporation" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-be-corp-corp:hasDateOfRegistration" ];
+	"owl:Thing" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "fibo-be-corp-corp:hasNominalCapital" ];
+
+}

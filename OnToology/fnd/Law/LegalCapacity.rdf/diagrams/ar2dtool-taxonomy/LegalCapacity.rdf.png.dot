@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-law-lcap:StatutoryResponsibility" "fibo-fnd-law-lcap:SignatoryCapacity" "fibo-fnd-law-lcap:LiabilityCapacity" "fibo-fnd-law-lcap:LegalConstruct" "fibo-fnd-law-lcap:LegalCapacity" "fibo-fnd-law-lcap:Duty" "fibo-fnd-law-lcap:DelegatedLegalAuthority" "fibo-fnd-law-lcap:ContractualCapability" ; /*classes style*/
+	"fibo-fnd-law-lcap:StatutoryResponsibility" -> "fibo-fnd-law-lcap:Duty" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-lcap:DelegatedLegalAuthority" -> "fibo-fnd-law-lcap:LegalCapacity" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-lcap:LegalCapacity" -> "fibo-fnd-law-lcap:LegalConstruct" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-lcap:LiabilityCapacity" -> "fibo-fnd-law-lcap:LegalCapacity" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-lcap:Duty" -> "fibo-fnd-law-lcap:LegalConstruct" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-lcap:ContractualCapability" -> "fibo-fnd-law-lcap:LegalCapacity" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-lcap:SignatoryCapacity" -> "fibo-fnd-law-lcap:LegalCapacity" [ label = "rdfs:subClassOf" ];
+
+}

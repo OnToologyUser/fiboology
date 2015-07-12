@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-oac-opty:EntityOwnershipContext" "fibo-be-oac-opty:GuaranteeProvidingMember" "fibo-be-oac-opty:InvestorContract" "fibo-be-oac-opty:ConstitutionalOwner" "fibo-be-oac-opty:Investor" "fibo-be-oac-opty:InvestmentEquity" "fibo-be-oac-opty:EntityOwner" "fibo-be-oac-opty:ControllingEquity" ; /*classes style*/
+	"fibo-be-oac-opty:InvestorContract" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-opty:EntityOwner" -> "fibo-fnd-oac-own:Owner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-opty:Investor" -> "fibo-be-oac-opty:EntityOwner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-opty:InvestmentEquity" -> "fibo-fnd-acc-aeq:Equity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-opty:EntityOwnershipContext" -> "fibo-fnd-oac-own:Ownership" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-opty:ConstitutionalOwner" -> "fibo-be-oac-opty:EntityOwner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-opty:ControllingEquity" -> "fibo-fnd-acc-aeq:StockholdersEquity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-opty:GuaranteeProvidingMember" -> "fibo-be-le-fbo:FormallyConstitutedOrganizationMember" [ label = "rdfs:subClassOf" ];
+
+}

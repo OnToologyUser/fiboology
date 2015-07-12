@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-org-fm:InformalOrganization" "fibo-fnd-org-fm:FormalOrganization" ; /*classes style*/
+	"NULL" -> "fibo-fnd-rel-rel:hasMember" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-org-fm:FormalOrganization" -> "fibo-fnd-org-fm:InformalOrganization" [ label = "owl:disjointWith" ];
+	"fibo-fnd-org-fm:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-org-fm:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Organizations/FormalOrganizations/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-org-fm:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-fnd-org-fm:" -> "fibo-fnd-org-org:" [ label = "owl:imports" ];
+	"fibo-fnd-org-fm:" -> "fibo-fnd-arr-arr:" [ label = "owl:imports" ];
+	"fibo-fnd-org-fm:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fnd-org-fm:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-org-fm:FormalOrganization" -> "fibo-fnd-plc-cty:Country" [ label = "fibo-fnd-org-fm:isDomiciledIn" ];
+
+}

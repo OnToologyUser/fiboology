@@ -1,0 +1,47 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fnd-plc-3166-2:" -> "http://spec.edmcouncil.org/fibo/FND/20150501/Places/ISO3166-2-SubdivisionCodes/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-plc-3166-2:" -> "http://spec.edmcouncil.org/fibo/FND/Places/Countries/" [ label = "owl:imports" ];
+	"fibo-fnd-plc-3166-2:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-3166-2:" -> "fibo-fnd-plc-cr:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-3166-2:" -> "fibo-fnd-plc-3166-1:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-3166-2:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-3166-2:Delaware" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:Delaware" -> "fibo-fnd-plc-3166-2:State" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:Delaware" -> "fibo-fnd-plc-3166-2:US-DE" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:UnitedStatesMinorOutlyingIslands" -> "fibo-fnd-plc-3166-2:US-UM" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:UnitedStatesMinorOutlyingIslands" -> "fibo-fnd-plc-3166-2:OutlyingArea" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:UnitedStatesMinorOutlyingIslands" -> "fibo-fnd-plc-3166-1:UnitedStatesMinorOutlyingIslands" [ label = "owl:sameAs" ];
+	"fibo-fnd-plc-3166-2:UnitedStatesMinorOutlyingIslands" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:Guam" -> "fibo-fnd-plc-3166-1:Guam" [ label = "owl:sameAs" ];
+	"fibo-fnd-plc-3166-2:Guam" -> "fibo-fnd-plc-3166-2:OutlyingArea" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:Guam" -> "fibo-fnd-plc-3166-2:US-GU" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:Guam" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:PuertoRico" -> "fibo-fnd-plc-3166-2:US-PR" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:PuertoRico" -> "fibo-fnd-plc-3166-2:OutlyingArea" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:PuertoRico" -> "fibo-fnd-plc-3166-1:PuertoRico" [ label = "owl:sameAs" ];
+	"fibo-fnd-plc-3166-2:PuertoRico" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:VirginIslandsUS" -> "fibo-fnd-plc-3166-2:OutlyingArea" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:VirginIslandsUS" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:VirginIslandsUS" -> "fibo-fnd-plc-3166-2:US-VI" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:VirginIslandsUS" -> "fibo-fnd-plc-3166-1:VirginIslandsUS" [ label = "owl:sameAs" ];
+	"fibo-fnd-plc-3166-2:California" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:California" -> "fibo-fnd-plc-3166-2:State" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:California" -> "fibo-fnd-plc-3166-2:US-CA" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:SouthDakota" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:SouthDakota" -> "fibo-fnd-plc-3166-2:State" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:SouthDakota" -> "fibo-fnd-plc-3166-2:US-SD" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:NorthernMarianaIslands" -> "fibo-fnd-plc-3166-2:OutlyingArea" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:NorthernMarianaIslands" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:NorthernMarianaIslands" -> "fibo-fnd-plc-3166-2:US-MP" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:NorthernMarianaIslands" -> "fibo-fnd-plc-3166-1:NorthernMarianaIslands" [ label = "owl:sameAs" ];
+	"fibo-fnd-plc-3166-2:AmericanSamoa" -> "fibo-fnd-plc-3166-2:US-AS" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+	"fibo-fnd-plc-3166-2:AmericanSamoa" -> "fibo-fnd-plc-3166-1:AmericanSamoa" [ label = "owl:sameAs" ];
+	"fibo-fnd-plc-3166-2:AmericanSamoa" -> "fibo-fnd-plc-3166-2:OutlyingArea" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:AmericanSamoa" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:NewYork" -> "fibo-fnd-plc-3166-1:UnitedStates" [ label = "fibo-fnd-plc-cr:isSubdivisionOf" ];
+	"fibo-fnd-plc-3166-2:NewYork" -> "fibo-fnd-plc-3166-2:State" [ label = "fibo-fnd-plc-cr:hasSubdivisionKind" ];
+	"fibo-fnd-plc-3166-2:NewYork" -> "fibo-fnd-plc-3166-2:US-NY" [ label = "fibo-fnd-plc-cr:hasSubdivisionCode" ];
+
+}

@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-rel-tmp-rel:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-rel-tmp-rel:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-rel-tmp-rel:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-rel-tmp-rel:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Parties/Parties/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-rel-tmp-rel:" -> "fibo-fnd-rel-tmp-rel:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-rel-tmp-rel:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/" [ label = "owl:imports" ];
+
+}

@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-aap-agt:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-aap-agt:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-aap-agt:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-aap-agt:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-aap-agt:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+
+}

@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-lng-lr:NaturalLanguage" "fibo-fnd-lng-lr:StandardVariant" "fibo-fnd-lng-lr:RemainderGroup" "fibo-fnd-lng-lr:LanguageGroup" "fibo-fnd-lng-lr:LanguageVariant" "fibo-fnd-lng-lr:IndividualLanguageIdentifier" "fibo-fnd-lng-lr:LivingLanguage" "fibo-fnd-lng-lr:IndividualLanguage" "fibo-fnd-lng-lr:SpokenLanguage" "fibo-fnd-lng-lr:Dialect" "fibo-fnd-lng-lr:SpecialPurposeCode" "fibo-fnd-lng-lr:CollectiveLanguageCode" "fibo-fnd-lng-lr:ArtificialLanguage" "fibo-fnd-lng-lr:WrittenLanguage" "fibo-fnd-lng-lr:Alpha2Code" "fibo-fnd-lng-lr:Alpha3Code" "fibo-fnd-lng-lr:HistoricalLanguage" "fibo-fnd-lng-lr:Orthography" "fibo-fnd-lng-lr:MacrolanguageIdentifier" "fibo-fnd-lng-lr:Macrolanguage" "fibo-fnd-lng-lr:Script" "fibo-fnd-lng-lr:LanguageIdentifier" "fibo-fnd-lng-lr:Language" "fibo-fnd-lng-lr:BibliographicCode" "fibo-fnd-lng-lr:Transcription" "fibo-fnd-lng-lr:LanguageFamily" "fibo-fnd-lng-lr:TerminologyCode" "fibo-fnd-lng-lr:ExtinctLanguage" "fibo-fnd-lng-lr:AncientLanguage" "fibo-fnd-lng-lr:Transliteration" "fibo-fnd-lng-lr:SpecialPurposeLanguageConcept" ; /*classes style*/
+	"fibo-fnd-lng-lr:Orthography" -> "fibo-fnd-arr-arr:Collection" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:Macrolanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:LanguageFamily" -> "fibo-fnd-lng-lr:LanguageGroup" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:Alpha3Code" -> "fibo-fnd-lng-lr:LanguageIdentifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:HistoricalLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:SpecialPurposeCode" -> "fibo-fnd-lng-lr:Alpha3Code" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:WrittenLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:IndividualLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:LanguageGroup" -> "fibo-fnd-arr-arr:Collection" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:SpecialPurposeLanguageConcept" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:TerminologyCode" -> "fibo-fnd-lng-lr:Alpha3Code" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:Transliteration" -> "fibo-fnd-lng-lr:Transcription" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:IndividualLanguageIdentifier" -> "fibo-fnd-lng-lr:Alpha3Code" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:AncientLanguage" -> "fibo-fnd-lng-lr:ExtinctLanguage" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:Alpha2Code" -> "fibo-fnd-lng-lr:LanguageIdentifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:CollectiveLanguageCode" -> "fibo-fnd-lng-lr:Alpha3Code" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:LivingLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:LanguageVariant" -> "fibo-fnd-lng-lr:IndividualLanguage" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:ArtificialLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:ExtinctLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:BibliographicCode" -> "fibo-fnd-lng-lr:Alpha3Code" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:NaturalLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:Script" -> "fibo-fnd-arr-arr:Collection" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:SpokenLanguage" -> "fibo-fnd-lng-lr:Language" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:Dialect" -> "fibo-fnd-lng-lr:LanguageVariant" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:StandardVariant" -> "fibo-fnd-lng-lr:LanguageVariant" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:LanguageIdentifier" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:LanguageIdentifier" -> "fibo-fnd-arr-cd:CodeElement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:MacrolanguageIdentifier" -> "fibo-fnd-lng-lr:Alpha3Code" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-lng-lr:RemainderGroup" -> "fibo-fnd-lng-lr:LanguageGroup" [ label = "rdfs:subClassOf" ];
+
+}

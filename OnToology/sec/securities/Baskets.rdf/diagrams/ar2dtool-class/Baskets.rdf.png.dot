@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "4f31c714:14e84a451e7:-7fef" "4f31c714:14e84a451e7:-7ff0" "fibo-sec-sec-bsk:SecuritiesBasketConstituent" "fibo-sec-sec-bsk:BasketOfIndicesConstituent" "fibo-sec-sec-bsk:BasketConstituent" "fibo-sec-sec-bsk:Basket" ; /*classes style*/
+	"NULL" -> "4f31c714:14e84a451e7:-7ff2" [ label = "owl:unionOf" ];
+	"NULL" -> "4f31c714:14e84a451e7:-7ff3" [ label = "owl:unionOf" ];
+	"NULL" -> "fibo-fbc-fi-fi:Security" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-ind-ind-ind:MarketRate" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fbc-pas-pas:Commodity" [ label = "rdf:first" ];
+	"NULL" -> "4f31c714:14e84a451e7:-7ff1" [ label = "rdf:rest" ];
+	"NULL" -> "4f31c714:14e84a451e7:-7ff4" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-sec-sec-bsk:BasketConstituent" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-sec-sec-bsk:BasketOfIndicesConstituent" [ label = "rdf:first" ];
+	"NULL" -> "4f31c714:14e84a451e7:-7ff0" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-sec-sec-bsk:SecuritiesBasketConstituent" [ label = "owl:onClass" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-rel-rel:isMemberOf" [ label = "owl:onProperty" ];
+	"NULL" -> "4f31c714:14e84a451e7:-7fef" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-bsk:BasketOfIndicesConstituent" [ label = "owl:onClass" ];
+	"NULL" -> "4f31c714:14e84a451e7:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-sec-sec-bsk:Basket" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasMember" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdf:first" ];
+	"NULL" -> "fibo-sec-sec-bsk:SecuritiesBasketConstituent" [ label = "rdf:first" ];
+	"fibo-sec-sec-bsk:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-sec-sec-bsk:" -> "fibo-fbc-fi-fi:" [ label = "owl:imports" ];
+	"fibo-sec-sec-bsk:" -> "fibo-ind-ind-ind:" [ label = "owl:imports" ];
+	"fibo-sec-sec-bsk:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-sec-sec-bsk:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-sec-sec-bsk:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-sec-sec-bsk:" -> "fibo-fnd-arr-arr:" [ label = "owl:imports" ];
+	"fibo-sec-sec-bsk:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+
+}

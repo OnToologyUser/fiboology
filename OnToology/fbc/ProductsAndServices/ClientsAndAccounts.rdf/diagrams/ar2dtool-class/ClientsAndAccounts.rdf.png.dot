@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fbc-pas-caa:AccountProvider" "fibo-fbc-pas-caa:AccountNumber" "fibo-fbc-pas-caa:AccountHolder" "fibo-fbc-pas-caa:Account" ; /*classes style*/
+	"NULL" -> "fibo-fnd-pty-pty:isAPartyTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-agr-ctr:hasContractParty" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-caa:AccountHolder" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fbc-pas-caa:AccountNumber" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-pas-caa:Account" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-pty-pty:hasPartyInRole" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:appliesTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:manages" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:identifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-caa:AccountProvider" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-pas-caa:Account" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-pas-caa:AccountProvider" [ label = "owl:someValuesFrom" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-be-oac-exec:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-oac-own:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-arr-id:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-caa:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/ProductsAndServices/ClientsAndAccounts/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-pas-caa:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+
+}

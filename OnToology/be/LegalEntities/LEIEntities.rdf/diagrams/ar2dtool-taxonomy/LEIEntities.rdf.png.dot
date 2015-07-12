@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-le-lp:LegalEntity" "fibo-be-le-lei:SupranationalEntity" "fibo-be-le-lei:SovereignState" "fibo-be-le-lei:RegionalGovernmentalEntity" "fibo-be-le-lei:MunicipalEntity" "fibo-be-le-lei:LegalEntityIdentifierScheme" "fibo-be-le-lei:LegalEntityIdentifier" "fibo-be-le-lei:ContractuallyCapableEntity" ; /*classes style*/
+	"fibo-be-le-lei:SovereignState" -> "fibo-be-le-lp:LegalEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-lei:LegalEntityIdentifierScheme" -> "fibo-be-le-fbo:OrganizationIdentificationScheme" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-lei:SupranationalEntity" -> "fibo-be-le-lp:LegalEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-lei:MunicipalEntity" -> "fibo-be-le-lp:LegalEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-lei:RegionalGovernmentalEntity" -> "fibo-be-le-lp:LegalEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-lei:LegalEntityIdentifier" -> "fibo-be-le-fbo:OrganizationIdentifier" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-lei:ContractuallyCapableEntity" -> "fibo-fnd-pty-rl:AgentInRole" [ label = "rdfs:subClassOf" ];
+
+}

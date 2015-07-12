@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-plc-cr:SubdivisionKind" "fibo-fnd-plc-cr:SubdivisionCode" "fibo-fnd-plc-cr:CountrySubdivision" "fibo-fnd-plc-cr:CountryIdentifier" "fibo-fnd-plc-cr:ApproximateCoordinates" "fibo-fnd-plc-cr:Alpha3Code" "fibo-fnd-plc-cr:Alpha2Code" ; /*classes style*/
+	"fibo-fnd-plc-cr:Alpha2Code" -> "fibo-fnd-plc-cr:CountryIdentifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:SubdivisionCode" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:SubdivisionCode" -> "fibo-fnd-arr-cd:CodeElement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:CountryIdentifier" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:CountryIdentifier" -> "fibo-fnd-arr-cd:CodeElement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:Alpha3Code" -> "fibo-fnd-plc-cr:CountryIdentifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:SubdivisionKind" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:ApproximateCoordinates" -> "fibo-fnd-arr-id:Index" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-cr:CountrySubdivision" -> "fibo-fnd-plc-cty:GeopoliticalEntity" [ label = "rdfs:subClassOf" ];
+
+}

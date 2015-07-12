@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fbc-fct-mod:FBCFunctionalEntitiesModule" -> "fibo-fbc:FBCSpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+	"fibo-fbc-fct-mod:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/FunctionalEntities/AboutFBCFunctionalEntities/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-fct-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-mod:" -> "fibo-fbc:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-fbc-fct-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+
+}

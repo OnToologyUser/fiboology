@@ -1,0 +1,50 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-der-drc-isda:TradingDateRule" "fibo-der-drc-isda:ISDAFpMLPeriodicScheduledEventDate" "fibo-der-drc-isda:ISDACalculationPeriodLength" "fibo-der-drc-isda:SettlementDateRule" "fibo-der-drc-isda:DayOfWeek" "fibo-der-drc-isda:FRNDateRule" "-13a2f05d:14e848d0542:-7ff1" "fibo-der-drc-isda:ISDARuleDeterminedDate" "fibo-fnd-dt-bd:BusinessRecurrenceIntervalEndOfMonth" "fibo-der-drc-isda:ISDAFpMLNonRollingDate" "fibo-der-drc-isda:ISDAFpMLStubPeriod" "fibo-der-drc-isda:USTBillAuctionDateRule" "fibo-der-drc-isda:DayOfMonth" ; /*classes style*/
+	"fibo-der-drc-isda:DayTypeSelection" -> "-13a2f05d:14e848d0542:-7ffa" [ label = "owl:equivalentClass" ];
+	"fibo-der-drc-isda:" -> "http://spec.edmcouncil.org/fibo/DER/20160201/DerivativesContracts/ISDASchedules/" [ label = "owl:versionIRI" ];
+	"fibo-der-drc-isda:" -> "fibo-fnd-dt-oc:" [ label = "owl:imports" ];
+	"fibo-der-drc-isda:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-der-drc-isda:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-der-drc-isda:" -> "fibo-fnd-dt-bd:" [ label = "owl:imports" ];
+	"fibo-der-drc-isda:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fed" [ label = "rdf:rest" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fe6" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalEndOfMonth" [ label = "rdf:first" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fea" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-rel-rel:isDefinedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-isda:DayOfWeek" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fnd-dt-bd:hasBusinessDayAdjustment" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-isda:FRNDateRule" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-drc-isda:DayOfMonth" [ label = "rdf:first" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fe9" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-der-drc-isda:TradingDateRule" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-dt-fd:hasDuration" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-isda:SettlementDateRule" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fec" [ label = "rdf:rest" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fe5" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-dt-fd:hasInitialStub" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-bd:hasBusinessDayConvention" [ label = "owl:onProperty" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fe8" [ label = "owl:unionOf" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-der-drc-isda:ISDARuleDeterminedDate" [ label = "rdf:first" ];
+	"NULL" -> "fibo-der-drc-isda:USTBillAuctionDateRule" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-drc-isda:ISDACalculationPeriodLength" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-drc-isda:ISDAFpMLStubPeriod" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-dt-fd:hasEndDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-bd:BusinessDayFollowing" [ label = "owl:hasValue" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fee" [ label = "owl:oneOf" ];
+	"NULL" -> "fibo-fnd-dt-fd:hasRecurrenceStartDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-isda:ISDAFpMLPeriodicScheduledEventDate" [ label = "owl:onClass" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7feb" [ label = "rdf:rest" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fe4" [ label = "rdf:rest" ];
+	"NULL" -> "-13a2f05d:14e848d0542:-7fe7" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-dt-bd:BusinessDayPreceding" [ label = "owl:hasValue" ];
+	"NULL" -> "fibo-fnd-dt-fd:hasFinalStub" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-fd:hasStartDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-isda:ISDAFpMLNonRollingDate" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fnd-dt-fd:Date" [ label = "owl:onClass" ];
+	"fibo-der-drc-isda:ISDAFpMLPeriodicScheduledEventDate" -> "-13a2f05d:14e848d0542:-7ff1" [ label = "owl:equivalentClass" ];
+
+}

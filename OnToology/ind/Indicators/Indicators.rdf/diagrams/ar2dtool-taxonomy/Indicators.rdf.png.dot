@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-ind-ind-ind:Volatility" "fibo-ind-ind-ind:PublishedFinancialInformation" "fibo-ind-ind-ind:MarketSpread" "fibo-ind-ind-ind:MarketRate" "fibo-ind-ind-ind:FinancialInformationPublisher" ; /*classes style*/
+	"fibo-ind-ind-ind:MarketRate" -> "fibo-ind-ind-ind:PublishedFinancialInformation" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ind-ind:MarketRate" -> "fibo-fnd-utl-alx:Measure" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ind-ind:PublishedFinancialInformation" -> "fibo-be-fct-pub:Publication" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ind-ind:Volatility" -> "fibo-fnd-utl-alx:StatisticalMeasure" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ind-ind:MarketSpread" -> "fibo-fnd-utl-alx:StatisticalMeasure" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ind-ind:FinancialInformationPublisher" -> "fibo-be-fct-pub:Publisher" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,28 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" "fibo-fnd-dt-bd:BusinessRecurrenceInterval" "fibo-fnd-dt-bd:BusinessDayConvention" "fibo-fnd-dt-bd:BusinessDayAdjustment" ; /*classes style*/
+	"fibo-fnd-dt-bd:hasBusinessRecurrenceIntervalConvention" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-dt-bd:hasBusinessDayAdjustment" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-dt-bd:hasBusinessCenter" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-dt-bd:holdsDuring" -> "fibo-fnd-dt-fd:hasDatePeriod" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-dt-bd:hasBusinessDayConvention" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-dt-bd:hasBusinessRecurrenceIntervalConvention" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-dt-bd:hasBusinessDayConvention" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-bd:BusinessDayConvention" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-dt-bd:hasBusinessCenter" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-cty:BusinessCenter" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-dt-bd:hasBusinessDayAdjustment" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-bd:BusinessDayAdjustment" [ label = "owl:onClass" ];
+	"fibo-fnd-dt-bd:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-bd:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-bd:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/DatesAndTimes/BusinessDates/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-dt-bd:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-bd:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-bd:BusinessDayAdjustment" -> "fibo-fnd-dt-bd:BusinessDayConvention" [ label = "fibo-fnd-dt-bd:hasBusinessDayConvention" ];
+	"fibo-fnd-dt-bd:BusinessDayAdjustment" -> "fibo-fnd-plc-cty:BusinessCenter" [ label = "fibo-fnd-dt-bd:hasBusinessCenter" ];
+	"owl:Thing" -> "fibo-fnd-dt-bd:BusinessDayAdjustment" [ label = "fibo-fnd-dt-bd:hasBusinessDayAdjustment" ];
+	"fibo-fnd-dt-bd:BusinessRecurrenceInterval" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "fibo-fnd-dt-bd:hasBusinessRecurrenceIntervalConvention" ];
+
+}

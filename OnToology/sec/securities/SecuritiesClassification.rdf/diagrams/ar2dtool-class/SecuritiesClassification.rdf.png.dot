@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-sec-sec-cls:FinancialInstrumentClassifier" "fibo-sec-sec-cls:FinancialInstrumentClassificationScheme" ; /*classes style*/
+	"NULL" -> "fibo-sec-sec-cls:FinancialInstrumentClassifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-cls:FinancialInstrumentClassifier" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:isClassifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-cls:IndustrySectorClassifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasDefinition" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-cls:FinancialInstrumentClassificationScheme" [ label = "owl:onClass" ];
+	"fibo-sec-sec-cls:" -> "fibo-fnd-arr-cls:" [ label = "owl:imports" ];
+	"fibo-sec-sec-cls:" -> "fibo-fbc-fi-fi:" [ label = "owl:imports" ];
+	"fibo-sec-sec-cls:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-sec-sec-cls:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+
+}

@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-utl-bt:RestrictedPercentage" "fibo-fnd-utl-bt:Percentage" ; /*classes style*/
+	"fibo-fnd-utl-bt:RestrictedPercentage" -> "fibo-fnd-utl-bt:Percentage" [ label = "rdfs:subClassOf" ];
+
+}

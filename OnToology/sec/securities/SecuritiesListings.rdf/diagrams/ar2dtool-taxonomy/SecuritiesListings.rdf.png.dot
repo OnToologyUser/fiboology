@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-sec-sec-lst:SecuritiesExchange" "fibo-sec-sec-lst:RegisteredSecurity" "fibo-sec-sec-lst:ListedSecurity" "fibo-sec-sec-lst:ExchangeIdentifier" "fibo-sec-sec-lst:ExchangeTradedSecurity" "fibo-sec-sec-lst:NotionalFinancialMarketplace" "fibo-sec-sec-lst:SecuritiesTradingFacility" "fibo-sec-sec-lst:ExchangeAndListingService" "fibo-sec-sec-lst:SecurityListing" "fibo-sec-sec-lst:MultilateralTradingFacility" ; /*classes style*/
+	"fibo-sec-sec-lst:ExchangeIdentifier" -> "fibo-fbc-fct-mkt:MarketIdentifier" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:NotionalFinancialMarketplace" -> "fibo-fnd-plc-vrt:NotionalPlace" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:NotionalFinancialMarketplace" -> "fibo-fbc-fct-mkt:Market" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:ListedSecurity" -> "fibo-sec-sec-lst:RegisteredSecurity" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:ExchangeTradedSecurity" -> "fibo-sec-sec-lst:ListedSecurity" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:ExchangeAndListingService" -> "fibo-fbc-pas-pas:Service" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:SecuritiesExchange" -> "fibo-sec-sec-lst:SecuritiesTradingFacility" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:SecuritiesExchange" -> "fibo-fbc-fct-mkt:Exchange" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:MultilateralTradingFacility" -> "fibo-sec-sec-lst:SecuritiesTradingFacility" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:SecuritiesTradingFacility" -> "fibo-fnd-plc-fac:Facility" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:SecuritiesTradingFacility" -> "fibo-fbc-pas-pas:ServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:SecurityListing" -> "fibo-fnd-plc-fac:Capability" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-lst:RegisteredSecurity" -> "fibo-fbc-fi-fi:Security" [ label = "rdfs:subClassOf" ];
+
+}

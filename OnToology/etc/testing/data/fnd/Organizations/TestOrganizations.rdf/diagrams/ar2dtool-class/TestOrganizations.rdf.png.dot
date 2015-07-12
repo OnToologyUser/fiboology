@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Parties/Roles/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Parties/Parties/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-org-org:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-gao-gl:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-org:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+
+}

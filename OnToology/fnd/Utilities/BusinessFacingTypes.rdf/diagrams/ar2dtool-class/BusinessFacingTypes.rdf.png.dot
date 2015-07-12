@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-utl-bt:Percentage" ; /*classes style*/
+	"fibo-fnd-utl-bt:positiveWholeNumber" -> "xsd:positiveInteger" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:percentageValue" -> "xsd:decimal" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:nonNegativeNumber" -> "-6c52be34:14e84a1f9fd:-7ffa" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:restrictedPercentageValue" -> "-6c52be34:14e84a1f9fd:-7ff9" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:yesOrNo" -> "xsd:boolean" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:basisPoints" -> "-6c52be34:14e84a1f9fd:-7ffb" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-utl-bt:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Utilities/BusinessFacingTypes/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-utl-bt:negativeWholeNumber" -> "xsd:negativeInteger" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:URI" -> "xsd:anyURI" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:nonNegativeWholeNumber" -> "xsd:nonNegativeInteger" [ label = "owl:equivalentClass" ];
+	"NULL" -> "fibo-fnd-utl-bt:restrictedPercentageValue" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff3" [ label = "rdf:first" ];
+	"NULL" -> "xsd:integer" [ label = "owl:onDatatype" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff7" [ label = "rdf:first" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff8" [ label = "owl:withRestrictions" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff1" [ label = "rdf:first" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff4" [ label = "owl:withRestrictions" ];
+	"NULL" -> "xsd:decimal" [ label = "owl:onDatatype" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff5" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fnd-utl-bt:hasPercentageValue" [ label = "owl:onProperty" ];
+	"NULL" -> "-6c52be34:14e84a1f9fd:-7ff2" [ label = "owl:withRestrictions" ];
+	"fibo-fnd-utl-bt:wholeNumber" -> "xsd:integer" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:number" -> "xsd:decimal" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-utl-bt:text" -> "xsd:string" [ label = "owl:equivalentClass" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:number" [ label = "fibo-fnd-utl-bt:hasNumericValue" ];
+	"fibo-fnd-utl-bt:Percentage" -> "fibo-fnd-utl-bt:percentageValue" [ label = "fibo-fnd-utl-bt:hasPercentageValue" ];
+	"fibo-fnd-utl-bt:Percentage" -> "owl:Thing" [ label = "fibo-fnd-utl-bt:isPercentageOf" ];
+
+}

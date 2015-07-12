@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-pas-caa:RelationshipManager" "fibo-fbc-pas-caa:AccountingTransaction" "fibo-fbc-pas-caa:AccountSpecificServiceAgreement" "fibo-fbc-pas-caa:AccountProvider" "fibo-fbc-pas-caa:AccountNumber" "fibo-fbc-pas-caa:AccountHolder" "fibo-fbc-pas-caa:Account" ; /*classes style*/
+	"fibo-fbc-pas-caa:AccountProvider" -> "fibo-fbc-pas-pas:ServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-caa:Account" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-caa:AccountNumber" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-caa:AccountSpecificServiceAgreement" -> "fibo-fbc-pas-pas:ServiceAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-caa:RelationshipManager" -> "fibo-be-oac-exec:ResponsibleParty" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-caa:AccountHolder" -> "fibo-fbc-pas-pas:Customer" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-caa:AccountHolder" -> "fibo-fbc-pas-pas:Client" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-caa:AccountingTransaction" -> "fibo-fbc-pas-pas:Transaction" [ label = "rdfs:subClassOf" ];
+
+}

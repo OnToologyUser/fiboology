@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-sps-sps:SoleProprietorship" "fibo-be-sps-sps:SoleProprietor" ; /*classes style*/
+	"fibo-be-sps-sps:SoleProprietorship" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-be-sps-sps:SoleProprietor" -> "fibo-fnd-oac-own:Owner" [ label = "rdfs:subClassOf" ];
+
+}

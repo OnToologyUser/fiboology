@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-law-cor:Law" ; /*classes style*/
+	"fibo-fnd-law-cor:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-law-cor:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-law-cor:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Law/LegalCore/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-law-cor:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-fnd-law-cor:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-rel-rel:governs" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-law-cor:Law" [ label = "owl:allValuesFrom" ];
+	"owl:Thing" -> "fibo-fnd-law-cor:Law" [ label = "fibo-fnd-law-cor:hasInforce" ];
+	"fibo-fnd-law-cor:Law" -> "owl:Thing" [ label = "fibo-fnd-law-cor:isInForceIn" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "fibo-fnd-law-cor:Law" [ label = "fibo-fnd-law-cor:isConstrainedBy" ];
+	"fibo-fnd-law-cor:Law" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-law-cor:constrains" ];
+
+}

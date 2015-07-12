@@ -1,0 +1,30 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-ind-fx-fx:ExchangeRate" "fibo-ind-fx-fx:CurrencyForwardRate" ; /*classes style*/
+	"fibo-ind-fx-fx:hasSettlementDate" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"fibo-ind-fx-fx:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-ind-fx-fx:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-ind-fx-fx:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/ForeignExchange/ForeignExchange/" [ label = "owl:versionIRI" ];
+	"fibo-ind-fx-fx:" -> "fibo-fnd-utl-alx:" [ label = "owl:imports" ];
+	"fibo-ind-fx-fx:" -> "fibo-ind-ind-ind:" [ label = "owl:imports" ];
+	"fibo-ind-fx-fx:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-ind-fx-fx:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-ind-fx-fx:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-ind-fx-fx:hasSettlementDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-fd:Date" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-ind-fx-fx:hasQuoteCurrency" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:number" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-utl-bt:hasNumericValue" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ind-ind:isVolatilityOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-fx-fx:ExchangeRate" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-acc-cur:Currency" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-ind-fx-fx:hasBaseCurrency" [ label = "owl:onProperty" ];
+	"fibo-ind-fx-fx:ExchangeRate" -> "fibo-fnd-utl-bt:number" [ label = "fibo-ind-fx-fx:hasQuotationSettlementBasisInDays" ];
+	"owl:Thing" -> "fibo-fnd-acc-cur:Currency" [ label = "fibo-ind-fx-fx:hasQuoteCurrency" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-ind-fx-fx:hasSettlementDate" ];
+	"owl:Thing" -> "fibo-fnd-acc-cur:Currency" [ label = "fibo-ind-fx-fx:hasBaseCurrency" ];
+	"fibo-ind-fx-fx:CurrencyForwardRate" -> "fibo-ind-fx-fx:ExchangeRate" [ label = "fibo-ind-fx-fx:isPremiumOn" ];
+	"fibo-ind-fx-fx:ExchangeRate" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "fibo-ind-fx-fx:hasQuotationBlockAmountBasis" ];
+
+}

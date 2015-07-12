@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-ind-ei-ei:UnemploymentRate" "fibo-ind-ei-ei:GrossDomesticProduct" "fibo-ind-ei-ei:Economy" "fibo-ind-ei-ei:EconomicIndicator" "fibo-ind-ei-ei:EconomicActivity" "fibo-ind-ei-ei:ConsumerPriceIndex" ; /*classes style*/
+	"fibo-ind-ei-ei:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:" -> "fibo-fnd-utl-alx:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/EconomicIndicators/EconomicIndicators/" [ label = "owl:versionIRI" ];
+	"fibo-ind-ei-ei:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:" -> "fibo-be-fct-pub:" [ label = "owl:imports" ];
+	"fibo-ind-ei-ei:ConsumerPriceIndex" -> "fibo-ind-ei-ei:UnemploymentRate" [ label = "owl:disjointWith" ];
+	"fibo-ind-ei-ei:ConsumerPriceIndex" -> "fibo-ind-ei-ei:GrossDomesticProduct" [ label = "owl:disjointWith" ];
+	"NULL" -> "fibo-ind-ei-ei:Economy" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-acc-cur:hasNotionalAmount" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:hasNumericValue" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-loc:Location" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:appliesTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-alx:isMeasureOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-cty:Country" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-ind-ei-ei:EconomicActivity" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-utl-bt:number" [ label = "owl:someValuesFrom" ];
+	"fibo-ind-ei-ei:GrossDomesticProduct" -> "fibo-ind-ei-ei:UnemploymentRate" [ label = "owl:disjointWith" ];
+	"fibo-ind-ei-ei:ConsumerPriceIndex" -> "fibo-fnd-utl-bt:yesOrNo" [ label = "fibo-ind-ei-ei:excludesEnergyAndfood" ];
+	"fibo-ind-ei-ei:Economy" -> "fibo-fnd-plc-cty:GeopoliticalEntity" [ label = "fibo-ind-ei-ei:isEconomyOf" ];
+	"fibo-ind-ei-ei:EconomicIndicator" -> "fibo-fnd-utl-bt:yesOrNo" [ label = "fibo-ind-ei-ei:isSeasonallyAdjusted" ];
+
+}

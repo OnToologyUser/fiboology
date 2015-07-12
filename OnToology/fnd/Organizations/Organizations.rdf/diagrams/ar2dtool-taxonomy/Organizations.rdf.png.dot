@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-org-org:Organization" ; /*classes style*/
+	"fibo-fnd-org-org:Organization" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "rdfs:subClassOf" ];
+
+}

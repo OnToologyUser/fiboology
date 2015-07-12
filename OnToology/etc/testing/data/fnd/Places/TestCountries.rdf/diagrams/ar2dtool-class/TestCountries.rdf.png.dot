@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-plc-cty:StateOfCalifornia" -> "fibo-tst-fnd-plc-cty:UnitedStates" [ label = "fibo-fnd-plc-cty:inCountry" ];
+	"fibo-tst-fnd-plc-cty:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-plc-cty:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-plc-cty:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-plc-cty:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-plc-cty:Wales" -> "fibo-tst-fnd-plc-cty:UnitedKingdom" [ label = "fibo-fnd-plc-cty:inCountry" ];
+	"fibo-tst-fnd-plc-cty:England" -> "fibo-tst-fnd-plc-cty:UnitedKingdom" [ label = "fibo-fnd-plc-cty:inCountry" ];
+	"fibo-tst-fnd-plc-cty:HessenState" -> "fibo-tst-fnd-plc-cty:Germany" [ label = "fibo-fnd-plc-cty:inCountry" ];
+	"fibo-tst-fnd-plc-cty:NewYorkState" -> "fibo-tst-fnd-plc-cty:UnitedStates" [ label = "fibo-fnd-plc-cty:inCountry" ];
+
+}

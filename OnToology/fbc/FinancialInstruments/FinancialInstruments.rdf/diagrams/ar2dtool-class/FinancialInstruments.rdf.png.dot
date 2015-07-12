@@ -1,0 +1,50 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fbc-fi-fi:Security" "fibo-fbc-fi-fi:CashInstrument" "fibo-fbc-fi-fi:FinancialInstrumentIdentifier" "fibo-fbc-fi-fi:FinancialInstrument" "fibo-fbc-fi-fi:DerivativeInstrument" "fibo-fbc-fi-fi:PrincipalExecutiveOfficeAddress" "fibo-fbc-fi-fi:Issuer" ; /*classes style*/
+	"fibo-fbc-fi-fi:hasValueExpressedInCurrency" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-fi-fi:DerivativeInstrument" -> "fibo-fbc-fi-fi:CashInstrument" [ label = "owl:disjointWith" ];
+	"fibo-fbc-fi-fi:isLegallyRecordedIn" -> "fibo-fnd-agr-ctr:hasGoverningJurisdiction" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-fi-fi:hasIssuer" -> "fibo-fnd-pty-pty:hasPartyInRole" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-fi-fi:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/FinancialInstruments/FinancialInstruments/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-fi-fi:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-arr-id:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fbc-fct-mkt:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-be-le-fbo:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-law-jur:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:hasPrincipalExecutiveOfficeAddress" -> "fibo-be-le-fbo:hasRegisteredAddress" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-pty-pty:isAPartyTo" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:boolean" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fbc-fi-fi:FinancialInstrumentIdentifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-fi-fi:hasIssuer" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:appliesTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fi-fi:isTransferable" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-fi-fi:Issuer" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-aap-agt:identifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fi-fi:Issuer" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fi-fi:isLegallyRecordedIn" [ label = "owl:onProperty" ];
+	"fibo-fbc-fi-fi:Security" -> "fibo-fbc-fct-mkt:Market" [ label = "fibo-fbc-fi-fi:mayBeTradedIn" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-fbc-fi-fi:PrincipalExecutiveOfficeAddress" [ label = "fibo-fbc-fi-fi:hasPrincipalExecutiveOfficeAddress" ];
+	"fibo-fbc-fi-fi:FinancialInstrument" -> "fibo-fbc-fi-fi:Issuer" [ label = "fibo-fbc-fi-fi:hasIssuer" ];
+	"fibo-fbc-fi-fi:FinancialInstrument" -> "xsd:boolean" [ label = "fibo-fbc-fi-fi:isTransferable" ];
+	"fibo-fbc-fi-fi:FinancialInstrument" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "fibo-fbc-fi-fi:isLegallyRecordedIn" ];
+	"fibo-fbc-fi-fi:FinancialInstrument" -> "fibo-fnd-acc-cur:Currency" [ label = "fibo-fbc-fi-fi:hasValueExpressedInCurrency" ];
+
+}

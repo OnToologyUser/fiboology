@@ -1,0 +1,33 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-ind-ir-pub:MonetaryAuthority" "fibo-ind-ir-pub:CentralBank" ; /*classes style*/
+	"fibo-ind-ir-pub:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/InterestRates/InterestRatePublishers/" [ label = "owl:versionIRI" ];
+	"fibo-ind-ir-pub:" -> "fibo-be-fct-pub:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "fibo-ind-ir-ir:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:" -> "fibo-ind-ind-ind:" [ label = "owl:imports" ];
+	"fibo-ind-ir-pub:sets" -> "fibo-fnd-rel-rel:provides" [ label = "rdfs:subPropertyOf" ];
+	"fibo-ind-ir-pub:regulatesSupplyFor" -> "fibo-fnd-rel-rel:governs" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-acc-cur:Currency" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-ind-ir-pub:CentralBank" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-ind-ir-pub:convenes" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ir-ir:BaseRate" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-fct-pub:publishes" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ir-ir:ReferenceRate" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-ind-ir-pub:sets" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ir-pub:MonetaryAuthority" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-ind-ir-pub:regulatesSupplyFor" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ir-ir:InterbankRate" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ind-ind:MarketRate" [ label = "owl:someValuesFrom" ];
+	"fibo-fnd-pty-pty:IndependentParty" -> "owl:Thing" [ label = "fibo-ind-ir-pub:regulatesSupplyFor" ];
+	"fibo-fnd-pty-rl:AgentInRole" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "fibo-ind-ir-pub:convenes" ];
+	"fibo-fnd-pty-rl:AgentInRole" -> "owl:Thing" [ label = "fibo-ind-ir-pub:sets" ];
+
+}

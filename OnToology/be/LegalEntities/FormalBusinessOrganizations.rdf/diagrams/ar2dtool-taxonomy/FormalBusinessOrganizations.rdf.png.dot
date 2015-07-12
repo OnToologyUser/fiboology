@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-le-fbo:FormallyConstitutedOrganization" "fibo-be-le-fbo:OrganizationalSubUnit" "fibo-be-le-fbo:FormallyConstitutedOrganizationMember" "fibo-be-le-fbo:OrganizationIdentifier" "fibo-be-le-fbo:JointVenture" "fibo-be-le-fbo:RegisteredAddress" "fibo-be-le-fbo:Branch" "fibo-be-le-fbo:Division" "fibo-be-le-fbo:OrganizationCoveringAgreement" "fibo-be-le-fbo:OrganizationIndustrySectorClassification" "fibo-be-le-fbo:OrganizationIdentificationScheme" ; /*classes style*/
+	"fibo-be-le-fbo:OrganizationCoveringAgreement" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:Division" -> "fibo-be-le-fbo:OrganizationalSubUnit" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:Branch" -> "fibo-be-le-fbo:OrganizationalSubUnit" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:OrganizationalSubUnit" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganizationMember" -> "fibo-fnd-pty-pty:OrganizationMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:JointVenture" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:OrganizationIndustrySectorClassification" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:OrganizationIdentificationScheme" -> "fibo-fnd-arr-id:IdentificationScheme" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:RegisteredAddress" -> "fibo-fnd-plc-adr:PostalAddress" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-fbo:OrganizationIdentifier" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+
+}

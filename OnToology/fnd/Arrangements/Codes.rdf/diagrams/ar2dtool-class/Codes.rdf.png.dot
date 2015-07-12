@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-arr-cd:CodeSet" "fibo-fnd-arr-cd:CodeElement" ; /*classes style*/
+	"NULL" -> "fibo-fnd-rel-rel:isMemberOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-cd:CodeSet" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:comprises" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:denotes" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-cd:CodeElement" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-arr-cd:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-cd:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Arrangements/Codes/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-arr-cd:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-cd:" -> "fibo-fnd-arr-arr:" [ label = "owl:imports" ];
+
+}

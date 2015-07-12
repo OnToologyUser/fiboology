@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-law-cor:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-org-org:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-gao-gl:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-cor:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+
+}

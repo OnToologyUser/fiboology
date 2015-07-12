@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fnd-utl-mod:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-fnd-utl-mod:" -> "http://spec.edmcouncil.org/fibo/FND/20140801/Utilities/AboutUtilities/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-utl-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+
+}

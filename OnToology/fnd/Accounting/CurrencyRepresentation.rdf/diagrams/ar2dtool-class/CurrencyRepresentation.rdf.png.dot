@@ -1,0 +1,46 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "-3e2f7bff:14e84976413:-7ff0" "fibo-fnd-acc-cr:FundRelatedEntity" "fibo-fnd-acc-cr:CurrencyIdentifier" "fibo-fnd-acc-cr:Currency" ; /*classes style*/
+	"fibo-fnd-acc-cr:hasCurrencyIdentifier" -> "fibo-fnd-rel-rel:hasDenotation" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-acc-cr:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cr:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cr:" -> "fibo-fnd-arr-id:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cr:" -> "fibo-fnd-arr-cd:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cr:" -> "http://spec.edmcouncil.org/fibo/FND/20150501/Accounting/CurrencyRepresentation/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-acc-cr:" -> "fibo-fnd-plc-cr:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cr:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cr:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cr:hasCurrencyName" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-acc-cr:hasNumericCode" -> "fibo-fnd-rel-rel:hasUniqueIdentifier" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-rel-rel:uses" [ label = "owl:onProperty" ];
+	"NULL" -> "-3e2f7bff:14e84976413:-7ff2" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-acc-cr:hasCurrencyIdentifier" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:denotes" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cr:representsRedenomination" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:boolean" [ label = "owl:onDataRange" ];
+	"NULL" -> "-3e2f7bff:14e84976413:-7ff1" [ label = "owl:unionOf" ];
+	"NULL" -> "fibo-fnd-acc-cr:hasCurrencyTag" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cr:Currency" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-acc-cr:hasCurrencyName" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cr:hasMinorUnit" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-rel-rel:isUsedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cr:FundRelatedEntity" [ label = "rdf:first" ];
+	"NULL" -> "xsd:string" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-aap-agt:identifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cr:hasNumericCode" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cr:Currency" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-acc-cr:CurrencyIdentifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-plc-cr:Country" [ label = "rdf:first" ];
+	"NULL" -> "-3e2f7bff:14e84976413:-7ff0" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-acc-cr:Currency" -> "fibo-fnd-acc-cur:Currency" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-acc-cr:hasCurrencyTag" -> "fibo-fnd-rel-rel:hasUniqueIdentifier" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-acc-cr:Currency" -> "fibo-fnd-acc-cr:CurrencyIdentifier" [ label = "fibo-fnd-acc-cr:hasCurrencyIdentifier" ];
+	"fibo-fnd-acc-cr:Currency" -> "xsd:string" [ label = "fibo-fnd-acc-cr:hasMinorUnit" ];
+	"fibo-fnd-acc-cr:Currency" -> "xsd:string" [ label = "fibo-fnd-acc-cr:hasNumericCode" ];
+	"fibo-fnd-acc-cr:Currency" -> "xsd:boolean" [ label = "fibo-fnd-acc-cr:representsRedenomination" ];
+	"fibo-fnd-acc-cr:Currency" -> "xsd:string" [ label = "fibo-fnd-acc-cr:hasCurrencyName" ];
+	"fibo-fnd-acc-cr:CurrencyIdentifier" -> "xsd:string" [ label = "fibo-fnd-acc-cr:hasCurrencyTag" ];
+
+}

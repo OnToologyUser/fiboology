@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-ind-ei-ei:UnemploymentRate" "fibo-ind-ei-ei:PercentageUnemploymentRate" "fibo-ind-ei-ei:NumericUnemploymentRate" "fibo-ind-ei-ei:InflationRate" "fibo-ind-ei-ei:GrossDomesticProduct" "fibo-ind-ei-ei:EconomicIndicator" "fibo-ind-ei-ei:ConsumerPriceIndex" ; /*classes style*/
+	"fibo-ind-ei-ei:InflationRate" -> "fibo-ind-ei-ei:EconomicIndicator" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:InflationRate" -> "fibo-fnd-utl-bt:Percentage" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:PercentageUnemploymentRate" -> "fibo-ind-ei-ei:UnemploymentRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:PercentageUnemploymentRate" -> "fibo-fnd-utl-bt:Percentage" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:UnemploymentRate" -> "fibo-ind-ei-ei:EconomicIndicator" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:NumericUnemploymentRate" -> "fibo-ind-ei-ei:UnemploymentRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:ConsumerPriceIndex" -> "fibo-ind-ei-ei:EconomicIndicator" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:EconomicIndicator" -> "fibo-fnd-utl-alx:StatisticalMeasure" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:EconomicIndicator" -> "fibo-be-fct-pub:Publication" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ei-ei:GrossDomesticProduct" -> "fibo-ind-ei-ei:EconomicIndicator" [ label = "rdfs:subClassOf" ];
+
+}

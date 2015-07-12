@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fnd-plc-cty:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-cty:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Places/Countries/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-plc-cty:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+
+}

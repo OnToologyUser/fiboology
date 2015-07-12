@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-arr-id:IndexingScheme" "fibo-fnd-arr-id:Index" "fibo-fnd-arr-id:Identifier" "fibo-fnd-arr-id:IdentificationScheme" ; /*classes style*/
+	"fibo-fnd-arr-id:IdentificationScheme" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-id:Index" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-id:IndexingScheme" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-id:Identifier" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+
+}

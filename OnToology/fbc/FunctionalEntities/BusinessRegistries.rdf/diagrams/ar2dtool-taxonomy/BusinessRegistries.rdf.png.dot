@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-fct-breg:LegalRegistrationAddress" "fibo-fbc-fct-breg:BusinessRegistry" "fibo-fbc-fct-breg:BusinessRegistrationAuthority" ; /*classes style*/
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-be-le-fbo:RegisteredAddress" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-breg:BusinessRegistrationAuthority" -> "fibo-fbc-fct-ra:RegistrationAuthority" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-breg:BusinessRegistry" -> "fibo-fbc-fct-ra:Registry" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fnd-aap-agt:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fnd-aap-agt:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-aap-agt:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/AgentsAndPeople/Agents/" [ label = "owl:versionIRI" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:hasName" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:text" [ label = "owl:onDataRange" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-aap-agt:hasName" ];
+
+}

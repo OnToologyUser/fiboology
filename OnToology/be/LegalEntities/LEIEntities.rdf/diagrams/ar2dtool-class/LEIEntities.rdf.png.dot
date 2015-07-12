@@ -1,0 +1,32 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-le-lp:LegalEntity" "fibo-be-le-lei:SupranationalEntity" "fibo-be-le-lei:SovereignState" "fibo-be-le-lei:RegionalGovernmentalEntity" "fibo-be-le-lei:MunicipalEntity" "fibo-be-le-lei:LegalEntityIdentifier" ; /*classes style*/
+	"fibo-be-le-lei:SovereignState" -> "fibo-be-le-lei:SupranationalEntity" [ label = "owl:disjointWith" ];
+	"fibo-be-le-lei:MunicipalEntity" -> "fibo-be-le-lei:SupranationalEntity" [ label = "owl:disjointWith" ];
+	"fibo-be-le-lei:MunicipalEntity" -> "fibo-be-le-lei:SovereignState" [ label = "owl:disjointWith" ];
+	"fibo-be-le-lei:RegionalGovernmentalEntity" -> "fibo-be-le-lei:SovereignState" [ label = "owl:disjointWith" ];
+	"fibo-be-le-lei:hasAddressOfLegalFormation" -> "fibo-be-le-fbo:hasRegisteredAddress" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-lei:" -> "fibo-fnd-law-jur:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "fibo-be-le-fbo:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "http://spec.edmcouncil.org/fibo/BE/20150801/LegalEntities/LEIEntities/" [ label = "owl:versionIRI" ];
+	"fibo-be-le-lei:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-be-le-lei:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-plc-cty:GeopoliticalEntity" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-plc-cty:Country" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-le-lei:LegalEntityIdentifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-le-lp:LegalEntity" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-le-lei:LegalEntityIdentifier" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:identifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:represents" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"fibo-be-le-lp:LegalEntity" -> "fibo-be-le-fbo:RegisteredAddress" [ label = "fibo-be-le-lei:hasAddressOfLegalFormation" ];
+
+}

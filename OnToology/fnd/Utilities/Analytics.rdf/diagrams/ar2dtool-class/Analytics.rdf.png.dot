@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-utl-alx:Variable" "fibo-fnd-utl-alx:StatisticalMeasure" "fibo-fnd-utl-alx:Measure" "fibo-fnd-utl-alx:Formula" "fibo-fnd-utl-alx:Expression" "fibo-fnd-utl-alx:Constant" ; /*classes style*/
+	"fibo-fnd-utl-alx:hasApplicablePeriodStart" -> "fibo-fnd-dt-fd:hasDateTimeValue" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:hasArgument" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:hasMeasurementDate" -> "fibo-fnd-dt-fd:hasDateValue" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:hasFormula" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-utl-alx:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Utilities/Analytics/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-utl-alx:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fnd-utl-alx:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fnd-utl-alx:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-utl-alx:hasOperand" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:hasExpression" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:hasApplicableDatePeriod" -> "fibo-fnd-dt-fd:hasDatePeriod" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:hasApplicablePeriodEnd" -> "fibo-fnd-dt-fd:hasDateTimeValue" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-utl-alx:isMeasureOf" -> "fibo-fnd-rel-rel:appliesTo" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-utl-alx:Expression" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-utl-alx:hasExpression" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-alx:Constant" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-utl-alx:hasArgument" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-alx:Variable" [ label = "owl:onClass" ];
+	"owl:Thing" -> "fibo-fnd-utl-alx:Formula" [ label = "fibo-fnd-utl-alx:hasFormula" ];
+	"fibo-fnd-utl-alx:StatisticalMeasure" -> "xsd:dateTime" [ label = "fibo-fnd-utl-alx:hasApplicablePeriodEnd" ];
+	"fibo-fnd-utl-alx:Measure" -> "fibo-fnd-dt-fd:dateValue" [ label = "fibo-fnd-utl-alx:hasMeasurementDate" ];
+	"fibo-fnd-utl-alx:Measure" -> "fibo-fnd-utl-bt:wholeNumber" [ label = "fibo-fnd-utl-alx:hasMeasurementPeriodInMonths" ];
+	"fibo-fnd-utl-alx:StatisticalMeasure" -> "xsd:dateTime" [ label = "fibo-fnd-utl-alx:hasApplicablePeriodStart" ];
+	"fibo-fnd-utl-alx:Measure" -> "owl:Thing" [ label = "fibo-fnd-utl-alx:isMeasureOf" ];
+	"fibo-fnd-utl-alx:StatisticalMeasure" -> "fibo-fnd-dt-fd:DatePeriod" [ label = "fibo-fnd-utl-alx:hasApplicableDatePeriod" ];
+	"fibo-fnd-rel-rel:Reference" -> "fibo-fnd-utl-alx:Expression" [ label = "fibo-fnd-utl-alx:hasExpression" ];
+	"fibo-fnd-utl-alx:StatisticalMeasure" -> "fibo-fnd-dt-fd:ExplicitDatePeriod" [ label = "fibo-fnd-utl-alx:forYear" ];
+	"fibo-fnd-rel-rel:Reference" -> "fibo-fnd-rel-rel:Reference" [ label = "fibo-fnd-utl-alx:hasArgument" ];
+	"fibo-fnd-rel-rel:Reference" -> "fibo-fnd-rel-rel:Referent" [ label = "fibo-fnd-utl-alx:hasOperand" ];
+
+}

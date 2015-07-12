@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-oac-own:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac-own:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac-own:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac-own:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/OwnershipRules/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac-own:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac-own:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac-own:LatticePattern" -> "fibo-tst-fnd-oac-own:GoodBankOwnedByBigBankPIR" [ label = "fibo-fnd-oac-own:ownershipOfThing" ];
+	"fibo-tst-fnd-oac-own:LatticePattern" -> "fibo-tst-fnd-oac-own:BigBankOwnsGoodBankPIR" [ label = "fibo-fnd-oac-own:ownershipByParty" ];
+	"fibo-tst-fnd-oac-own:BigBankOwnsGoodBankPIR" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/BigBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+	"fibo-tst-fnd-oac-own:GoodBankOwnedByBigBankPIR" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/GoodBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+	"fibo-tst-fnd-oac-own:AssociativeRelation" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/SecuritiesInc" [ label = "fibo-fnd-oac-own:ownershipOf" ];
+	"fibo-tst-fnd-oac-own:AssociativeRelation" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/CaliforniaBank" [ label = "fibo-fnd-oac-own:ownershipBy" ];
+
+}

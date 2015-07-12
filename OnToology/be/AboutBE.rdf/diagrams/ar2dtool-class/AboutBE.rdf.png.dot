@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fnd:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/AboutBE/" [ label = "owl:versionIRI" ];
+	"fibo-fnd:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-fnd:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-fnd:BESpecification" -> "sm:MITLicense" [ label = "dct:license" ];
+
+}

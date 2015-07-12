@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-arr-id:IndexingScheme" "fibo-fnd-arr-id:Index" "fibo-fnd-arr-id:Identifier" "fibo-fnd-arr-id:IdentificationScheme" ; /*classes style*/
+	"NULL" -> "fibo-fnd-arr-id:Index" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-arr-id:IndexingScheme" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-id:isIndexTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isMemberOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasUniqueIdentifier" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-id:IdentificationScheme" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-aap-agt:identifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:text" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-arr-id:Identifier" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-arr-id:isIndexTo" -> "fibo-fnd-rel-rel:refersTo" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-arr-id:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Arrangements/IdentifiersAndIndices/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-arr-id:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-id:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-id:" -> "fibo-fnd-arr-arr:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-id:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-id:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-id:Index" -> "owl:Thing" [ label = "fibo-fnd-arr-id:isIndexTo" ];
+
+}

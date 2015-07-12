@@ -1,0 +1,34 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-tr-tr:Trustor" "fibo-be-tr-tr:Trustee" "fibo-be-tr-tr:TrustFundTrust" "fibo-be-tr-tr:TrustFundManager" "fibo-be-tr-tr:TrustBeneficiary" "fibo-be-tr-tr:TrustAgreement" "fibo-be-tr-tr:Trust" "fibo-be-tr-tr:FundUnitHolder" ; /*classes style*/
+	"fibo-be-tr-tr:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-be-tr-tr:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/Trusts/Trusts/" [ label = "owl:versionIRI" ];
+	"fibo-be-tr-tr:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-tr-tr:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-be-tr-tr:" -> "fibo-be-le-fbo:" [ label = "owl:imports" ];
+	"fibo-be-tr-tr:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-tr-tr:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-pty-pty:isAPartyTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-tr-tr:FundUnitHolder" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-tr-tr:TrustBeneficiary" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-tr-tr:TrustAgreement" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-be-tr-tr:TrustFundTrust" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-tr-tr:Trustee" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-pty-pty:hasPartyInRole" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isGovernedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:manages" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isManagedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isMemberOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-tr-tr:Trust" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-be-tr-tr:Trustor" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-le-lp:LegalPerson" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-tr-tr:TrustAgreement" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-lp:LegalPerson" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-be-tr-tr:TrustFundManager" [ label = "owl:allValuesFrom" ];
+
+}

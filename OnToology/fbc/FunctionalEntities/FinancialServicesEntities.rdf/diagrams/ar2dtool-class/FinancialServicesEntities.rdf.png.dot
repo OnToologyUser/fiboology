@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fbc-fct-fse:FinancialService" "fibo-fbc-fct-fse:UnitInvestmentTrust" "fibo-fbc-fct-fse:FinancialIntermediationService" "fibo-fbc-fct-fse:FaceAmountCertificateCompany" "fibo-fbc-fct-fse:Bank" "fibo-fbc-fct-fse:ManagementCompany" "fibo-fbc-fct-fse:BrokerageFirm" "1f28d198:14e84952eec:-7ff1" "fibo-fbc-fct-fse:ClearingService" ; /*classes style*/
+	"fibo-fbc-fct-fse:ManagementCompany" -> "fibo-fbc-fct-fse:UnitInvestmentTrust" [ label = "owl:disjointWith" ];
+	"NULL" -> "fibo-fnd-rel-rel:provides" [ label = "owl:onProperty" ];
+	"NULL" -> "1f28d198:14e84952eec:-7ff5" [ label = "owl:intersectionOf" ];
+	"NULL" -> "fibo-fbc-fct-rga:RegulatoryAgency" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fbc-fct-fse:FinancialService" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-fct-fse:BrokerageFirm" [ label = "rdf:first" ];
+	"NULL" -> "fibo-be-le-cb:Corporation" [ label = "owl:onClass" ];
+	"NULL" -> "1f28d198:14e84952eec:-7ff2" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fbc-fct-fse:ClearingService" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "rdf:first" ];
+	"NULL" -> "1f28d198:14e84952eec:-7ff1" [ label = "owl:onClass" ];
+	"NULL" -> "1f28d198:14e84952eec:-7ff3" [ label = "owl:unionOf" ];
+	"NULL" -> "fibo-fbc-fct-rga:isRegulatedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fct-fse:Bank" [ label = "rdf:first" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "1f28d198:14e84952eec:-7ff4" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fbc-fct-fse:FinancialIntermediationService" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-lp:LegalEntity" [ label = "rdf:first" ];
+	"fibo-fbc-fct-fse:" -> "fibo-be-fct-fct:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-be-le-fbo:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-be-le-cb:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/FunctionalEntities/FinancialServicesEntities/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-fct-fse:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-fbc-fct-rga:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:" -> "fibo-be-le-lei:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-fse:FaceAmountCertificateCompany" -> "fibo-fbc-fct-fse:ManagementCompany" [ label = "owl:disjointWith" ];
+
+}

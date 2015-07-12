@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-dt-bd:BusinessRecurrenceInterval" ; /*classes style*/
+	"fibo-fnd-dt-bd:BusinessRecurrenceInterval" -> "fibo-fnd-dt-fd:RecurrenceInterval" [ label = "rdfs:subClassOf" ];
+
+}

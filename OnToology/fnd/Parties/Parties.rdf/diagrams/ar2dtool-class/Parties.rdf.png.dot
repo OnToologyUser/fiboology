@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-pty-pty:PartyInRole" "fibo-fnd-pty-pty:IndependentParty" ; /*classes style*/
+	"fibo-fnd-pty-pty:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-pty:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Parties/Parties/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-pty-pty:" -> "fibo-fnd-aap-ppl:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-pty:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-pty:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-pty:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-pty:" -> "fibo-fnd-org-org:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-pty:hasPartyInRole" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-pty-pty:hasParty" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-aap-ppl:Person" [ label = "rdf:first" ];
+	"NULL" -> "-15fc9dd7:14e849ea0db:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-org-org:Organization" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "-15fc9dd7:14e849ea0db:-7ff8" [ label = "owl:unionOf" ];
+	"NULL" -> "fibo-fnd-org-org:Organization" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fnd-pty-pty:hasCommencementDate" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-rel-rel:isMemberOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-fd:Date" [ label = "owl:onClass" ];
+	"fibo-fnd-pty-pty:PartyInRole" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-fnd-pty-pty:hasCommencementDate" ];
+	"owl:Thing" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "fibo-fnd-pty-pty:hasParty" ];
+	"fibo-fnd-pty-pty:IndependentParty" -> "owl:Thing" [ label = "fibo-fnd-pty-pty:isAPartyTo" ];
+	"owl:Thing" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "fibo-fnd-pty-pty:hasPartyInRole" ];
+
+}

@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "-4847a872:14e849e9291:-7ffc" "fibo-fnd-pty-pty:PartyInRole" "fibo-fnd-pty-pty:OrganizationMember" "fibo-fnd-pty-pty:IndependentParty" ; /*classes style*/
+	"fibo-fnd-pty-pty:PartyInRole" -> "fibo-fnd-pty-rl:AgentInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-pty-pty:OrganizationMember" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-pty-pty:IndependentParty" -> "-4847a872:14e849e9291:-7ffc" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,29 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-plc-fac:Site" "fibo-fnd-plc-fac:Facility" "fibo-fnd-plc-fac:Capability" ; /*classes style*/
+	"NULL" -> "owl:Thing" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-plc-fac:Site" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:provides" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-adr:Address" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasContext" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-loc:Location" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-plc-fac:Facility" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:involves" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-loc:PhysicalLocation" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-plc-loc:isLocatedAt" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-fac:isSituatedAt" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-fac:Capability" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-plc-fac:situates" [ label = "owl:onProperty" ];
+	"fibo-fnd-plc-fac:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-fac:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Places/Facilities/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-plc-fac:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-fac:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-fac:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-fac:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"owl:Thing" -> "xsd:string" [ label = "fibo-fnd-plc-fac:hasLatitude" ];
+	"owl:Thing" -> "xsd:string" [ label = "fibo-fnd-plc-fac:hasLongitude" ];
+
+}

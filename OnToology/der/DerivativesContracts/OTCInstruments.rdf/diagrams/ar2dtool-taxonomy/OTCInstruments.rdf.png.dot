@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-der-drc-otci:OTCTransaction" "fibo-der-drc-otci:OTCInstrumentConfirmation" "fibo-der-drc-otci:OTCInstrument" "fibo-der-drc-otci:OTCDerivativeContract" "fibo-der-drc-otci:OTCContractSettlementTerms" "fibo-der-drc-otci:DeliverCash" "fibo-der-drc-otci:CashDeliveryCommitment" "fibo-der-drc-bsc:OTCTransactionParty" ; /*classes style*/
+	"fibo-der-drc-otci:OTCContractSettlementTerms" -> "fibo-der-drc-bsc:SettlementTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:CashDeliveryCommitment" -> "fibo-fbc-pas-psch:Obligation" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:CashDeliveryCommitment" -> "fibo-der-drc-bsc:DeliveryCommitment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:DeliverCash" -> "fibo-der-drc-bsc:DeliveryTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:OTCDerivativeContract" -> "fibo-fbc-fi-fi:DerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:OTCDerivativeContract" -> "fibo-der-drc-otci:OTCInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:OTCInstrumentConfirmation" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:OTCInstrumentConfirmation" -> "fibo-fbc-pas-pas:TransactionConfirmation" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:OTCTransactionParty" -> "fibo-fnd-agr-ctr:ContractParty" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:OTCTransaction" -> "fibo-fbc-fi-fi:SecuritiesTransaction" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-otci:OTCInstrument" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+
+}

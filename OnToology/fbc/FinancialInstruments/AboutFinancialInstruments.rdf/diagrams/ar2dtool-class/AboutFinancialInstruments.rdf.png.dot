@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fbc-fi-mod:FinancialInstrumentsModule" -> "fibo-fbc:FBCSpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+	"fibo-fbc-fi-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-fbc-fi-mod:" -> "fibo-fbc:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-mod:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/FinancialInstruments/AboutFinancialInstruments/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-fi-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+
+}

@@ -1,0 +1,18 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-plc-adr:AddressingScheme" "fibo-fnd-plc-adr:Address" ; /*classes style*/
+	"NULL" -> "fibo-fnd-plc-loc:Location" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-adr:Address" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasDefinition" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-adr:AddressingScheme" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:appliesTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-loc:PhysicalLocation" [ label = "owl:onClass" ];
+	"fibo-fnd-plc-adr:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-adr:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Places/Addresses/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-plc-adr:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-adr:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-plc-adr:" -> "fibo-fnd-arr-id:" [ label = "owl:imports" ];
+
+}

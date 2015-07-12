@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-dt-fd:RecurrenceInterval" "fibo-fnd-dt-fd:Duration" "fibo-fnd-dt-fd:ExplicitRecurrenceInterval" "fibo-fnd-dt-fd:CalculatedDate" "fibo-fnd-dt-fd:Schedule" "fibo-fnd-dt-fd:ExplicitDatePeriod" "fibo-fnd-dt-fd:SpecifiedDate" "fibo-fnd-dt-fd:ExplicitDate" "fibo-fnd-dt-fd:RegularSchedule" "fibo-fnd-dt-fd:Date" "fibo-fnd-dt-fd:AdHocSchedule" "fibo-fnd-dt-fd:DatePeriod" "fibo-fnd-dt-fd:CalendarSpecifiedInterval" "fibo-fnd-dt-fd:ExplicitDuration" "fibo-fnd-dt-fd:RelativeDate" ; /*classes style*/
+	"fibo-fnd-dt-fd:SpecifiedDate" -> "fibo-fnd-dt-fd:CalculatedDate" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:RegularSchedule" -> "fibo-fnd-dt-fd:Schedule" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:CalendarSpecifiedInterval" -> "fibo-fnd-dt-fd:RecurrenceInterval" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:ExplicitDatePeriod" -> "fibo-fnd-dt-fd:DatePeriod" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:AdHocSchedule" -> "fibo-fnd-dt-fd:Schedule" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:ExplicitDuration" -> "fibo-fnd-dt-fd:Duration" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:ExplicitDate" -> "fibo-fnd-dt-fd:Date" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:RelativeDate" -> "fibo-fnd-dt-fd:CalculatedDate" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:ExplicitRecurrenceInterval" -> "fibo-fnd-dt-fd:RecurrenceInterval" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-dt-fd:CalculatedDate" -> "fibo-fnd-dt-fd:Date" [ label = "rdfs:subClassOf" ];
+
+}

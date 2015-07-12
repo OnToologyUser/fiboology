@@ -1,0 +1,28 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-ind-ir-ir:ReferenceRate" "fibo-ind-ir-ir:InterbankRate" "fibo-ind-ir-ir:FederalFundsRate" ; /*classes style*/
+	"fibo-ind-ir-ir:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-ind-ir-ir:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/InterestRates/InterestRates/" [ label = "owl:versionIRI" ];
+	"fibo-ind-ir-ir:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-ind-ir-ir:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-ind-ir-ir:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-ind-ir-ir:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-ind-ir-ir:" -> "fibo-ind-ind-ind:" [ label = "owl:imports" ];
+	"fibo-ind-ir-ir:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-ind-ir-ir:hasQuotationDate" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"fibo-ind-ir-ir:hasReferenceCurrency" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-ind-ir-ir:hasQuotationDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-fd:Date" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-ind-ir-ir:hasReferenceCurrency" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cur:Currency" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-aap-agt:hasName" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:text" [ label = "owl:allValuesFrom" ];
+	"fibo-ind-ir-ir:FederalFundsRate" -> "http://www.newyorkfed.org/markets/omo/dmm/fedfundsdata.cfm" [ label = "rdfs:seeAlso" ];
+	"fibo-ind-ir-ir:InterbankRate" -> "xsd:dateTime" [ label = "fibo-ind-ir-ir:hasRateResetTimeOfDay" ];
+	"fibo-ind-ir-ir:ReferenceRate" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-ind-ir-ir:hasQuotationDate" ];
+	"fibo-ind-ir-ir:InterbankRate" -> "fibo-fnd-utl-bt:wholeNumber" [ label = "fibo-ind-ir-ir:hasTenorInMonths" ];
+	"fibo-ind-ir-ir:ReferenceRate" -> "fibo-fnd-acc-cur:Currency" [ label = "fibo-ind-ir-ir:hasReferenceCurrency" ];
+	"fibo-ind-ir-ir:InterbankRate" -> "fibo-fnd-utl-bt:wholeNumber" [ label = "fibo-ind-ir-ir:hasTenorInDays" ];
+
+}

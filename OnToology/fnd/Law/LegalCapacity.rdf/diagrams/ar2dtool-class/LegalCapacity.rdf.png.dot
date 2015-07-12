@@ -1,0 +1,30 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "7ff2a9ab:14e849cfdf2:-7ff6" "fibo-fnd-law-lcap:LegalCapacity" ; /*classes style*/
+	"fibo-fnd-law-lcap:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-law-lcap:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Law/LegalCapacity/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-law-lcap:" -> "fibo-fnd-law-cor:" [ label = "owl:imports" ];
+	"fibo-fnd-law-lcap:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fnd-law-lcap:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-law-lcap:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-fnd-law-lcap:" -> "fibo-fnd-law-jur:" [ label = "owl:imports" ];
+	"fibo-fnd-law-lcap:isCapacityOf" -> "fibo-fnd-rel-rel:isConferredOn" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "owl:onClass" ];
+	"NULL" -> "7ff2a9ab:14e849cfdf2:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-law-jur:StatuteLaw" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-law-cor:Constitution" [ label = "rdf:first" ];
+	"NULL" -> "7ff2a9ab:14e849cfdf2:-7ff9" [ label = "owl:unionOf" ];
+	"NULL" -> "7ff2a9ab:14e849cfdf2:-7ff6" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-law-cor:Law" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fnd-agr-ctr:Contract" [ label = "rdf:first" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-rel-rel:isConferredOn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isMandatedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isConferredBy" [ label = "owl:onProperty" ];
+	"NULL" -> "7ff2a9ab:14e849cfdf2:-7ff8" [ label = "rdf:rest" ];
+	"fibo-fnd-law-lcap:hasCapacity" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "fibo-fnd-law-lcap:LegalCapacity" [ label = "fibo-fnd-law-lcap:hasCapacity" ];
+	"fibo-fnd-law-lcap:LegalCapacity" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-law-lcap:isCapacityOf" ];
+
+}

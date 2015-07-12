@@ -1,0 +1,18 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-le-cb:IncorporationGuarantee" "fibo-be-le-cb:CompanyIncorporatedByGuarantee" "fibo-be-le-cb:BodyLimitedByGuaranteePrincipalsAgreement" "fibo-be-le-cb:InstrumentOfIncorporation" "fibo-be-le-cb:GeneralStockCorporation" "fibo-be-le-cb:BenefitCorporation" "fibo-be-le-cb:BodyIncorporatedThroughAgreement" "fibo-be-le-cb:NonProfitCorporation" "fibo-be-le-cb:CommonInterestDevelopmentCorporation" "fibo-be-le-cb:BodyIncorporatedWithGuarantee" "fibo-be-le-cb:Corporation" ; /*classes style*/
+	"fibo-be-le-cb:CommonInterestDevelopmentCorporation" -> "fibo-be-le-cb:NonProfitCorporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:InstrumentOfIncorporation" -> "fibo-fnd-law-cor:Constitution" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:NonProfitCorporation" -> "fibo-be-le-cb:Corporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:BodyIncorporatedThroughAgreement" -> "fibo-be-le-cb:Corporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:Corporation" -> "fibo-be-le-lp:JuridicalPerson" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:Corporation" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:BenefitCorporation" -> "fibo-be-le-cb:NonProfitCorporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:BodyLimitedByGuaranteePrincipalsAgreement" -> "fibo-be-le-fbo:OrganizationCoveringAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:GeneralStockCorporation" -> "fibo-be-le-cb:Corporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:CompanyIncorporatedByGuarantee" -> "fibo-be-le-cb:BodyIncorporatedWithGuarantee" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:BodyIncorporatedWithGuarantee" -> "fibo-be-le-cb:Corporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-le-cb:IncorporationGuarantee" -> "fibo-fnd-law-cor:Constitution" [ label = "rdfs:subClassOf" ];
+
+}

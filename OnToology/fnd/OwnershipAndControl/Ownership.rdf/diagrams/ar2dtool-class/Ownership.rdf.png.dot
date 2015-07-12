@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-oac-own:Ownership" "fibo-fnd-oac-own:Owner" "fibo-fnd-oac-own:Asset" ; /*classes style*/
+	"fibo-fnd-oac-own:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-own:" -> "fibo-fnd-dt-bd:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-own:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-own:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/OwnershipAndControl/Ownership/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-oac-own:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-own:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-own:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-oac-own:isOwnedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:dateTime" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-pty-rl:ThingInRole" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-oac-own:owns" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasAcquisitionDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-fd:DatePeriod" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-oac-own:hasOwnedThing" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-bd:holdsDuring" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-oac-own:hasOwningParty" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-oac-own:Owner" [ label = "owl:onClass" ];
+	"fibo-fnd-oac-own:Asset" -> "fibo-fnd-oac-own:Owner" [ label = "fibo-fnd-oac-own:isOwnedBy" ];
+	"fibo-fnd-oac-own:Owner" -> "fibo-fnd-oac-own:Ownership" [ label = "fibo-fnd-oac-own:isOwningPartyInRole" ];
+	"fibo-fnd-oac-own:Ownership" -> "fibo-fnd-oac-own:Asset" [ label = "fibo-fnd-oac-own:hasOwnedThing" ];
+	"fibo-fnd-oac-own:Ownership" -> "fibo-fnd-oac-own:Owner" [ label = "fibo-fnd-oac-own:hasOwningParty" ];
+	"fibo-fnd-pty-pty:IndependentParty" -> "owl:Thing" [ label = "fibo-fnd-oac-own:owns" ];
+	"fibo-fnd-oac-own:Asset" -> "fibo-fnd-oac-own:Ownership" [ label = "fibo-fnd-oac-own:isOwnedThingInRole" ];
+
+}

@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-be-oac-mod:OwnershipAndControlModule" -> "fibo-be:BESpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+	"fibo-be-oac-mod:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/OwnershipAndControl/AboutBEOwnershipAndControl/" [ label = "owl:versionIRI" ];
+	"fibo-be-oac-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-oac-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-oac-mod:" -> "fibo-be:" [ label = "owl:imports" ];
+	"fibo-be-oac-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+
+}

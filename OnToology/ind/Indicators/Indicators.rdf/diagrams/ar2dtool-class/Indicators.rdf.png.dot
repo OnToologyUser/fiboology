@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-ind-ind-ind:Volatility" "fibo-ind-ind-ind:PublishedFinancialInformation" "fibo-ind-ind-ind:MarketRate" "fibo-ind-ind-ind:FinancialInformationPublisher" ; /*classes style*/
+	"fibo-ind-ind-ind:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-ind-ind-ind:" -> "fibo-be-fct-pub:" [ label = "owl:imports" ];
+	"fibo-ind-ind-ind:" -> "fibo-fnd-utl-alx:" [ label = "owl:imports" ];
+	"fibo-ind-ind-ind:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/Indicators/Indicators/" [ label = "owl:versionIRI" ];
+	"fibo-ind-ind-ind:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-ind-ind-ind:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-ind-ind-ind:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-ind-ind-ind:PublishedFinancialInformation" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-fct-pub:publishes" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:hasNumericValue" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-fct-pub:hasPublisher" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ind-ind:FinancialInformationPublisher" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-alx:hasOperand" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:number" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-ind-ind-ind:MarketRate" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasMember" [ label = "owl:onProperty" ];
+	"fibo-ind-ind-ind:isVolatilityOf" -> "fibo-fnd-rel-rel:appliesTo" [ label = "rdfs:subPropertyOf" ];
+	"fibo-ind-ind-ind:Volatility" -> "fibo-ind-ind-ind:MarketRate" [ label = "fibo-ind-ind-ind:isVolatilityOf" ];
+
+}

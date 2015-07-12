@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-org-fm:InformalOrganization" "fibo-fnd-org-fm:Group" "fibo-fnd-org-fm:FormalOrganization" ; /*classes style*/
+	"fibo-fnd-org-fm:FormalOrganization" -> "fibo-fnd-org-org:Organization" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-org-fm:Group" -> "fibo-fnd-arr-arr:Collection" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-org-fm:InformalOrganization" -> "fibo-fnd-org-org:Organization" [ label = "rdfs:subClassOf" ];
+
+}

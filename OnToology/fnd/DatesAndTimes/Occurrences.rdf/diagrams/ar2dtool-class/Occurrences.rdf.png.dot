@@ -1,0 +1,28 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-dt-oc:OccurrenceKind" "fibo-fnd-dt-oc:OccurrenceBasedDate" "fibo-fnd-dt-oc:Occurrence" "fibo-fnd-dt-fd:SpecifiedDate" "fibo-fnd-dt-fd:RelativeDate" ; /*classes style*/
+	"fibo-fnd-dt-fd:RelativeDate" -> "fibo-fnd-dt-oc:OccurrenceBasedDate" [ label = "owl:disjointWith" ];
+	"fibo-fnd-dt-oc:hasOccurrence" -> "fibo-fnd-dt-oc:isExemplifiedBy" [ label = "owl:equivalentProperty" ];
+	"fibo-fnd-dt-oc:hasOccurrence" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-dt-oc:hasDescription" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:string" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-plc-loc:isLocatedAt" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-loc:Location" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-dt-oc:isTriggeredBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:comprises" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-oc:exemplifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-oc:OccurrenceKind" [ label = "owl:onClass" ];
+	"fibo-fnd-dt-oc:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-oc:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-oc:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-oc:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/DatesAndTimes/Occurrences/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-dt-oc:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fnd-dt-fd:SpecifiedDate" -> "fibo-fnd-dt-oc:OccurrenceBasedDate" [ label = "owl:disjointWith" ];
+	"owl:Thing" -> "xsd:string" [ label = "fibo-fnd-dt-oc:hasDescription" ];
+	"fibo-fnd-dt-oc:OccurrenceKind" -> "fibo-fnd-dt-oc:Occurrence" [ label = "fibo-fnd-dt-oc:hasOccurrence" ];
+	"fibo-fnd-dt-oc:OccurrenceKind" -> "fibo-fnd-dt-oc:Occurrence" [ label = "fibo-fnd-dt-oc:isExemplifiedBy" ];
+	"fibo-fnd-dt-oc:Occurrence" -> "fibo-fnd-dt-oc:OccurrenceKind" [ label = "fibo-fnd-dt-oc:exemplifies" ];
+	"fibo-fnd-dt-oc:OccurrenceBasedDate" -> "fibo-fnd-dt-oc:OccurrenceKind" [ label = "fibo-fnd-dt-oc:isTriggeredBy" ];
+
+}

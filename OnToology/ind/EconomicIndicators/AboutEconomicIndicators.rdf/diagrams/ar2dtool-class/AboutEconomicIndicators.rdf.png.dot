@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-ind-ei-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-ind-ei-mod:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-ind-ei-mod:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/EconomicIndicators/AboutEconomicIndicators/" [ label = "owl:versionIRI" ];
+
+}

@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-pas-psch:PaymentSchedule" "fibo-fbc-pas-psch:PaymentEvent" "fibo-fbc-pas-psch:Payment" "fibo-fbc-pas-psch:Payer" "fibo-fbc-pas-psch:Payee" "fibo-fbc-pas-psch:Obligation" ; /*classes style*/
+	"fibo-fbc-pas-psch:PaymentSchedule" -> "fibo-fnd-dt-fd:Schedule" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-psch:Obligation" -> "fibo-fnd-law-lcap:Duty" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-psch:Payee" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-psch:Payer" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-psch:Payment" -> "fibo-fnd-acc-cur:MoneyAmount" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-psch:PaymentEvent" -> "fibo-fbc-pas-pas:Transaction" [ label = "rdfs:subClassOf" ];
+
+}

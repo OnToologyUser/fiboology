@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-acc-cr:CurrencyIdentifier" ; /*classes style*/
+	"fibo-fnd-acc-cr:CurrencyIdentifier" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-acc-cr:CurrencyIdentifier" -> "fibo-fnd-arr-cd:CodeElement" [ label = "rdfs:subClassOf" ];
+
+}

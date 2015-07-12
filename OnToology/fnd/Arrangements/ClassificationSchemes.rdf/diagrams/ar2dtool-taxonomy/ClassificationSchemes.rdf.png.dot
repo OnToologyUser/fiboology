@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-arr-cls:IndustrySectorClassifier" "fibo-fnd-arr-cls:IndustrySectorClassificationScheme" "fibo-fnd-arr-cls:Classifier" "fibo-fnd-arr-cls:ClassificationScheme" ; /*classes style*/
+	"fibo-fnd-arr-cls:IndustrySectorClassifier" -> "fibo-fnd-arr-cls:Classifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-cls:IndustrySectorClassificationScheme" -> "fibo-fnd-arr-cls:ClassificationScheme" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-cls:Classifier" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-cls:ClassificationScheme" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+
+}

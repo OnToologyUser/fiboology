@@ -1,0 +1,39 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-oac-cpty:EntityControllingParty" "fibo-be-oac-cpty:DeJureControllingInterestParty" "fibo-be-oac-cpty:DegreeOfControl" "fibo-be-oac-cpty:ConstitutionalDeJureControl" "fibo-be-oac-cpty:DeFactoControllingInterestParty" "fibo-be-oac-cpty:Receiver" "fibo-be-oac-cpty:InvestmentBasedDeFactoControl" "fibo-be-oac-cpty:InfluenceBasedDeFactoControl" "fibo-be-oac-cpty:TotalOwner" "fibo-be-oac-cpty:ControllingAlliance" "fibo-be-oac-cpty:ControllingInterestOptionHolder" "fibo-be-oac-cpty:ControllingLeverageParty" "fibo-be-oac-cpty:DeJureControllingInterest" "fibo-be-oac-cpty:PartyHoldingSomeOptionForControl" "fibo-be-oac-cpty:JointControllingParty" "fibo-be-oac-cpty:CourtAppointedControl" "fibo-be-oac-cpty:InvestmentBasedDeFactoControllingInterestParty" "fibo-be-oac-cpty:ContractualControl" "fibo-be-oac-cpty:SignificantControllingInterestParty" "fibo-be-oac-cpty:WarrantHolder" "fibo-be-oac-cpty:EquityBasedDeJureControl" "fibo-be-oac-cpty:ConstitutionalContractualControl" "fibo-be-oac-cpty:LimitedDeFactoControl" "fibo-be-oac-cpty:ControlledParty" "fibo-be-oac-cpty:MajorityControllingParty" "fibo-be-oac-cpty:ContractualControllingParty" "fibo-be-oac-cpty:ControllingInterestParty" "fibo-be-oac-cpty:COCOBondholder" "fibo-be-oac-cpty:InfluenceBasedDeFactoControllingParty" "fibo-be-oac-cpty:SoleControllingParty" "fibo-be-oac-cpty:LimitedControllingParty" ; /*classes style*/
+	"fibo-be-oac-cpty:LimitedDeFactoControl" -> "fibo-fnd-oac-ctl:DeFactoControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ControllingInterestParty" -> "fibo-fnd-oac-ctl:ControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:WarrantHolder" -> "fibo-be-oac-cpty:PartyHoldingSomeOptionForControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:COCOBondholder" -> "fibo-be-oac-cpty:PartyHoldingSomeOptionForControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:InfluenceBasedDeFactoControllingParty" -> "fibo-be-oac-cpty:DeFactoControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ContractualControllingParty" -> "fibo-be-oac-cpty:DeJureControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ControllingInterestOptionHolder" -> "fibo-be-oac-cpty:PartyHoldingSomeOptionForControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ControllingAlliance" -> "fibo-fnd-org-fm:Group" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:SignificantControllingInterestParty" -> "fibo-be-oac-cpty:DeJureControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:DeFactoControllingInterestParty" -> "fibo-be-oac-cpty:ControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:DegreeOfControl" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:PartyHoldingSomeOptionForControl" -> "fibo-be-oac-cpty:ControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:InvestmentBasedDeFactoControllingInterestParty" -> "fibo-be-oac-opty:Investor" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:InvestmentBasedDeFactoControllingInterestParty" -> "fibo-be-oac-cpty:DeFactoControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:DeJureControllingInterest" -> "fibo-fnd-oac-ctl:DeJureControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:EquityBasedDeJureControl" -> "fibo-be-oac-cpty:ConstitutionalDeJureControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:Receiver" -> "fibo-be-oac-cpty:DeJureControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:JointControllingParty" -> "fibo-be-oac-cpty:EntityControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ControlledParty" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:LimitedControllingParty" -> "fibo-be-oac-cpty:EntityControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:SoleControllingParty" -> "fibo-be-oac-cpty:EntityControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:TotalOwner" -> "fibo-be-oac-opty:ConstitutionalOwner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:InvestmentBasedDeFactoControl" -> "fibo-fnd-oac-ctl:DeFactoControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:CourtAppointedControl" -> "fibo-fnd-oac-ctl:ControllingCapacity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:DeJureControllingInterestParty" -> "fibo-be-oac-cpty:ControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ConstitutionalDeJureControl" -> "fibo-be-oac-cpty:DeJureControllingInterest" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:EntityControllingParty" -> "fibo-fnd-oac-ctl:ControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ConstitutionalContractualControl" -> "fibo-be-oac-cpty:ContractualControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ConstitutionalContractualControl" -> "fibo-be-oac-cpty:ConstitutionalDeJureControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:InfluenceBasedDeFactoControl" -> "fibo-fnd-oac-ctl:DeFactoControl" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ControllingLeverageParty" -> "fibo-be-oac-cpty:DeFactoControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:MajorityControllingParty" -> "fibo-be-oac-cpty:SoleControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cpty:ContractualControl" -> "fibo-fnd-oac-ctl:ControllingCapacity" [ label = "rdfs:subClassOf" ];
+
+}

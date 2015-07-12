@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-plc-adr:VirtualAddress" "fibo-fnd-plc-adr:PostalAddress" "fibo-fnd-plc-adr:PostCodeArea" "fibo-fnd-plc-adr:AddressingScheme" "fibo-fnd-plc-adr:Address" ; /*classes style*/
+	"fibo-fnd-plc-adr:VirtualAddress" -> "fibo-fnd-plc-adr:Address" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-adr:Address" -> "fibo-fnd-arr-id:Index" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-adr:PostCodeArea" -> "fibo-fnd-plc-loc:PhysicalLocation" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-adr:PostalAddress" -> "fibo-fnd-plc-adr:Address" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-adr:AddressingScheme" -> "fibo-fnd-arr-id:IndexingScheme" [ label = "rdfs:subClassOf" ];
+
+}

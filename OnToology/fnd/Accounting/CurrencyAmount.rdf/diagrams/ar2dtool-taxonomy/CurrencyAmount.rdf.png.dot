@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-acc-cur:PercentageMonetaryAmount" "fibo-fnd-acc-cur:MonetaryMeasure" "fibo-fnd-acc-cur:MonetaryAmount" ; /*classes style*/
+	"fibo-fnd-acc-cur:PercentageMonetaryAmount" -> "fibo-fnd-acc-cur:MonetaryMeasure" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-acc-cur:MonetaryAmount" -> "fibo-fnd-acc-cur:MonetaryMeasure" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-acc-cur:MonetaryMeasure" -> "fibo-fnd-utl-alx:Measure" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,33 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-der-drc-swp:SwapConfirmation" "fibo-der-drc-swp:LegReceiver" "fibo-der-drc-swp:ReceiveLegPayer" "fibo-der-drc-swp:FixedPaymentLeg" "fibo-der-drc-swp:LegPayer" "fibo-der-drc-swp:SwapLegTermsSet" "fibo-der-drc-swp:SwapLegCommitment" "fibo-der-drc-swp:FloatingFundingLeg" "fibo-der-drc-swp:SwapExecutionFacility" "fibo-der-drc-swp:SwapDirectionalLeg" "fibo-der-drc-swp:SwapContract" "fibo-der-drc-swp:SwapLeg" "fibo-der-drc-swp:SwapParty" "fibo-der-drc-swp:SwapstreamEvent" "fibo-der-drc-swp:PaymentLeg" "fibo-der-drc-swp:StrikeLeg" "fibo-der-drc-swp:RealizedVariableCommitment" "fibo-der-drc-swp:SwapTransaction" "fibo-der-drc-swp:PaymentStreamPaymentSchedule" "fibo-der-drc-swp:SwapTermsSet" "fibo-der-drc-swp:Swapstream" "fibo-der-drc-swp:SwapHolder" "fibo-der-drc-swp:PaymentCommitment" "fibo-der-drc-swp:FixedPaymentStream" "fibo-der-drc-swp:LegStrikeCommitment" "fibo-der-drc-swp:PayingLeg" "fibo-der-drc-swp:ReceivingLeg" ; /*classes style*/
+	"fibo-der-drc-swp:PaymentCommitment" -> "fibo-fnd-agr-agr:Commitment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapLegCommitment" -> "fibo-fnd-agr-agr:Commitment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapConfirmation" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapConfirmation" -> "fibo-fbc-pas-pas:TransactionConfirmation" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:StrikeLeg" -> "fibo-der-drc-swp:SwapLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:PaymentStreamPaymentSchedule" -> "fibo-fbc-pas-psch:PaymentSchedule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapTransaction" -> "fibo-fbc-pas-pas:Transaction" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:FixedPaymentLeg" -> "fibo-der-drc-swp:PaymentLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapTermsSet" -> "fibo-der-drc-bsc:DerivativeTransactionTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:LegReceiver" -> "fibo-der-drc-swp:SwapParty" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapstreamEvent" -> "fibo-fbc-pas-psch:PaymentEvent" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:Swapstream" -> "fibo-der-drc-dct:CashflowTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:FloatingFundingLeg" -> "fibo-der-drc-swp:SwapLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapLegTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:PayingLeg" -> "fibo-der-drc-swp:SwapDirectionalLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapExecutionFacility" -> "fibo-fbc-fct-mkt:Exchange" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapParty" -> "fibo-der-drc-bsc:DerivativeContractParty" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:ReceiveLegPayer" -> "fibo-der-drc-swp:LegPayer" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:FixedPaymentStream" -> "fibo-der-drc-swp:Swapstream" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapDirectionalLeg" -> "fibo-der-drc-swp:SwapLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:PaymentLeg" -> "fibo-der-drc-swp:SwapLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:ReceivingLeg" -> "fibo-der-drc-swp:SwapLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:LegPayer" -> "fibo-der-drc-swp:SwapParty" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapContract" -> "fibo-fbc-fi-fi:DerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:LegStrikeCommitment" -> "fibo-der-drc-swp:SwapLegCommitment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:SwapHolder" -> "fibo-der-drc-bsc:DerivativeContractParty" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-swp:RealizedVariableCommitment" -> "fibo-der-drc-swp:PaymentCommitment" [ label = "rdfs:subClassOf" ];
+
+}

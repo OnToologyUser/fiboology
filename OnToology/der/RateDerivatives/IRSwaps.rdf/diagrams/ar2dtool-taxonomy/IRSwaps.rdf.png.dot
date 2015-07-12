@@ -1,0 +1,44 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-der-rtd-irswp:NotionalStepSchedule" "fibo-der-rtd-irswp:InterestRateStreamEvent" "fibo-der-rtd-irswp:FixedInterestRateStream" "fibo-der-rtd-irswp:ExplicitInterestAmountCalculationEvent" "fibo-der-rtd-irswp:CurrencySwapTransaction" "fibo-der-rtd-irswp:NotionalStepPeriodLength" "fibo-der-rtd-irswp:SwapstreamInterestPaymentCalculationRelativeDate" "fibo-der-rtd-irswp:NotionalStepPercentageAmount" "fibo-der-rtd-irswp:FloatingSwapstreamInterestRateReset" "fibo-der-rtd-irswp:BasisSwapContract" "fibo-der-rtd-irswp:VanillaInterestRateSwapContract" "fibo-der-rtd-irswp:InterestRateLegCashflowCommitment" "fibo-der-rtd-irswp:FixedRateInterestCalculation" "fibo-der-rtd-irswp:VanillaIRSwapTransaction" "fibo-der-rtd-irswp:FloatingInterestRateStream" "fibo-der-rtd-irswp:SwapstreamInterestPayment" "fibo-der-rtd-irswp:FloatingSwapstreamInterestRateFixing" "fibo-der-rtd-irswp:SwapstreamInterestFixingRelativeDate" "fibo-der-rtd-irswp:IRSwapTransaction" "fibo-der-rtd-irswp:InterestLeg" "fibo-der-rtd-irswp:SwapstreamResetRelativeDate" "fibo-der-rtd-irswp:CurrencySwapContract" "fibo-der-rtd-irswp:NotionalStepChangeEvent" "fibo-der-rtd-irswp:SwapstreamInterestCalculationSchedule" "fibo-der-rtd-irswp:NotionalStepAmount" "fibo-der-rtd-irswp:FloatingRateInterestCalculation" "fibo-der-rtd-irswp:FixedInterestLeg" "fibo-der-rtd-irswp:InterestRateSwapContract" "fibo-der-rtd-irswp:FloatingInterestLeg" "fibo-der-rtd-irswp:SwapstreamCalculationRelativeDate" "fibo-der-rtd-irswp:SwapstreamInterestCalculation" "fibo-der-rtd-irswp:InterestRateStream" "fibo-der-rtd-irswp:BasisSwapTransaction" "fibo-der-rtd-irswp:SwapstreamInterestPaymentSchedule" "fibo-der-rtd-irswp:FloatingRateFixingValue" "fibo-der-rtd-irswp:SwapstreamInterestRateResetSchedule" ; /*classes style*/
+	"fibo-der-rtd-irswp:FixedInterestLeg" -> "fibo-der-rtd-irswp:InterestLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestPayment" -> "fibo-fbc-pas-psch:Payment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:NotionalStepChangeEvent" -> "fibo-der-rtd-irswp:InterestRateStreamEvent" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FloatingRateFixingValue" -> "fibo-fnd-utl-alx:Variable" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FloatingInterestLeg" -> "fibo-der-rtd-irswp:InterestLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:InterestRateStream" -> "fibo-der-drc-swp:Swapstream" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FloatingSwapstreamInterestRateReset" -> "fibo-der-rtd-irswp:InterestRateStreamEvent" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:NotionalStepPeriodLength" -> "fibo-fnd-dt-fd:RecurrenceInterval" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:VanillaIRSwapTransaction" -> "fibo-der-rtd-irswp:IRSwapTransaction" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:VanillaInterestRateSwapContract" -> "fibo-der-rtd-irswp:InterestRateSwapContract" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamCalculationRelativeDate" -> "fibo-fnd-dt-fd:RelativeDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:InterestRateLegCashflowCommitment" -> "fibo-der-drc-swp:SwapLegCommitment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:CurrencySwapContract" -> "fibo-der-rtd-irswp:InterestRateSwapContract" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FixedRateInterestCalculation" -> "fibo-fnd-utl-alx:Expression" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FloatingInterestRateStream" -> "fibo-der-rtd-irswp:InterestRateStream" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamResetRelativeDate" -> "fibo-fnd-dt-fd:RelativeDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FloatingSwapstreamInterestRateFixing" -> "fibo-der-rtd-irswp:InterestRateStreamEvent" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestPaymentCalculationRelativeDate" -> "fibo-fnd-dt-fd:RelativeDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:InterestRateStreamEvent" -> "fibo-der-drc-swp:SwapstreamEvent" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:IRSwapTransaction" -> "fibo-der-drc-swp:SwapTransaction" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestCalculationSchedule" -> "fibo-der-drc-isda:ISDAFpMLParametricSchedule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:ExplicitInterestAmountCalculationEvent" -> "fibo-der-drc-isda:ScheduledCalculationPeriodEndEvent" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestRateResetSchedule" -> "fibo-der-drc-isda:ISDAFpMLParametricSchedule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:NotionalStepAmount" -> "fibo-fnd-acc-cur:MoneyAmount" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestPaymentSchedule" -> "fibo-der-drc-swp:PaymentStreamPaymentSchedule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestPaymentSchedule" -> "fibo-der-drc-isda:ISDAFpMLParametricSchedule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestFixingRelativeDate" -> "fibo-fnd-dt-fd:RelativeDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:NotionalStepPercentageAmount" -> "fibo-fnd-acc-cur:PercentageMonetaryAmount" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:InterestRateSwapContract" -> "fibo-der-rtd-rtd:InterestRateDerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:InterestRateSwapContract" -> "fibo-der-drc-swp:SwapContract" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:BasisSwapTransaction" -> "fibo-der-rtd-irswp:IRSwapTransaction" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:CurrencySwapTransaction" -> "fibo-der-rtd-irswp:IRSwapTransaction" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:BasisSwapContract" -> "fibo-der-rtd-irswp:InterestRateSwapContract" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:NotionalStepSchedule" -> "fibo-der-drc-isda:ISDAFpMLParametricSchedule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:InterestLeg" -> "fibo-der-drc-swp:SwapLeg" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FloatingRateInterestCalculation" -> "fibo-fnd-utl-alx:Expression" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:FixedInterestRateStream" -> "fibo-der-rtd-irswp:InterestRateStream" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-irswp:SwapstreamInterestCalculation" -> "fibo-fnd-utl-alx:Expression" [ label = "rdfs:subClassOf" ];
+
+}

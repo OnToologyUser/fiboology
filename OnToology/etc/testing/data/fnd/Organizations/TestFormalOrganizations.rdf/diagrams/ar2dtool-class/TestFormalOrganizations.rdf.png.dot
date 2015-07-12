@@ -1,0 +1,33 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-org-fm:FrankfurtBank" -> "fibo-tst-fnd-org-fm:GlobalbankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:FrankfurtBank" -> "fibo-tst-fnd-org-fm:FrankfurtBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Law/TestJurisdiction/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-gao-gl:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-org-org:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> ":" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-org-fm:GoodBank" -> "fibo-tst-fnd-org-fm:GoodBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:TrustedBank" -> "fibo-tst-fnd-org-fm:TrustedBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:CaliforniaBank" -> "fibo-tst-fnd-org-fm:CaliforniaBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:GlobalBank" -> "fibo-tst-fnd-org-fm:GlobalbankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:TraderInc" -> "fibo-tst-fnd-org-fm:TraderIncIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:SecuritiesInc" -> "fibo-tst-fnd-org-fm:SecuritiesIncIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:WallStreetBank" -> "fibo-tst-fnd-org-fm:WallStreetBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:AtlasBank" -> "fibo-tst-fnd-org-fm:AtlasBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:NewConceptInc" -> "fibo-tst-fnd-org-fm:NewConceptIncIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:ParisBank" -> "fibo-tst-fnd-org-fm:ParisBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:BigBank" -> "fibo-tst-fnd-org-fm:BigBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:NewYorkBank" -> "fibo-tst-fnd-org-fm:NewYorkBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+	"fibo-tst-fnd-org-fm:LondonBank" -> "fibo-tst-fnd-org-fm:LondonBankIdentifier" [ label = "fibo-fnd-rel-rel:isIdentifiedBy" ];
+
+}

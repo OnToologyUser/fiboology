@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-der-drc-dct:CashflowFormula" ; /*classes style*/
+	"NULL" -> "fibo-der-drc-dct:CashflowFormula" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-utl-alx:hasFormula" [ label = "owl:onProperty" ];
+	"fibo-der-drc-dct:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-der-drc-dct:" -> "fibo-fnd-utl-alx:" [ label = "owl:imports" ];
+	"fibo-der-drc-dct:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-der-drc-dct:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-der-drc-dct:" -> "http://spec.edmcouncil.org/fibo/DER/20160201/DerivativesContracts/DerivativesCashFlowTerms/" [ label = "owl:versionIRI" ];
+
+}

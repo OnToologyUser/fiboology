@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-fct-pub:PublishingHouse" "fibo-be-fct-pub:Publisher" "fibo-be-fct-pub:Publication" ; /*classes style*/
+	"fibo-be-fct-pub:PublishingHouse" -> "fibo-be-fct-fct:FunctionalBusinessEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-fct-pub:Publisher" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-be-fct-pub:Publication" -> "fibo-fnd-arr-doc:Document" [ label = "rdfs:subClassOf" ];
+
+}

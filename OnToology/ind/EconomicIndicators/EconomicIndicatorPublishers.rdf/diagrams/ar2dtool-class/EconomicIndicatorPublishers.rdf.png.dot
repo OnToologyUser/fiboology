@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-ind-ei-pub:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/EconomicIndicators/EconomicIndicatorPublishers/" [ label = "owl:versionIRI" ];
+	"fibo-ind-ei-pub:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-ind-ei-pub:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-ind-ei-pub:" -> "fibo-ind-ei-ei:" [ label = "owl:imports" ];
+	"fibo-ind-ei-pub:" -> "fibo-ind-ind-ind:" [ label = "owl:imports" ];
+	"fibo-ind-ei-pub:" -> "fibo-be-fct-pub:" [ label = "owl:imports" ];
+	"fibo-ind-ei-pub:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ei-ei:EconomicIndicator" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-fct-pub:publishes" [ label = "owl:onProperty" ];
+
+}

@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "sm:TypeOfContent" "sm:SpecificationFamily" "sm:Specification" "sm:Organization" "sm:MediaType" "sm:BibliographicCitation" "skos:OrderedCollection" "skos:Collection" "skos:Concept" ; /*classes style*/
+	"sm:TypeOfContent" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"sm:Organization" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"sm:SpecificationFamily" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"sm:MediaType" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"sm:Specification" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"skos:OrderedCollection" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
+	"sm:BibliographicCitation" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+
+}

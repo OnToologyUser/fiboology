@@ -1,0 +1,25 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-agr-ctr:ContractDocument" "fibo-fnd-agr-ctr:ContractThirdParty" "fibo-fnd-agr-ctr:VerbalContract" "fibo-fnd-agr-ctr:ContractualElement" "fibo-fnd-agr-ctr:UnilateralContract" "fibo-fnd-agr-ctr:MutualContractualAgreement" "fibo-fnd-agr-ctr:ContractCounterparty" "fibo-fnd-agr-ctr:ContractOriginator" "fibo-fnd-agr-ctr:PromissoryNote" "fibo-fnd-agr-ctr:ContractTermsSet" "fibo-fnd-agr-ctr:ConditionsPrecedent" "fibo-fnd-agr-ctr:Contract" "fibo-fnd-agr-ctr:ContractParty" "fibo-fnd-agr-ctr:ContractPrincipal" "fibo-fnd-agr-ctr:ContractualDefinition" "fibo-fnd-agr-ctr:WrittenContract" "fibo-fnd-agr-ctr:NonBindingTermsSet" "fibo-fnd-agr-ctr:TransferableContractHolder" ; /*classes style*/
+	"fibo-fnd-agr-ctr:ContractCounterparty" -> "fibo-fnd-agr-ctr:ContractParty" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ContractOriginator" -> "fibo-fnd-agr-ctr:ContractPrincipal" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ContractParty" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ContractualDefinition" -> "fibo-fnd-agr-ctr:ContractualElement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:MutualContractualAgreement" -> "fibo-fnd-agr-ctr:Contract" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:MutualContractualAgreement" -> "fibo-fnd-agr-agr:MutualAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:VerbalContract" -> "fibo-fnd-agr-ctr:Contract" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:Contract" -> "fibo-fnd-agr-agr:Agreement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:PromissoryNote" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:PromissoryNote" -> "fibo-fnd-agr-ctr:UnilateralContract" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:UnilateralContract" -> "fibo-fnd-agr-ctr:Contract" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:NonBindingTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:TransferableContractHolder" -> "fibo-fnd-agr-ctr:ContractCounterparty" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ContractTermsSet" -> "fibo-fnd-agr-ctr:ContractualElement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ContractThirdParty" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ContractPrincipal" -> "fibo-fnd-agr-ctr:ContractParty" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:WrittenContract" -> "fibo-fnd-agr-ctr:Contract" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ContractDocument" -> "fibo-fnd-arr-doc:LegalDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-ctr:ConditionsPrecedent" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+
+}

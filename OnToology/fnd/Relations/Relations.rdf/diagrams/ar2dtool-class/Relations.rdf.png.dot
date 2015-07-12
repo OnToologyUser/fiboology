@@ -1,0 +1,57 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-rel-rel:Reference" ; /*classes style*/
+	"fibo-fnd-rel-rel:hasDefinition" -> "fibo-fnd-rel-rel:hasRepresentation" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:denotes" -> "fibo-fnd-rel-rel:represents" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:appliesTo" -> "fibo-fnd-rel-rel:refersTo" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasLegalName" -> "fibo-fnd-rel-rel:hasFormalName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:appoints" -> "fibo-fnd-rel-rel:designates" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasAlias" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fnd-rel-rel:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Relations/Relations/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-rel-rel:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fnd-rel-rel:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-rel-rel:characterizes" -> "fibo-fnd-rel-rel:refersTo" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasDenotation" -> "fibo-fnd-rel-rel:hasRepresentation" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:represents" -> "fibo-fnd-rel-rel:refersTo" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:wasFormerlyKnownAs" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasIdentity" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasContext" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasCommonName" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:defines" -> "fibo-fnd-rel-rel:represents" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasFormalName" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:isMandatedBy" -> "fibo-fnd-rel-rel:isConferredBy" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:hasRepresentation" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-rel-rel:classifies" -> "fibo-fnd-rel-rel:refersTo" [ label = "rdfs:subPropertyOf" ];
+	"owl:Thing" -> "xsd:dateTime" [ label = "fibo-fnd-rel-rel:hasAcquisitionDate" ];
+	"owl:Thing" -> "fibo-fnd-rel-rel:Reference" [ label = "fibo-fnd-rel-rel:hasRepresentation" ];
+	"fibo-fnd-rel-rel:Reference" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:characterizes" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-rel-rel:hasFormalName" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:designates" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:uses" ];
+	"fibo-fnd-rel-rel:Reference" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:defines" ];
+	"fibo-fnd-rel-rel:Reference" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:appliesTo" ];
+	"fibo-fnd-rel-rel:Reference" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:classifies" ];
+	"fibo-fnd-rel-rel:Reference" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:refersTo" ];
+	"owl:Thing" -> "fibo-fnd-rel-rel:Reference" [ label = "fibo-fnd-rel-rel:isClassifiedBy" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-rel-rel:hasUniqueIdentifier" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-rel-rel:hasCommonName" ];
+	"owl:Thing" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-rel-rel:isUsedBy" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-rel-rel:isAppointedBy" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-rel-rel:hasLegalName" ];
+	"owl:Thing" -> "fibo-fnd-rel-rel:Reference" [ label = "fibo-fnd-rel-rel:hasDefinition" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:hasDesignation" ];
+	"owl:Thing" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-rel-rel:isIssuedBy" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-rel-rel:hasAlias" ];
+	"fibo-fnd-rel-rel:Reference" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:represents" ];
+	"owl:Thing" -> "xsd:dateTime" [ label = "fibo-fnd-rel-rel:hasDispositionDate" ];
+	"owl:Thing" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-rel-rel:isHeldBy" ];
+	"owl:Thing" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-rel-rel:isConferredOn" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "fibo-fnd-rel-rel:appoints" ];
+	"fibo-fnd-rel-rel:Reference" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:denotes" ];
+	"fibo-fnd-aap-agt:AutonomousAgent" -> "owl:Thing" [ label = "fibo-fnd-rel-rel:holds" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-rel-rel:wasFormerlyKnownAs" ];
+	"owl:Thing" -> "fibo-fnd-rel-rel:Reference" [ label = "fibo-fnd-rel-rel:hasDenotation" ];
+
+}

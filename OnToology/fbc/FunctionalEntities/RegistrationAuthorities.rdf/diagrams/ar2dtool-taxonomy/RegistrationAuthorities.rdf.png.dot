@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-fct-ra:RegistrationScheme" "fibo-fbc-fct-ra:Registry" "fibo-fbc-fct-ra:RegistrationCapacity" "fibo-fbc-fct-ra:RegistryScheme" "fibo-fbc-fct-ra:Registrar" "fibo-fbc-fct-ra:RegistrationAuthority" "fibo-fbc-fct-ra:RegistryEntry" "fibo-fbc-fct-ra:RegistrationService" "fibo-fbc-fct-ra:RegistryIdentifier" ; /*classes style*/
+	"fibo-fbc-fct-ra:RegistryScheme" -> "fibo-fnd-arr-id:IndexingScheme" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:RegistrationAuthority" -> "fibo-fbc-pas-pas:ServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:RegistrationService" -> "fibo-fbc-pas-pas:Service" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:Registry" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:RegistrationScheme" -> "fibo-fnd-arr-id:IdentificationScheme" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:RegistryIdentifier" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:Registrar" -> "fibo-be-oac-exec:ResponsibleParty" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:RegistryEntry" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-ra:RegistrationCapacity" -> "fibo-fnd-law-lcap:LegalCapacity" [ label = "rdfs:subClassOf" ];
+
+}

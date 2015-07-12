@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fnd-law-mod:" -> "http://spec.edmcouncil.org/fibo/FND/20140801/Law/AboutLaw/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-law-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-fnd-law-mod:" -> "sm:" [ label = "owl:imports" ];
+
+}

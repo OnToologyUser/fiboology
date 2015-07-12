@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-be-ptr-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-ptr-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-be-ptr-mod:" -> "fibo-be:" [ label = "owl:imports" ];
+	"fibo-be-ptr-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-ptr-mod:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/Partnerships/AboutPartnerships/" [ label = "owl:versionIRI" ];
+	"fibo-be-ptr-mod:PartnershipsModule" -> "fibo-be:BESpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+
+}

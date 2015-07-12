@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-fbc-pas-mod:FBCProductsAndServicesModule" -> "fibo-fbc:FBCSpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+	"fibo-fbc-pas-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-fbc-pas-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-mod:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/ProductsAndServices/AboutProductsAndServices/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-pas-mod:" -> "fibo-fbc:" [ label = "owl:imports" ];
+
+}

@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-agr-agr:MutualCommitment" "fibo-fnd-agr-agr:Commitment" ; /*classes style*/
+	"fibo-fnd-agr-agr:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Agreements/Agreements/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-agr-agr:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-agr-agr:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-agr-agr:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-pty-pty:hasPartyInRole" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-agr-agr:MutualCommitment" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-agr-agr:Commitment" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:confers" [ label = "owl:onProperty" ];
+
+}

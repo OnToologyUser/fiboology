@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-be-tr-mod:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/Trusts/AboutTrusts/" [ label = "owl:versionIRI" ];
+	"fibo-be-tr-mod:" -> "fibo-be:" [ label = "owl:imports" ];
+	"fibo-be-tr-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-tr-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-be-tr-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-tr-mod:TrustsModule" -> "fibo-be:BESpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+
+}

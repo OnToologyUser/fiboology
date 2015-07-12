@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-der-drc-otci:OTCTransaction" "fibo-der-drc-otci:OTCInstrument" "fibo-der-drc-otci:DeliverCash" "fibo-der-drc-bsc:OTCTransactionParty" ; /*classes style*/
+	"fibo-der-drc-otci:hasDeliveryAmount" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-der-drc-otci:" -> "http://spec.edmcouncil.org/fibo/DER/20160201/DerivativesContracts/OTCInstruments/" [ label = "owl:versionIRI" ];
+	"fibo-der-drc-otci:" -> "fibo-der-drc-bsc:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fbc-pas-psch:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fbc-fi-fi:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-der-drc-otci:hasDeliveryDate" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-pty-pty:isAPartyTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-agr-ctr:hasContractParty" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-otci:DeliverCash" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:governs" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:appliesTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-bsc:OTCTransactionParty" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-le-lp:LegalPerson" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-otci:OTCTransaction" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:refersTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-otci:OTCInstrument" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-drc-otci:OTCInstrument" [ label = "owl:someValuesFrom" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-der-drc-otci:hasDeliveryDate" ];
+	"owl:Thing" -> "xsd:string" [ label = "fibo-der-drc-otci:hasPaymentType" ];
+	"owl:Thing" -> "fibo-fnd-acc-cur:MoneyAmount" [ label = "fibo-der-drc-otci:hasDeliveryAmount" ];
+
+}

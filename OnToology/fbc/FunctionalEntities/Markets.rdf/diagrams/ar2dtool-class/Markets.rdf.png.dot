@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fbc-fct-mkt:MarketIdentifier" "fibo-fbc-fct-mkt:Exchange" ; /*classes style*/
+	"NULL" -> "fibo-fnd-aap-agt:identifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fct-mkt:Exchange" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fct-mkt:MarketIdentifier" [ label = "owl:onClass" ];
+	"fibo-fbc-fct-mkt:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/FunctionalEntities/Markets/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-fct-mkt:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-mkt:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-mkt:" -> "fibo-fnd-plc-fac:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-mkt:" -> "fibo-fnd-arr-id:" [ label = "owl:imports" ];
+
+}

@@ -1,0 +1,56 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-sec-sec-lst:SecuritiesExchange" "fibo-sec-sec-lst:ListedSecurity" "fibo-sec-sec-lst:ExchangeIdentifier" "fibo-sec-sec-lst:ExchangeTradedSecurity" "fibo-sec-sec-lst:SecuritiesTradingFacility" "fibo-sec-sec-lst:ExchangeAndListingService" "fibo-sec-sec-lst:SecurityListing" ; /*classes style*/
+	"fibo-sec-sec-lst:hasListingDate" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"fibo-sec-sec-lst:isIssuedIn" -> "fibo-sec-sec-lst:isTradedOn" [ label = "rdfs:subPropertyOf" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-plc-vrt:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fbc-fi-fi:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fbc-fct-ra:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fbc-fct-mkt:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fnd-plc-fac:" [ label = "owl:imports" ];
+	"fibo-sec-sec-lst:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-rel-rel:provides" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:ExchangeIdentifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-sec-sec-lst:SecuritiesTradingFacility" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-sec-sec-lst:SecuritiesExchange" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-sec-sec-lst:hasListingDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fct-ra:hasRegistrationDate" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fct-ra:RegistrationAuthority" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-fi-fi:mayBeTradedIn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:SecurityListing" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fbc-pas-pas:provisions" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:lists" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:SecurityListing" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-sec-sec-lst:ExchangeAndListingService" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-sec-sec-lst:ListedSecurity" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-acc-cur:Currency" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-sec-sec-lst:isListedVia" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:SecuritiesExchange" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-fct-mkt:Market" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-sec-sec-lst:SecuritiesTradingFacility" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-fct-ra:isRegisteredBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-pas:isProvisionedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:isTradedOn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:isIssuedIn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:hasListingCurrency" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isProvidedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-lst:ExchangeAndListingService" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-dt-fd:Date" [ label = "owl:onClass" ];
+	"fibo-sec-sec-lst:ListedSecurity" -> "fibo-fnd-acc-cur:Currency" [ label = "fibo-sec-sec-lst:hasListingCurrency" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-sec-sec-lst:hasListingDate" ];
+	"fibo-sec-sec-lst:ListedSecurity" -> "fibo-sec-sec-lst:SecurityListing" [ label = "fibo-sec-sec-lst:isListedVia" ];
+	"fibo-sec-sec-lst:ExchangeTradedSecurity" -> "fibo-sec-sec-lst:SecuritiesExchange" [ label = "fibo-sec-sec-lst:isIssuedIn" ];
+	"fibo-sec-sec-lst:ListedSecurity" -> "fibo-sec-sec-lst:SecuritiesTradingFacility" [ label = "fibo-sec-sec-lst:isTradedOn" ];
+	"fibo-sec-sec-lst:SecurityListing" -> "fibo-sec-sec-lst:ListedSecurity" [ label = "fibo-sec-sec-lst:lists" ];
+
+}

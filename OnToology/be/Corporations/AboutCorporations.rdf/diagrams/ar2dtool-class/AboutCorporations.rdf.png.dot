@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-be-corp-mod:CorporationsModule" -> "fibo-be:BESpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+	"fibo-be-corp-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+	"fibo-be-corp-mod:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/Corporations/AboutCorporations/" [ label = "owl:versionIRI" ];
+	"fibo-be-corp-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-corp-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-corp-mod:" -> "fibo-be:" [ label = "owl:imports" ];
+
+}

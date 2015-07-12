@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-der-drc-bsc:SettlementCommitment" "fibo-der-drc-bsc:ObservableValue" "fibo-der-drc-bsc:DerivativeContractParty" "fibo-der-drc-bsc:DeliveryCommitment" "fibo-der-drc-bsc:DerivativeTransactionTermsSet" "fibo-der-drc-bsc:SettlementTermsSet" "fibo-der-drc-bsc:DerivativeUnderlying" "fibo-der-drc-bsc:DeliveryTermsSet" "fibo-der-drc-bsc:NonPhysicalUnderlying" ; /*classes style*/
+	"fibo-der-drc-bsc:DeliveryTermsSet" -> "fibo-der-drc-bsc:DerivativeTransactionTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:DeliveryCommitment" -> "fibo-fnd-agr-agr:Commitment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:DerivativeContractParty" -> "fibo-fnd-agr-ctr:ContractParty" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:DerivativeUnderlying" -> "fibo-fnd-pty-rl:ThingInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:ObservableValue" -> "fibo-fnd-arr-qt:QuantityValue" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:NonPhysicalUnderlying" -> "fibo-der-drc-bsc:DerivativeUnderlying" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:SettlementCommitment" -> "fibo-fnd-agr-agr:Commitment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:SettlementTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-bsc:DerivativeTransactionTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+
+}

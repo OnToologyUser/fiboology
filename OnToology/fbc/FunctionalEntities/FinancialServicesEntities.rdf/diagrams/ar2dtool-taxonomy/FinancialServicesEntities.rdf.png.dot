@@ -1,0 +1,43 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-fct-fse:CommercialBank" "fibo-fbc-fct-fse:FinancialInstitution" "fibo-fbc-fct-fse:ClearingHouse" "fibo-fbc-fct-fse:FinancialService" "fibo-fbc-fct-fse:SavingsBank" "fibo-fbc-fct-fse:InsuranceCompany" "fibo-fbc-fct-fse:FinancialProduct" "fibo-fbc-fct-fse:BankForInternationalSettlements" "fibo-fbc-fct-fse:UnitInvestmentTrust" "fibo-fbc-fct-fse:FinancialIntermediationService" "fibo-fbc-fct-fse:CommercialFinanceCompany" "fibo-fbc-fct-fse:SalesFinanceCompany" "fibo-fbc-fct-fse:FinancialServiceProvider" "fibo-fbc-fct-fse:FaceAmountCertificateCompany" "fibo-fbc-fct-fse:ClearingBank" "fibo-fbc-fct-fse:BankHoldingCompany" "fibo-fbc-fct-fse:ConsumerFinanceCompany" "fibo-fbc-fct-fse:PrincipalUnderwriter" "fibo-fbc-fct-fse:Bank" "fibo-fbc-fct-fse:InvestmentBank" "fibo-fbc-fct-fse:FinancialHoldingCompany" "fibo-fbc-fct-fse:CommoditiesBroker" "fibo-fbc-fct-fse:Underwriter" "fibo-fbc-fct-fse:ManagementCompany" "fibo-fbc-fct-fse:CreditUnion" "fibo-fbc-fct-fse:SavingsAssociation" "fibo-fbc-fct-fse:InvestmentCompany" "fibo-fbc-fct-fse:BrokerageFirm" "-26405b94:14e849521a4:-7ff6" "fibo-fbc-fct-fse:NonDepositoryInstitution" "fibo-fbc-fct-fse:DepositoryInstitution" "fibo-fbc-fct-fse:FinanceCompany" "fibo-fbc-fct-fse:ClearingCorporation" "fibo-fbc-fct-fse:CentralBank" "fibo-fbc-fct-fse:ClearingService" ; /*classes style*/
+	"fibo-fbc-fct-fse:NonDepositoryInstitution" -> "fibo-fbc-fct-fse:FinancialInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:CommercialFinanceCompany" -> "fibo-fbc-fct-fse:FinanceCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:InvestmentCompany" -> "fibo-fbc-fct-fse:NonDepositoryInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:Bank" -> "fibo-fbc-fct-fse:DepositoryInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:Underwriter" -> "fibo-fbc-fct-fse:FinancialServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinancialIntermediationService" -> "fibo-fbc-fct-fse:FinancialService" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:InvestmentBank" -> "-26405b94:14e849521a4:-7ff6" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:InvestmentBank" -> "fibo-fbc-fct-fse:FinancialInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:BankHoldingCompany" -> "fibo-fbc-fct-fse:FinancialServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinancialProduct" -> "fibo-fbc-pas-pas:Product" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:CommoditiesBroker" -> "fibo-fbc-fct-fse:NonDepositoryInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:CreditUnion" -> "fibo-fbc-fct-fse:SavingsAssociation" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinanceCompany" -> "fibo-fbc-fct-fse:NonDepositoryInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:BankForInternationalSettlements" -> "fibo-fbc-fct-fse:Bank" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:ManagementCompany" -> "fibo-fbc-fct-fse:InvestmentCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:UnitInvestmentTrust" -> "fibo-fbc-fct-fse:InvestmentCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinancialService" -> "fibo-fbc-pas-pas:Service" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinancialHoldingCompany" -> "fibo-fbc-fct-fse:BankHoldingCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:ClearingHouse" -> "fibo-fbc-fct-fse:FinancialServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:ClearingService" -> "fibo-fbc-fct-fse:FinancialService" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:CentralBank" -> "fibo-fbc-fct-fse:Bank" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:DepositoryInstitution" -> "fibo-fbc-fct-fse:FinancialInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:PrincipalUnderwriter" -> "fibo-fbc-fct-fse:Underwriter" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:ClearingCorporation" -> "fibo-fbc-fct-fse:ClearingHouse" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:SavingsBank" -> "fibo-fbc-fct-fse:Bank" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:ClearingBank" -> "fibo-fbc-fct-fse:CommercialBank" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:ClearingBank" -> "fibo-fbc-fct-fse:ClearingHouse" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinancialServiceProvider" -> "fibo-fbc-pas-pas:ServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinancialServiceProvider" -> "fibo-be-fct-fct:Business" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:BrokerageFirm" -> "fibo-fbc-fct-fse:NonDepositoryInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:ConsumerFinanceCompany" -> "fibo-fbc-fct-fse:FinanceCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:CommercialBank" -> "fibo-fbc-fct-fse:Bank" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:SalesFinanceCompany" -> "fibo-fbc-fct-fse:FinanceCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FinancialInstitution" -> "fibo-fbc-fct-fse:FinancialServiceProvider" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:SavingsAssociation" -> "fibo-fbc-fct-fse:DepositoryInstitution" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:FaceAmountCertificateCompany" -> "fibo-fbc-fct-fse:InvestmentCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-fse:InsuranceCompany" -> "fibo-fbc-fct-fse:NonDepositoryInstitution" [ label = "rdfs:subClassOf" ];
+
+}

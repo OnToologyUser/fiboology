@@ -1,0 +1,27 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "2d45ef39:14e848b2a1c:-7ff6" "fibo-be-oac-cown:Shareholder" ; /*classes style*/
+	"NULL" -> "fibo-be-oac-opty:isEquityHeldBy" [ label = "owl:onProperty" ];
+	"NULL" -> "2d45ef39:14e848b2a1c:-7ffa" [ label = "owl:unionOf" ];
+	"NULL" -> "2d45ef39:14e848b2a1c:-7ff6" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-oac-cown:Shareholder" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "2d45ef39:14e848b2a1c:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-be-oac-opty:holdsAnInterestIn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-oac-opty:holdsEquity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-cb:GeneralStockCorporation" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-acc-aeq:StockholdersEquity" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"fibo-be-oac-cown:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/OwnershipAndControl/CorporateOwnership/" [ label = "owl:versionIRI" ];
+	"fibo-be-oac-cown:" -> "fibo-be-corp-corp:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-be-le-cb:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-be-oac-opty:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-fnd-acc-aeq:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-be-oac-cown:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+
+}

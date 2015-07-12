@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-le-cb:GeneralStockCorporation" "fibo-be-corp-corp:RegistrationIdentifier" "fibo-be-corp-corp:PubliclyHeldCompany" "fibo-be-corp-corp:PrivatelyHeldCompany" "fibo-be-corp-corp:JointStockCompany" "fibo-be-corp-corp:BoardAgreement" ; /*classes style*/
+	"fibo-be-corp-corp:RegistrationIdentifier" -> "fibo-be-le-fbo:OrganizationIdentifier" [ label = "rdfs:subClassOf" ];
+	"fibo-be-corp-corp:JointStockCompany" -> "fibo-be-le-cb:GeneralStockCorporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-corp-corp:BoardAgreement" -> "fibo-be-le-fbo:OrganizationCoveringAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-be-corp-corp:PubliclyHeldCompany" -> "fibo-be-le-cb:GeneralStockCorporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-corp-corp:PrivatelyHeldCompany" -> "fibo-be-le-cb:GeneralStockCorporation" [ label = "rdfs:subClassOf" ];
+
+}

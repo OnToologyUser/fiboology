@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-agr-agr:UnilateralCommitment" "fibo-fnd-agr-agr:MutualCommitment" "fibo-fnd-agr-agr:MutualAgreement" "fibo-fnd-agr-agr:IndividualUnilateralCommitment" "fibo-fnd-agr-agr:CommitmentAtLarge" "fibo-fnd-agr-agr:Commitment" "fibo-fnd-agr-agr:Agreement" ; /*classes style*/
+	"fibo-fnd-agr-agr:MutualCommitment" -> "fibo-fnd-agr-agr:Commitment" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-agr:MutualAgreement" -> "fibo-fnd-agr-agr:Agreement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-agr:UnilateralCommitment" -> "fibo-fnd-agr-agr:Commitment" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-agr:IndividualUnilateralCommitment" -> "fibo-fnd-agr-agr:UnilateralCommitment" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-agr-agr:CommitmentAtLarge" -> "fibo-fnd-agr-agr:UnilateralCommitment" [ label = "rdfs:subClassOf" ];
+
+}

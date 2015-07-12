@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-org-lg:LegitimateOrganization" "fibo-fnd-org-lg:IllegalOrganization" "fibo-fnd-org-lg:IllegalCartel" "fibo-fnd-org-lg:CrimeSyndicate" "fibo-fnd-org-lg:Club" ; /*classes style*/
+	"fibo-fnd-org-lg:IllegalOrganization" -> "fibo-fnd-org-org:Organization" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-org-lg:Club" -> "fibo-fnd-org-lg:LegitimateOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-org-lg:LegitimateOrganization" -> "fibo-fnd-org-org:Organization" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-org-lg:CrimeSyndicate" -> "fibo-fnd-org-lg:IllegalOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-org-lg:IllegalCartel" -> "fibo-fnd-org-lg:IllegalOrganization" [ label = "rdfs:subClassOf" ];
+
+}

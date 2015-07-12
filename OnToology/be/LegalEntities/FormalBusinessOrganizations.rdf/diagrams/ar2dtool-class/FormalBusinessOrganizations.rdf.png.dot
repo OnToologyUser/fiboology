@@ -1,0 +1,47 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-le-fbo:FormallyConstitutedOrganization" "fibo-be-le-fbo:OrganizationalSubUnit" "fibo-be-le-fbo:OrganizationIdentifier" "fibo-be-le-fbo:RegisteredAddress" "fibo-be-le-fbo:OrganizationCoveringAgreement" "fibo-be-le-fbo:OrganizationIndustrySectorClassification" ; /*classes style*/
+	"fibo-be-le-fbo:hasInternalEntity" -> "fibo-be-le-fbo:hasSubUnit" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-fbo:isSubUnitOf" -> "fibo-fnd-rel-rel:isPartOf" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-arr-id:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-acc-aeq:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/LegalEntities/FormalBusinessOrganizations/" [ label = "owl:versionIRI" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-be-le-fbo:hasRegisteredAddress" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-fbo:hasEquity" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-fbo:hasOperatingAddress" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-fbo:hasPrimaryAddress" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-fbo:hasSubUnit" -> "fibo-fnd-rel-rel:hasPart" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-fbo:hasSignatory" -> "fibo-fnd-pty-pty:hasPartyInRole" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-be-le-fbo:OrganizationIndustrySectorClassification" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-le-fbo:OrganizationIdentifier" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-be-le-fbo:OrganizationIdentifier" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:isClassifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:classifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isGovernedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isMemberOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:isIdentifiedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-be-le-fbo:OrganizationCoveringAgreement" [ label = "owl:onClass" ];
+	"fibo-be-le-fbo:OrganizationalSubUnit" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "fibo-be-le-fbo:isSubUnitOf" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-be-le-fbo:RegisteredAddress" [ label = "fibo-be-le-fbo:hasRegisteredAddress" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-fnd-plc-adr:Address" [ label = "fibo-be-le-fbo:hasPrimaryAddress" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-be-le-fbo:OrganizationalSubUnit" [ label = "fibo-be-le-fbo:hasSubUnit" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-fnd-acc-aeq:StockholdersEquity" [ label = "fibo-be-le-fbo:hasEquity" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-be-le-lp:Signatory" [ label = "fibo-be-le-fbo:hasSignatory" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-be-le-fbo:OrganizationalSubUnit" [ label = "fibo-be-le-fbo:hasInternalEntity" ];
+	"fibo-be-le-fbo:FormallyConstitutedOrganization" -> "fibo-fnd-plc-adr:Address" [ label = "fibo-be-le-fbo:hasOperatingAddress" ];
+
+}

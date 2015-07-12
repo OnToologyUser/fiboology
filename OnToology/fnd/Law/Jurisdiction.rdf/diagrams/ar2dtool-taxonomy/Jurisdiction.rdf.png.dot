@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-law-jur:StatuteLaw" "fibo-fnd-law-jur:LegalSystem" "fibo-fnd-law-jur:Jurisdiction" "fibo-fnd-law-jur:CommonLawSystem" "fibo-fnd-law-jur:CommonLawJurisdiction" "fibo-fnd-law-jur:CivilLawSystem" "fibo-fnd-law-jur:CivilLawJurisdiction" ; /*classes style*/
+	"fibo-fnd-law-jur:CivilLawJurisdiction" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-jur:CivilLawSystem" -> "fibo-fnd-law-jur:LegalSystem" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-jur:CommonLawSystem" -> "fibo-fnd-law-jur:LegalSystem" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-jur:CommonLawJurisdiction" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-law-jur:StatuteLaw" -> "fibo-fnd-law-cor:Law" [ label = "rdfs:subClassOf" ];
+
+}

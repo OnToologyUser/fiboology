@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-sec-sec-iss:SecurityUnderwriter" "fibo-sec-sec-iss:Prospectus" "fibo-sec-sec-iss:PrivatePlacementMemorandum" "fibo-sec-sec-iss:OfferingStatement" "fibo-sec-sec-iss:OfferingDocument" "fibo-sec-sec-iss:AgentForServiceOfProcess" ; /*classes style*/
+	"fibo-sec-sec-iss:OfferingDocument" -> "fibo-be-fct-pub:Publication" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-iss:OfferingDocument" -> "fibo-fnd-arr-doc:LegalDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-iss:PrivatePlacementMemorandum" -> "fibo-sec-sec-iss:OfferingDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-iss:AgentForServiceOfProcess" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-iss:Prospectus" -> "fibo-sec-sec-iss:OfferingDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-iss:SecurityUnderwriter" -> "fibo-fnd-agr-ctr:ContractThirdParty" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-iss:SecurityUnderwriter" -> "fibo-fbc-fct-fse:Underwriter" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-iss:OfferingStatement" -> "fibo-sec-sec-iss:OfferingDocument" [ label = "rdfs:subClassOf" ];
+
+}

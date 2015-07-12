@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-fct-mkt:MarketIdentifier" "fibo-fbc-fct-mkt:Market" "fibo-fbc-fct-mkt:Exchange" ; /*classes style*/
+	"fibo-fbc-fct-mkt:Exchange" -> "fibo-fbc-fct-mkt:Market" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-mkt:Market" -> "fibo-fnd-plc-fac:Venue" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fct-mkt:MarketIdentifier" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+
+}

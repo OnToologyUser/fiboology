@@ -1,0 +1,20 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-fct-pub:Publisher" "fibo-be-fct-pub:Publication" ; /*classes style*/
+	"NULL" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "owl:onClass" ];
+	"fibo-be-fct-pub:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-be-fct-pub:" -> "fibo-fnd-arr-doc:" [ label = "owl:imports" ];
+	"fibo-be-fct-pub:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-fct-pub:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-be-fct-pub:" -> "http://spec.edmcouncil.org/fibo/BE/20150801/FunctionalEntities/Publishers/" [ label = "owl:versionIRI" ];
+	"fibo-be-fct-pub:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-fct-pub:" -> "fibo-be-fct-fct:" [ label = "owl:imports" ];
+	"fibo-be-fct-pub:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-be-fct-pub:Publication" -> "fibo-be-fct-pub:Publisher" [ label = "fibo-be-fct-pub:hasPublisher" ];
+	"fibo-be-fct-pub:Publication" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "fibo-be-fct-pub:isPublishedBy" ];
+	"fibo-be-fct-pub:Publisher" -> "fibo-be-fct-pub:Publication" [ label = "fibo-be-fct-pub:publishes" ];
+
+}

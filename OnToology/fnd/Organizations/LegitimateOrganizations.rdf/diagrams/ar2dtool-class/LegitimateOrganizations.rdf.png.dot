@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-org-lg:LegitimateOrganization" "fibo-fnd-org-lg:IllegalOrganization" ; /*classes style*/
+	"fibo-fnd-org-lg:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-org-lg:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-org-lg:" -> "fibo-fnd-org-org:" [ label = "owl:imports" ];
+	"fibo-fnd-org-lg:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-fnd-org-lg:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Organizations/LegitimateOrganizations/" [ label = "owl:versionIRI" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasMember" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-org-lg:IllegalOrganization" -> "fibo-fnd-org-lg:LegitimateOrganization" [ label = "owl:disjointWith" ];
+
+}

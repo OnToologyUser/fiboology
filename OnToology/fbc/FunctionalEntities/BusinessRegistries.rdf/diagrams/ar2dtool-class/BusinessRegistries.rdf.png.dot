@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fbc-fct-breg:LegalRegistrationAddress" "fibo-fbc-fct-breg:BusinessRegistry" "fibo-fbc-fct-breg:BusinessRegistrationAuthority" ; /*classes style*/
+	"fibo-fbc-fct-breg:hasRegistrationStatusRevisionDate" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-fct-breg:hasCountryCode" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-fct-breg:hasHeadquartersAddress" -> "fibo-be-le-fbo:hasPrimaryAddress" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-rel-rel:isManagedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fct-breg:BusinessRegistrationAuthority" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:manages" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-fct-breg:BusinessRegistry" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:isGovernedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "owl:onClass" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fbc-fct-ra:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "fibo-be-le-fbo:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/FunctionalEntities/BusinessRegistries/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fnd-law-jur:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:" -> "fibo-fnd-plc-cr:" [ label = "owl:imports" ];
+	"fibo-fbc-fct-breg:hasSubdivisionCode" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-plc-cr:Alpha2Code" [ label = "fibo-fbc-fct-breg:hasCountryCode" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fbc-fct-breg:hasRegistrationStatus" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-plc-cr:SubdivisionCode" [ label = "fibo-fbc-fct-breg:hasSubdivisionCode" ];
+	"owl:Thing" -> "fibo-fbc-fct-breg:LegalRegistrationAddress" [ label = "fibo-fbc-fct-breg:hasHeadquartersAddress" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fbc-fct-breg:hasPostalCode" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fbc-fct-breg:hasAddressLine1" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fbc-fct-breg:hasAddressLine2" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-fbc-fct-breg:hasRegistrationStatusRevisionDate" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fbc-fct-breg:hasCity" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fbc-fct-breg:hasAddressLine3" ];
+	"fibo-fbc-fct-breg:LegalRegistrationAddress" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fbc-fct-breg:hasAddressLine4" ];
+
+}

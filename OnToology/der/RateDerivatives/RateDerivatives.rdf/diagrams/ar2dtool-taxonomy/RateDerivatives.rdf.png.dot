@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-der-rtd-rtd:RateBasedObservable" "fibo-der-rtd-rtd:RateBasedDerivativeInstrument" "fibo-der-rtd-rtd:InterestRateObservable" "fibo-der-rtd-rtd:InterestRateDerivativeInstrument" "fibo-der-rtd-rtd:IndexDerivativeInstrument" "fibo-der-rtd-rtd:EconomicRateObservable" ; /*classes style*/
+	"fibo-der-rtd-rtd:RateBasedObservable" -> "fibo-der-drc-bsc:NonPhysicalUnderlying" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-rtd:RateBasedDerivativeInstrument" -> "fibo-fbc-fi-fi:DerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-rtd:InterestRateDerivativeInstrument" -> "fibo-der-rtd-rtd:RateBasedDerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-rtd:InterestRateObservable" -> "fibo-der-rtd-rtd:RateBasedObservable" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-rtd:IndexDerivativeInstrument" -> "fibo-der-rtd-rtd:RateBasedDerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-der-rtd-rtd:EconomicRateObservable" -> "fibo-der-rtd-rtd:RateBasedObservable" [ label = "rdfs:subClassOf" ];
+
+}

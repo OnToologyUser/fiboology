@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-utl-alx:Variable" "fibo-fnd-utl-alx:StatisticalMeasure" "fibo-fnd-utl-alx:Measure" "fibo-fnd-utl-alx:Formula" "fibo-fnd-utl-alx:Expression" "fibo-fnd-utl-alx:Constant" ; /*classes style*/
+	"fibo-fnd-utl-alx:StatisticalMeasure" -> "fibo-fnd-utl-alx:Measure" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-utl-alx:Formula" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-utl-alx:Constant" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-utl-alx:Measure" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-utl-alx:Variable" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-utl-alx:Expression" -> "fibo-fnd-rel-rel:Reference" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,40 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-ptr-ptr:Partnership" "fibo-be-ptr-ptr:PartnershipWithGeneralAndLimitedPartners" "fibo-be-ptr-ptr:CorporateLimitedPartner" "fibo-be-ptr-ptr:PartnershipIncorporatedByEquity" "fibo-be-ptr-ptr:EquityApportionmentTermsSet" "fibo-be-ptr-ptr:PartnershipWithLimitedPartners" "fibo-be-ptr-ptr:NonIncorporatedPartnership" "fibo-be-ptr-ptr:LimitedPartner" "fibo-be-ptr-ptr:Partner" "fibo-be-ptr-ptr:PartnershipEquity" "fibo-be-ptr-ptr:PartnershipWithNaturalPersonLimitedPartners" "fibo-be-ptr-ptr:LiabilityApportionmentTermsSet" "fibo-be-ptr-ptr:LimitedPartnerEquity" "fibo-be-ptr-ptr:PartnershipAgreement" "fibo-be-ptr-ptr:LegallyIncorporatedPartnership" "fibo-be-ptr-ptr:NaturalPersonLimitedPartner" "fibo-be-ptr-ptr:PartnershipWithGeneralPartnersWithLimitedLiability" "fibo-be-ptr-ptr:PartnershipWithOnlyLimitedPartners" "fibo-be-ptr-ptr:GeneralPartner" "fibo-be-ptr-ptr:PartnershipWithGeneralPartners" "fibo-be-ptr-ptr:PartnershipWithCorporateLimitedPartners" "fibo-be-ptr-ptr:LegallyIncorporatedPartnershipMember" "fibo-be-ptr-ptr:GeneralPartnerEquity" "fibo-be-ptr-ptr:PartnershipIncorporatedThroughAgreement" ; /*classes style*/
+	"fibo-be-ptr-ptr:PartnershipWithOnlyLimitedPartners" -> "fibo-be-ptr-ptr:PartnershipWithLimitedPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithOnlyLimitedPartners" -> "fibo-be-le-cb:Corporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipEquity" -> "fibo-fnd-acc-aeq:StockholdersEquity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:LegallyIncorporatedPartnership" -> "fibo-be-ptr-ptr:Partnership" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:LegallyIncorporatedPartnership" -> "fibo-be-le-cb:Corporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:LiabilityApportionmentTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipAgreement" -> "fibo-be-le-fbo:OrganizationCoveringAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithGeneralAndLimitedPartners" -> "fibo-be-ptr-ptr:PartnershipWithLimitedPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithGeneralAndLimitedPartners" -> "fibo-be-ptr-ptr:PartnershipWithGeneralPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:LimitedPartner" -> "fibo-be-ptr-ptr:Partner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithLimitedPartners" -> "fibo-be-ptr-ptr:Partnership" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithNaturalPersonLimitedPartners" -> "fibo-be-ptr-ptr:PartnershipWithLimitedPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:GeneralPartnerEquity" -> "fibo-be-ptr-ptr:PartnershipEquity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:GeneralPartnerEquity" -> "fibo-be-oac-opty:ControllingEquity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithGeneralPartners" -> "fibo-be-ptr-ptr:Partnership" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:EquityApportionmentTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipIncorporatedThroughAgreement" -> "fibo-be-ptr-ptr:Partnership" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipIncorporatedThroughAgreement" -> "fibo-be-le-cb:BodyIncorporatedThroughAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:NaturalPersonLimitedPartner" -> "fibo-be-ptr-ptr:LimitedPartner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:GeneralPartner" -> "fibo-be-ptr-ptr:Partner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:GeneralPartner" -> "fibo-be-oac-cpty:DeJureControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithCorporateLimitedPartners" -> "fibo-be-ptr-ptr:PartnershipWithLimitedPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:Partnership" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:Partnership" -> "fibo-be-le-lp:JuridicalPerson" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipWithGeneralPartnersWithLimitedLiability" -> "fibo-be-ptr-ptr:PartnershipWithGeneralPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipIncorporatedByEquity" -> "fibo-be-ptr-ptr:PartnershipWithLimitedPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:PartnershipIncorporatedByEquity" -> "fibo-be-le-cb:GeneralStockCorporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:Partner" -> "fibo-be-oac-opty:ConstitutionalOwner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:Partner" -> "fibo-be-le-fbo:FormallyConstitutedOrganizationMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:NonIncorporatedPartnership" -> "fibo-be-ptr-ptr:PartnershipWithGeneralPartners" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:CorporateLimitedPartner" -> "fibo-be-ptr-ptr:LimitedPartner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:LegallyIncorporatedPartnershipMember" -> "fibo-be-ptr-ptr:Partner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:LimitedPartnerEquity" -> "fibo-fnd-acc-aeq:IssuedEquity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-ptr-ptr:LimitedPartnerEquity" -> "fibo-be-ptr-ptr:PartnershipEquity" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-fct-fct:Merchant" "fibo-be-fct-fct:FunctionalBusinessEntity" "fibo-be-fct-fct:FamilyOffice" "fibo-be-fct-fct:CooperativeSociety" "fibo-be-fct-fct:CommercialActivity" "fibo-be-fct-fct:Commerce" "fibo-be-fct-fct:Business" ; /*classes style*/
+	"fibo-be-fct-fct:CooperativeSociety" -> "fibo-be-fct-fct:FunctionalBusinessEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-fct-fct:Business" -> "fibo-be-fct-fct:FunctionalBusinessEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-fct-fct:FamilyOffice" -> "fibo-be-fct-fct:FunctionalBusinessEntity" [ label = "rdfs:subClassOf" ];
+	"fibo-be-fct-fct:FunctionalBusinessEntity" -> "fibo-fnd-pty-rl:AgentInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-be-fct-fct:Merchant" -> "fibo-be-fct-fct:Business" [ label = "rdfs:subClassOf" ];
+	"fibo-be-fct-fct:Commerce" -> "fibo-be-fct-fct:CommercialActivity" [ label = "rdfs:subClassOf" ];
+
+}

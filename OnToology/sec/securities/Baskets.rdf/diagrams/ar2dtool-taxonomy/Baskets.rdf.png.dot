@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-sec-sec-bsk:SecuritiesBasketConstituent" "fibo-sec-sec-bsk:MixedBasket" "fibo-sec-sec-bsk:BasketOfSecurities" "fibo-sec-sec-bsk:BasketOfIndicesConstituent" "fibo-sec-sec-bsk:BasketOfIndices" "fibo-sec-sec-bsk:BasketConstituent" "fibo-sec-sec-bsk:Basket" ; /*classes style*/
+	"fibo-sec-sec-bsk:MixedBasket" -> "fibo-sec-sec-bsk:Basket" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-bsk:SecuritiesBasketConstituent" -> "fibo-sec-sec-bsk:BasketConstituent" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-bsk:Basket" -> "fibo-fnd-arr-arr:Collection" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-bsk:Basket" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-bsk:BasketOfSecurities" -> "fibo-sec-sec-bsk:Basket" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-bsk:BasketOfIndices" -> "fibo-sec-sec-bsk:Basket" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-bsk:BasketConstituent" -> "fibo-fnd-pty-rl:ThingInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-sec-sec-bsk:BasketOfIndicesConstituent" -> "fibo-sec-sec-bsk:BasketConstituent" [ label = "rdfs:subClassOf" ];
+
+}

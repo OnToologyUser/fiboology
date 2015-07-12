@@ -1,0 +1,21 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-pas-pas:TransactionConfirmation" "fibo-fbc-pas-pas:Good" "fibo-fbc-pas-pas:Product" "fibo-fbc-pas-pas:Customer" "fibo-fbc-pas-pas:Commodity" "fibo-fbc-pas-pas:Seller" "fibo-fbc-pas-pas:Transaction" "fibo-fbc-pas-pas:Client" "-548dde25:14e84963b8c:-7ff4" "fibo-fbc-pas-pas:Catalog" "fibo-fbc-pas-pas:ServiceAgreement" "fibo-fbc-pas-pas:RegulatedCommodity" "fibo-fbc-pas-pas:Producer" "fibo-fbc-pas-pas:Supplier" "fibo-fbc-pas-pas:Buyer" "-548dde25:14e84963b8c:-7fe7" "fibo-fbc-pas-pas:ServiceProvider" ; /*classes style*/
+	"fibo-fbc-pas-pas:Supplier" -> "-548dde25:14e84963b8c:-7fe7" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Seller" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Transaction" -> "fibo-fnd-dt-oc:OccurrenceKind" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Customer" -> "fibo-fbc-pas-pas:Buyer" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:TransactionConfirmation" -> "fibo-fnd-arr-doc:LegalDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Product" -> "-548dde25:14e84963b8c:-7ff4" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Catalog" -> "fibo-be-fct-pub:Publication" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Commodity" -> "fibo-fbc-pas-pas:Good" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Client" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Producer" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:ServiceAgreement" -> "fibo-fnd-agr-ctr:MutualContractualAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:ServiceAgreement" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:RegulatedCommodity" -> "fibo-fbc-pas-pas:Commodity" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:ServiceProvider" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-pas-pas:Buyer" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+
+}

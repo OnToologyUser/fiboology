@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-le-cb:BodyLimitedByGuaranteePrincipalsAgreement" "fibo-be-le-cb:InstrumentOfIncorporation" "fibo-be-le-cb:GeneralStockCorporation" "fibo-be-le-cb:Corporation" ; /*classes style*/
+	"fibo-be-le-cb:isIncorporatedIn" -> "fibo-be-le-lp:isOrganizedIn" [ label = "rdfs:subPropertyOf" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-law-cor:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/LegalEntities/CorporateBodies/" [ label = "owl:versionIRI" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-be-le-fbo:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-acc-aeq:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-law-jur:" [ label = "owl:imports" ];
+	"fibo-be-le-cb:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-be-le-cb:BodyLimitedByGuaranteePrincipalsAgreement" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasLegalName" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-cb:isConstitutedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-cb:InstrumentOfIncorporation" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-acc-cur:hasNotionalAmount" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-cb:issuesEquity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isGovernedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-org-fm:isDomiciledIn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-cty:Country" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-acc-aeq:IssuedEquity" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-le-cb:isIncorporatedIn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:text" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-rel-rel:isProvidedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "owl:onClass" ];
+	"fibo-be-le-cb:Corporation" -> "fibo-fnd-law-cor:Constitution" [ label = "fibo-be-le-cb:isConstitutedBy" ];
+	"fibo-be-le-cb:GeneralStockCorporation" -> "fibo-fnd-acc-aeq:IssuedEquity" [ label = "fibo-be-le-cb:issuesEquity" ];
+	"fibo-be-le-cb:Corporation" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "fibo-be-le-cb:isIncorporatedIn" ];
+
+}

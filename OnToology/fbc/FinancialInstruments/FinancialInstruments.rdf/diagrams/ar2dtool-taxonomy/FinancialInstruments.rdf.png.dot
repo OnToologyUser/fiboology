@@ -1,0 +1,22 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fbc-fi-fi:StandardizedTermsSet" "fibo-fbc-fi-fi:Security" "fibo-fbc-fi-fi:CommodityInstrument" "fibo-fbc-fi-fi:Option" "fibo-fbc-fi-fi:CashInstrument" "fibo-fbc-fi-fi:FinancialInstrumentIdentifier" "fibo-fbc-fi-fi:CurrencyInstrument" "fibo-fbc-fi-fi:FinancialInstrument" "fibo-fbc-fi-fi:DerivativeInstrument" "fibo-fbc-fi-fi:SecuritiesTransaction" "fibo-fbc-fi-fi:PrincipalExecutiveOfficeAddress" "fibo-fbc-fi-fi:EquityInstrument" "fibo-fbc-fi-fi:DebtInstrument" "fibo-fbc-fi-fi:Entitlement" "fibo-fbc-fi-fi:Future" "fibo-fbc-fi-fi:Issuer" ; /*classes style*/
+	"fibo-fbc-fi-fi:Future" -> "fibo-fbc-fi-fi:DerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:Entitlement" -> "fibo-fbc-fi-fi:DerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:DerivativeInstrument" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:PrincipalExecutiveOfficeAddress" -> "fibo-be-le-fbo:RegisteredAddress" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:Security" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:CurrencyInstrument" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:StandardizedTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:FinancialInstrument" -> "fibo-fnd-agr-ctr:WrittenContract" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:FinancialInstrumentIdentifier" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:CashInstrument" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:SecuritiesTransaction" -> "fibo-fbc-pas-pas:Transaction" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:Issuer" -> "fibo-fnd-agr-ctr:ContractOriginator" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:CommodityInstrument" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:Option" -> "fibo-fbc-fi-fi:DerivativeInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:DebtInstrument" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdfs:subClassOf" ];
+	"fibo-fbc-fi-fi:EquityInstrument" -> "fibo-fbc-fi-fi:Security" [ label = "rdfs:subClassOf" ];
+
+}

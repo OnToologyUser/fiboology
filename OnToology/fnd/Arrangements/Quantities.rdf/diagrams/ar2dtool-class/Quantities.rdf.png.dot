@@ -1,0 +1,34 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-arr-qt:BaseUnit" "fibo-fnd-arr-qt:DerivedQuantity" "fibo-fnd-arr-qt:Quantity" "fibo-fnd-arr-qt:SystemOfQuantities" "fibo-fnd-arr-qt:BaseQuantity" "fibo-fnd-arr-qt:QuantityKind" "fibo-fnd-arr-qt:SystemOfUnits" "fibo-fnd-arr-qt:MeasurementUnit" "fibo-fnd-arr-qt:DerivedUnit" "fibo-fnd-arr-qt:QuantityValue" ; /*classes style*/
+	"fibo-fnd-arr-qt:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-qt:" -> "fibo-fnd-arr-arr:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-qt:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-qt:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-qt:" -> "http://spec.edmcouncil.org/fibo/FND/20150501/Arrangements/Quantities/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-arr-qt:hasMeasurementUnit" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "xsd:decimal" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasDefinition" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-qt:BaseUnit" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-arr-qt:SystemOfUnits" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:involves" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-qt:hasNumericValue" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-qt:QuantityKind" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-arr-qt:BaseQuantity" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:appliesTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-qt:hasQuantityKind" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-qt:BaseQuantity" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-arr-qt:hasMeasurementUnit" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-qt:DerivedUnit" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-arr-qt:SystemOfQuantities" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-arr-qt:DerivedQuantity" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-arr-qt:isDerivedFrom" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-qt:MeasurementUnit" [ label = "owl:onClass" ];
+	"fibo-fnd-arr-qt:hasQuantityKind" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-arr-qt:Quantity" -> "fibo-fnd-arr-qt:QuantityKind" [ label = "fibo-fnd-arr-qt:hasQuantityKind" ];
+	"fibo-fnd-arr-qt:QuantityValue" -> "fibo-fnd-arr-qt:MeasurementUnit" [ label = "fibo-fnd-arr-qt:hasMeasurementUnit" ];
+	"owl:Thing" -> "xsd:decimal" [ label = "fibo-fnd-arr-qt:hasNumericValue" ];
+
+}

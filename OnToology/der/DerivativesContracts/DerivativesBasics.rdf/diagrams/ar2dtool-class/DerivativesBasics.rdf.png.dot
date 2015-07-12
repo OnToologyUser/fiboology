@@ -1,0 +1,56 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-ind-ind-ind:MarketRate" "fibo-der-drc-bsc:SettlementCommitment" "9f0b8cf:14e848cb6de:-7fea" "9f0b8cf:14e848cb6de:-7feb" "fibo-fbc-pas-pas:Commodity" "fibo-der-drc-bsc:DerivativeContractParty" "fibo-fbc-fi-fi:FinancialInstrument" "fibo-der-drc-bsc:DeliveryCommitment" "fibo-fbc-fi-fi:DerivativeInstrument" "fibo-der-drc-bsc:DerivativeTransactionTermsSet" "fibo-sec-sec-bsk:BasketOfSecurities" "fibo-der-drc-bsc:SettlementTermsSet" "fibo-sec-sec-bsk:Basket" "fibo-der-drc-bsc:DerivativeUnderlying" "fibo-der-drc-bsc:DeliveryTermsSet" "fibo-der-drc-bsc:NonPhysicalUnderlying" ; /*classes style*/
+	"fibo-der-drc-bsc:hasSettlementDate" -> "fibo-fnd-dt-fd:hasDate" [ label = "rdfs:subPropertyOf" ];
+	"fibo-der-drc-bsc:hasUnderlying" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-der-drc-bsc:DerivativeUnderlying" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-drc-bsc:hasUnderlying" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ind-ind:MarketRate" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fnd-pty-pty:isAPartyTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-bsc:DeliveryCommitment" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7fea" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-agr-ctr:hasContractParty" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-pas:Commodity" [ label = "rdf:first" ];
+	"NULL" -> "fibo-sec-sec-bsk:Basket" [ label = "rdf:first" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7fed" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-der-drc-bsc:SettlementCommitment" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-agr-ctr:hasTerms" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-der-drc-bsc:NonPhysicalUnderlying" [ label = "rdf:first" ];
+	"NULL" -> "fibo-fnd-rel-rel:embodies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-sec-sec-bsk:BasketOfSecurities" [ label = "rdf:first" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7fec" [ label = "rdf:rest" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7feb" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-drc-bsc:DerivativeTransactionTermsSet" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-der-drc-bsc:SettlementTermsSet" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7fef" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-der-drc-bsc:DeliveryTermsSet" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fbc-fi-fi:DerivativeInstrument" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-drc-bsc:DerivativeContractParty" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-be-le-lp:LegalPerson" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7fee" [ label = "owl:unionOf" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7ff1" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-rel-rel:refersTo" [ label = "owl:onProperty" ];
+	"NULL" -> "9f0b8cf:14e848cb6de:-7ff0" [ label = "owl:unionOf" ];
+	"NULL" -> "fibo-fbc-fi-fi:FinancialInstrument" [ label = "rdf:first" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-agr-agr:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "http://spec.edmcouncil.org/fibo/DER/20160201/DerivativesContracts/DerivativesBasics/" [ label = "owl:versionIRI" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-ind-ind-ind:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fbc-fi-fi:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-sec-sec-bsk:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-der-drc-bsc:" -> "fibo-fnd-arr-qt:" [ label = "owl:imports" ];
+	"fibo-fbc-fi-fi:DerivativeInstrument" -> "fibo-der-drc-bsc:DerivativeUnderlying" [ label = "fibo-der-drc-bsc:hasUnderlying" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-der-drc-bsc:hasSettlementDate" ];
+
+}

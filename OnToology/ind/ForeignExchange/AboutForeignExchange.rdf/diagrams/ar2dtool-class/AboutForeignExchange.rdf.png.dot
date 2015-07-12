@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-ind-fx-mod:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-ind-fx-mod:" -> "http://spec.edmcouncil.org/fibo/IND/20150501/ForeignExchange/AboutForeignExchange/" [ label = "owl:versionIRI" ];
+	"fibo-ind-fx-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+
+}

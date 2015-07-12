@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-tr-tr:Trustor" "fibo-be-tr-tr:Trustee" "fibo-be-tr-tr:TrustFundTrust" "fibo-be-tr-tr:TrustFundManager" "fibo-be-tr-tr:TrustBeneficiary" "fibo-be-tr-tr:TrustAgreement" "fibo-be-tr-tr:Trust" "fibo-be-tr-tr:FundUnitHolder" ; /*classes style*/
+	"fibo-be-tr-tr:Trustee" -> "fibo-be-le-fbo:FormallyConstitutedOrganizationMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:Trust" -> "fibo-be-le-fbo:FormallyConstitutedOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:Trust" -> "fibo-be-le-lp:JuridicalPerson" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:TrustFundTrust" -> "fibo-be-tr-tr:Trust" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:TrustAgreement" -> "fibo-be-le-fbo:OrganizationCoveringAgreement" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:TrustFundManager" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:TrustBeneficiary" -> "fibo-be-le-fbo:FormallyConstitutedOrganizationMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:FundUnitHolder" -> "fibo-be-tr-tr:TrustBeneficiary" [ label = "rdfs:subClassOf" ];
+	"fibo-be-tr-tr:Trustor" -> "fibo-be-le-fbo:FormallyConstitutedOrganizationMember" [ label = "rdfs:subClassOf" ];
+
+}

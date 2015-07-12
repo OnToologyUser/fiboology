@@ -1,0 +1,28 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-oac-ctl:DeJureControl" "fibo-fnd-oac-ctl:DeFactoControl" "fibo-fnd-oac-ctl:ControllingParty" "fibo-fnd-oac-ctl:ControlledThing" "fibo-fnd-oac-ctl:Control" ; /*classes style*/
+	"fibo-fnd-oac-ctl:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-ctl:" -> "fibo-fnd-law-lcap:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-ctl:" -> "fibo-fnd-dt-bd:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-ctl:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-ctl:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/OwnershipAndControl/Control/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-oac-ctl:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-ctl:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-ctl:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-ctl:DeFactoControl" -> "fibo-fnd-oac-ctl:DeJureControl" [ label = "owl:disjointWith" ];
+	"NULL" -> "fibo-fnd-oac-ctl:isInControlOfThing" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-oac-ctl:hasPartyInControl" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:ThingInRole" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:controls" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isControlledBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-dt-fd:DatePeriod" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-dt-bd:holdsDuring" [ label = "owl:onProperty" ];
+	"fibo-fnd-oac-ctl:Control" -> "fibo-fnd-oac-ctl:ControlledThing" [ label = "fibo-fnd-oac-ctl:isInControlOfThing" ];
+	"fibo-fnd-oac-ctl:ControllingParty" -> "fibo-fnd-oac-ctl:Control" [ label = "fibo-fnd-oac-ctl:isControllingPartyInRole" ];
+	"fibo-fnd-oac-ctl:Control" -> "fibo-fnd-oac-ctl:ControllingParty" [ label = "fibo-fnd-oac-ctl:hasPartyInControl" ];
+	"fibo-fnd-oac-ctl:ControlledThing" -> "fibo-fnd-oac-ctl:Control" [ label = "fibo-fnd-oac-ctl:isControlledThingInRole" ];
+
+}

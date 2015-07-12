@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-arr-doc:Document" ; /*classes style*/
+	"fibo-fnd-arr-doc:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-doc:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Arrangements/Documents/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-arr-doc:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-doc:Document" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-fnd-arr-doc:hasExpirationDate" ];
+	"fibo-fnd-arr-doc:Document" -> "fibo-fnd-dt-fd:Date" [ label = "fibo-fnd-arr-doc:hasDateOfIssuance" ];
+
+}

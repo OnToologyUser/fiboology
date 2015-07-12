@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-arr-cls:Classifier" "fibo-fnd-arr-cls:ClassificationScheme" ; /*classes style*/
+	"NULL" -> "fibo-fnd-rel-rel:defines" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-cls:Classifier" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:isMemberOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:classifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasDefinition" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-arr-cls:ClassificationScheme" [ label = "owl:onClass" ];
+	"fibo-fnd-arr-cls:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-cls:" -> "http://spec.edmcouncil.org/fibo/FND/20150501/Arrangements/ClassificationSchemes/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-arr-cls:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-arr-cls:" -> "fibo-fnd-arr-arr:" [ label = "owl:imports" ];
+
+}

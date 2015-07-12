@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-fct-fct:CommercialActivity" "fibo-be-fct-fct:Commerce" ; /*classes style*/
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-fct-fct:CommercialActivity" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-be-fct-fct:isCharacterizedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-fct-fct:Commerce" [ label = "owl:onClass" ];
+	"fibo-be-fct-fct:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-be-fct-fct:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-be-fct-fct:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-fct-fct:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-fct-fct:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-be-fct-fct:" -> "fibo-be-corp-corp:" [ label = "owl:imports" ];
+	"fibo-be-fct-fct:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-be-fct-fct:" -> "http://spec.edmcouncil.org/fibo/BE/20150201/FunctionalEntities/FunctionalEntities/" [ label = "owl:versionIRI" ];
+
+}

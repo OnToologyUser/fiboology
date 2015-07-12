@@ -1,0 +1,23 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-be-sps-sps:SoleProprietorship" ; /*classes style*/
+	"fibo-be-sps-sps:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-fnd-oac-own:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-fnd-law-lcap:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "fibo-be-le-lp:" [ label = "owl:imports" ];
+	"fibo-be-sps-sps:" -> "http://spec.edmcouncil.org/fibo/BE/20150501/SoleProprietorships/SoleProprietorships/" [ label = "owl:versionIRI" ];
+	"NULL" -> "fibo-fnd-law-lcap:hasCapacity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-law-lcap:LiabilityCapacity" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-le-lp:NaturalPerson" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-oac-own:owns" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-be-sps-sps:SoleProprietorship" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+
+}

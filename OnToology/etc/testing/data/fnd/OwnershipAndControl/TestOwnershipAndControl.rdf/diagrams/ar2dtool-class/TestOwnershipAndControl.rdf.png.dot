@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/TestControl/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/OwnershipAndControlRules/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/TestOwnership/" [ label = "owl:imports" ];
+
+}

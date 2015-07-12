@@ -1,0 +1,18 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-ctl:GoodBankControlledByBigBankPIR" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/GoodBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+	"fibo-tst-fnd-ctl:LatticeControlRelation" -> "fibo-tst-fnd-ctl:GoodBankControlledByBigBankPIR" [ label = "fibo-fnd-ctl:controlOfThing" ];
+	"fibo-tst-fnd-ctl:LatticeControlRelation" -> "fibo-tst-fnd-ctl:BigBankControlsGoodBankPIR" [ label = "fibo-fnd-ctl:controlByParty" ];
+	"fibo-tst-fnd-ctl:AssociativeControlRelation" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/SecuritiesInc" [ label = "fibo-fnd-ctl:controlOf" ];
+	"fibo-tst-fnd-ctl:AssociativeControlRelation" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/CaliforniaBank" [ label = "fibo-fnd-ctl:controlBy" ];
+	"fibo-tst-fnd-ctl:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-ctl:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-ctl:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/ControlRules/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-ctl:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-ctl:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-ctl:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-ctl:" -> "fibo-fnd-ctl:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-ctl:BigBankControlsGoodBankPIR" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/TestFormalOrganizations/BigBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+
+}

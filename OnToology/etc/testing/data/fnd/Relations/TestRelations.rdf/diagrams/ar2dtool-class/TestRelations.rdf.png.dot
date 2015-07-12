@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"base:" -> "sm:" [ label = "owl:imports" ];
+	"base:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"base:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"base:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+
+}

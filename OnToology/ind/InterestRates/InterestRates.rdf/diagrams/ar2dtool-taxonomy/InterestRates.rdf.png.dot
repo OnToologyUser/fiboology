@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-ind-ir-ir:ReferenceRate" "fibo-ind-ir-ir:OvernightRate" "fibo-ind-ir-ir:InterbankRate" "fibo-ind-ir-ir:InterbankOfferedRate" "fibo-ind-ir-ir:InterbankMidRate" "fibo-ind-ir-ir:InterbankBidRate" "fibo-ind-ir-ir:FederalFundsRate" "fibo-ind-ir-ir:BaseRate" ; /*classes style*/
+	"fibo-ind-ir-ir:ReferenceRate" -> "fibo-ind-ind-ind:MarketRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:ReferenceRate" -> "fibo-fnd-utl-bt:Percentage" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:OvernightRate" -> "fibo-ind-ir-ir:ReferenceRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:InterbankBidRate" -> "fibo-ind-ir-ir:InterbankRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:InterbankOfferedRate" -> "fibo-ind-ir-ir:InterbankRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:BaseRate" -> "fibo-ind-ir-ir:ReferenceRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:InterbankRate" -> "fibo-ind-ir-ir:ReferenceRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:InterbankMidRate" -> "fibo-ind-ir-ir:InterbankRate" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-ir:FederalFundsRate" -> "fibo-ind-ir-ir:OvernightRate" [ label = "rdfs:subClassOf" ];
+
+}

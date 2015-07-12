@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-arr-qt:BaseUnit" "fibo-fnd-arr-qt:DerivedQuantity" "fibo-fnd-arr-qt:Quantity" "fibo-fnd-arr-qt:SystemOfQuantities" "fibo-fnd-arr-qt:BaseQuantity" "fibo-fnd-arr-qt:QuantityKind" "fibo-fnd-arr-qt:SystemOfUnits" "fibo-fnd-arr-qt:ParticularQuantity" "fibo-fnd-arr-qt:MeasurementUnit" "fibo-fnd-arr-qt:DerivedUnit" "fibo-fnd-arr-qt:QuantityValue" ; /*classes style*/
+	"fibo-fnd-arr-qt:BaseUnit" -> "fibo-fnd-arr-qt:MeasurementUnit" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:Quantity" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:DerivedUnit" -> "fibo-fnd-arr-qt:MeasurementUnit" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:SystemOfUnits" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:MeasurementUnit" -> "fibo-fnd-arr-qt:Quantity" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:ParticularQuantity" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:BaseQuantity" -> "fibo-fnd-arr-qt:QuantityKind" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:DerivedQuantity" -> "fibo-fnd-arr-qt:QuantityKind" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:SystemOfQuantities" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:QuantityKind" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-arr-qt:QuantityValue" -> "fibo-fnd-arr-arr:Arrangement" [ label = "rdfs:subClassOf" ];
+
+}

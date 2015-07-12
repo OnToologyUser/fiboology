@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-pty-rl:ThingInRole" "fibo-fnd-pty-rl:Role" ; /*classes style*/
+	"fibo-fnd-pty-rl:isPlayedBy" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-pty-rl:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-rl:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-rl:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Parties/Roles/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-pty-rl:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fnd-pty-rl:hasRole" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-pty-rl:hasRole" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:Role" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "owl:onClass" ];
+	"fibo-fnd-pty-rl:ThingInRole" -> "fibo-fnd-pty-rl:Role" [ label = "fibo-fnd-pty-rl:hasRole" ];
+	"owl:Thing" -> "fibo-fnd-pty-rl:ThingInRole" [ label = "fibo-fnd-pty-rl:playsRole" ];
+	"fibo-fnd-pty-rl:ThingInRole" -> "owl:Thing" [ label = "fibo-fnd-pty-rl:isPlayedBy" ];
+
+}

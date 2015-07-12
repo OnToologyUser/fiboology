@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-oac-own:Owner" "fibo-fnd-oac-own:Asset" ; /*classes style*/
+	"fibo-fnd-oac-own:Owner" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-oac-own:Asset" -> "fibo-fnd-pty-rl:ThingInRole" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-der-drc-dct:ParametricCashflowTermsSet" "fibo-der-drc-dct:CashflowTermsSet" "fibo-der-drc-dct:CashflowFormula" ; /*classes style*/
+	"fibo-der-drc-dct:ParametricCashflowTermsSet" -> "fibo-der-drc-dct:CashflowTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-dct:CashflowTermsSet" -> "fibo-fnd-agr-ctr:ContractTermsSet" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-dct:CashflowFormula" -> "fibo-fnd-utl-alx:Formula" [ label = "rdfs:subClassOf" ];
+
+}

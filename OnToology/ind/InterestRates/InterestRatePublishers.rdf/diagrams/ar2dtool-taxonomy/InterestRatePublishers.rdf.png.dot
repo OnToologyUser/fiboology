@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-ind-ir-pub:MonetaryAuthority" "fibo-ind-ir-pub:MarketDataProvider" "fibo-ind-ir-pub:InterestRateAuthority" "fibo-ind-ir-pub:InterbankRateAuthority" "fibo-ind-ir-pub:CentralBank" "fibo-ind-ir-pub:BaseRateAuthority" ; /*classes style*/
+	"fibo-ind-ir-pub:CentralBank" -> "fibo-ind-ir-pub:MonetaryAuthority" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-pub:BaseRateAuthority" -> "fibo-ind-ir-pub:InterestRateAuthority" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-pub:MarketDataProvider" -> "fibo-ind-ind-ind:FinancialInformationPublisher" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-pub:InterestRateAuthority" -> "fibo-fnd-pty-rl:AgentInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-pub:MonetaryAuthority" -> "fibo-fnd-org-fm:FormalOrganization" [ label = "rdfs:subClassOf" ];
+	"fibo-ind-ir-pub:InterbankRateAuthority" -> "fibo-ind-ir-pub:InterestRateAuthority" [ label = "rdfs:subClassOf" ];
+
+}

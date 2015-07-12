@@ -1,0 +1,27 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-law-jur:LegalSystem" "fibo-fnd-law-jur:Jurisdiction" "fibo-fnd-law-jur:CommonLawSystem" "fibo-fnd-law-jur:CommonLawJurisdiction" "fibo-fnd-law-jur:CivilLawSystem" "fibo-fnd-law-jur:CivilLawJurisdiction" ; /*classes style*/
+	"fibo-fnd-law-jur:appliesIn" -> "fibo-fnd-rel-rel:governs" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-law-jur:CivilLawJurisdiction" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-law-jur:CivilLawSystem" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-law-jur:appliesIn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-law-cor:isInForceIn" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-law-jur:hasReach" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-plc-loc:Location" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:isGovernedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-law-jur:CommonLawJurisdiction" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-law-jur:LegalSystem" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-law-cor:GovernmentalConstitution" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-law-jur:CommonLawSystem" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-law-jur:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-fnd-law-jur:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-fnd-law-jur:" -> "fibo-fnd-law-cor:" [ label = "owl:imports" ];
+	"fibo-fnd-law-jur:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-law-jur:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-law-jur:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Law/Jurisdiction/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-law-jur:Jurisdiction" -> "fibo-fnd-plc-loc:Location" [ label = "fibo-fnd-law-jur:hasReach" ];
+	"fibo-fnd-law-jur:LegalSystem" -> "fibo-fnd-law-jur:Jurisdiction" [ label = "fibo-fnd-law-jur:appliesIn" ];
+
+}

@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "6c27ce72:14e849e52c7:-7ffc" "fibo-fnd-oac-oac:OwnershipAndControl" ; /*classes style*/
+	"fibo-fnd-oac-oac:OwnershipAndControl" -> "6c27ce72:14e849e52c7:-7ffc" [ label = "owl:equivalentClass" ];
+	"fibo-fnd-oac-oac:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-oac:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-oac:" -> "fibo-fnd-oac-ctl:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-oac:" -> "fibo-fnd-oac-own:" [ label = "owl:imports" ];
+	"fibo-fnd-oac-oac:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/OwnershipAndControl/OwnershipAndControl/" [ label = "owl:versionIRI" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-oac-own:Ownership" [ label = "rdf:first" ];
+	"NULL" -> "6c27ce72:14e849e52c7:-7ffb" [ label = "owl:intersectionOf" ];
+	"NULL" -> "6c27ce72:14e849e52c7:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "fibo-fnd-oac-ctl:Control" [ label = "rdf:first" ];
+	"owl:Thing" -> "fibo-fnd-pty-pty:IndependentParty" [ label = "fibo-fnd-oac-oac:isOwnedAndControlledBy" ];
+	"fibo-fnd-pty-pty:IndependentParty" -> "owl:Thing" [ label = "fibo-fnd-oac-oac:ownsAndControls" ];
+
+}

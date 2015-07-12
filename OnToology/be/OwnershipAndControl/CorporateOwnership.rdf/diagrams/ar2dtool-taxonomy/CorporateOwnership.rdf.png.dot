@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-oac-cown:Shareholding" "fibo-be-oac-cown:Shareholder" "fibo-be-oac-cown:RegisteredShareholder" "fibo-be-oac-cown:PublicShareholder" "fibo-be-oac-cown:BeneficialOwner" ; /*classes style*/
+	"fibo-be-oac-cown:BeneficialOwner" -> "fibo-be-oac-cown:Shareholder" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cown:PublicShareholder" -> "fibo-be-oac-cown:Shareholder" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cown:Shareholder" -> "fibo-fnd-agr-ctr:TransferableContractHolder" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cown:Shareholder" -> "fibo-be-oac-opty:ConstitutionalOwner" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cown:RegisteredShareholder" -> "fibo-be-oac-cown:Shareholder" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cown:Shareholding" -> "fibo-fnd-acc-aeq:FinancialAsset" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-der-drc-isda:TradingDateRule" "fibo-der-drc-isda:ISDAFpMLPeriodicScheduledEventDate" "fibo-der-drc-isda:DateReturnedBySettlementDateRule" "fibo-der-drc-isda:ISDACalculationPeriodLength" "fibo-der-drc-isda:USTBillDate" "fibo-der-drc-isda:SettlementDateRule" "fibo-der-drc-isda:DayOfWeek" "fibo-der-drc-isda:ScheduledCalculationPeriodEndEvent" "fibo-der-drc-isda:FRNDate" "fibo-der-drc-isda:DateReturnedByTradingDateRule" "fibo-der-drc-isda:FRNDateRule" "fibo-der-drc-isda:IMMSettlementDateRule" "fibo-der-drc-isda:IMMAUDTradingDateRule" "fibo-der-drc-isda:IMMCADTradingDateRule" "fibo-der-drc-isda:ISDARuleDeterminedDate" "fibo-der-drc-isda:AuctionDateRule" "fibo-der-drc-isda:ISDAFpMLNonRollingDate" "fibo-der-drc-isda:ISDAFpMLStubPeriod" "fibo-der-drc-isda:ScheduledCalculationPeriodStartEvent" "fibo-der-drc-isda:USTBillAuctionDateRule" "fibo-der-drc-isda:ISDAFpMLParametricSchedule" "fibo-der-drc-isda:SFESettlementDateRule" "fibo-der-drc-isda:IMMNZDTradingDateRule" "fibo-der-drc-isda:DayOfMonth" "fibo-der-drc-isda:ISDACalculationPeriod" ; /*classes style*/
+	"fibo-der-drc-isda:SFESettlementDateRule" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ScheduledCalculationPeriodStartEvent" -> "fibo-fnd-dt-oc:OccurrenceKind" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:USTBillDate" -> "fibo-fnd-dt-fd:CalculatedDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:AuctionDateRule" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ISDACalculationPeriod" -> "fibo-fnd-dt-fd:DatePeriod" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ISDAFpMLParametricSchedule" -> "fibo-fnd-dt-fd:RegularSchedule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ISDACalculationPeriodLength" -> "fibo-fnd-dt-fd:ExplicitDuration" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:IMMNZDTradingDateRule" -> "fibo-der-drc-isda:TradingDateRule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:USTBillAuctionDateRule" -> "fibo-der-drc-isda:AuctionDateRule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:DayOfWeek" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ISDARuleDeterminedDate" -> "fibo-fnd-dt-fd:CalculatedDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:DateReturnedByTradingDateRule" -> "fibo-der-drc-isda:ISDARuleDeterminedDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:SettlementDateRule" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:DateReturnedBySettlementDateRule" -> "fibo-der-drc-isda:ISDARuleDeterminedDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ISDAFpMLNonRollingDate" -> "fibo-fnd-dt-fd:ExplicitDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:DayOfMonth" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:FRNDateRule" -> "fibo-fnd-dt-bd:BusinessDayAdjustment" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:IMMSettlementDateRule" -> "fibo-der-drc-isda:SettlementDateRule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ScheduledCalculationPeriodEndEvent" -> "fibo-fnd-dt-oc:OccurrenceKind" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:IMMCADTradingDateRule" -> "fibo-der-drc-isda:TradingDateRule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:FRNDate" -> "fibo-fnd-dt-fd:CalculatedDate" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:TradingDateRule" -> "fibo-fnd-dt-bd:BusinessRecurrenceIntervalConvention" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ISDAFpMLStubPeriod" -> "fibo-fnd-dt-fd:ScheduleStub" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:IMMAUDTradingDateRule" -> "fibo-der-drc-isda:TradingDateRule" [ label = "rdfs:subClassOf" ];
+	"fibo-der-drc-isda:ISDAFpMLPeriodicScheduledEventDate" -> "fibo-fnd-dt-fd:Date" [ label = "rdfs:subClassOf" ];
+
+}

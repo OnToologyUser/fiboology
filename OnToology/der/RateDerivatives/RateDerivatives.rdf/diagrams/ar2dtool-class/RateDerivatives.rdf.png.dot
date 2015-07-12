@@ -1,0 +1,25 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-der-rtd-rtd:RateBasedObservable" "fibo-der-rtd-rtd:InterestRateObservable" "fibo-der-rtd-rtd:EconomicRateObservable" ; /*classes style*/
+	"fibo-der-rtd-rtd:" -> "fibo-der-drc-bsc:" [ label = "owl:imports" ];
+	"fibo-der-rtd-rtd:" -> "fibo-ind-ind-ind:" [ label = "owl:imports" ];
+	"fibo-der-rtd-rtd:" -> "fibo-ind-ir-ir:" [ label = "owl:imports" ];
+	"fibo-der-rtd-rtd:" -> "fibo-ind-ei-ei:" [ label = "owl:imports" ];
+	"fibo-der-rtd-rtd:" -> "http://spec.edmcouncil.org/fibo/DER/20160201/RateDerivatives/RateDerivatives/" [ label = "owl:versionIRI" ];
+	"fibo-der-rtd-rtd:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-der-rtd-rtd:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-der-rtd-rtd:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-der-rtd-rtd:" -> "fibo-fbc-fi-fi:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-ind-ei-ei:EconomicIndicator" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-ind-ir-ir:ReferenceRate" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-der-rtd-rtd:EconomicRateObservable" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-der-rtd-rtd:RateBasedObservable" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-der-rtd-rtd:InterestRateObservable" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-der-drc-bsc:hasUnderlying" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:hasIdentity" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-ind-ind-ind:MarketRate" [ label = "owl:onClass" ];
+	"fibo-der-rtd-rtd:hasIndexTenor" -> "fibo-fnd-dt-fd:hasDuration" [ label = "rdfs:subPropertyOf" ];
+	"owl:Thing" -> "fibo-fnd-dt-fd:Duration" [ label = "fibo-der-rtd-rtd:hasIndexTenor" ];
+
+}

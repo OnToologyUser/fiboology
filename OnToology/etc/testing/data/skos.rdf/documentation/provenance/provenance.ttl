@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index.html> a prov:Entity;
+	 dc:title "SKOS Vocabulary";
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Sean Bechhofer".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Alistair Miles".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Participants in W3C's Semantic Web Deployment Working Group.".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Nikki Rogers".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Dave Beckett".];
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;

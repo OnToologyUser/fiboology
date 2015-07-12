@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-aap-ppl:Person" "fibo-fnd-aap-ppl:DriversLicense" "fibo-fnd-aap-ppl:BirthCertificate" "fibo-fnd-aap-ppl:EmancipatedMinor" "fibo-fnd-aap-ppl:Adult" "fibo-fnd-aap-ppl:IdentityDocument" "fibo-fnd-aap-ppl:NationalIdentificationNumber" "fibo-fnd-aap-ppl:LegallyCapableAdult" "fibo-fnd-aap-ppl:Passport" "fibo-fnd-aap-ppl:IncapacitatedAdult" "fibo-fnd-aap-ppl:Minor" ; /*classes style*/
+	"fibo-fnd-aap-ppl:Person" -> "fibo-fnd-aap-agt:AutonomousAgent" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:BirthCertificate" -> "fibo-fnd-aap-ppl:IdentityDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:DriversLicense" -> "fibo-fnd-aap-ppl:IdentityDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:NationalIdentificationNumber" -> "fibo-fnd-arr-id:Identifier" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:EmancipatedMinor" -> "fibo-fnd-aap-ppl:Minor" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:IncapacitatedAdult" -> "fibo-fnd-aap-ppl:Adult" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:Minor" -> "fibo-fnd-aap-ppl:Person" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:Adult" -> "fibo-fnd-aap-ppl:Person" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:Passport" -> "fibo-fnd-aap-ppl:IdentityDocument" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:LegallyCapableAdult" -> "fibo-fnd-aap-ppl:Adult" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-aap-ppl:IdentityDocument" -> "fibo-fnd-arr-doc:LegalDocument" [ label = "rdfs:subClassOf" ];
+
+}

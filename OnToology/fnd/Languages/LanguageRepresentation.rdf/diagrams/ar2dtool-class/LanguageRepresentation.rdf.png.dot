@@ -1,0 +1,49 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-lng-lr:NaturalLanguage" "fibo-fnd-lng-lr:IndividualLanguageIdentifier" "fibo-fnd-lng-lr:LivingLanguage" "fibo-fnd-lng-lr:SpecialPurposeCode" "fibo-fnd-lng-lr:CollectiveLanguageCode" "fibo-fnd-lng-lr:ArtificialLanguage" "fibo-fnd-lng-lr:Alpha2Code" "fibo-fnd-lng-lr:Alpha3Code" "fibo-fnd-lng-lr:MacrolanguageIdentifier" "fibo-fnd-lng-lr:LanguageIdentifier" "fibo-fnd-lng-lr:Language" "fibo-fnd-lng-lr:TerminologyCode" "fibo-fnd-lng-lr:ExtinctLanguage" ; /*classes style*/
+	"fibo-fnd-lng-lr:MacrolanguageIdentifier" -> "fibo-fnd-lng-lr:SpecialPurposeCode" [ label = "owl:disjointWith" ];
+	"fibo-fnd-lng-lr:hasAlpha2Code" -> "fibo-fnd-rel-rel:hasDenotation" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-lng-lr:hasAlpha3Code" -> "fibo-fnd-rel-rel:hasDenotation" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-lng-lr:hasIndigenousName" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-lng-lr:ArtificialLanguage" -> "fibo-fnd-lng-lr:NaturalLanguage" [ label = "owl:disjointWith" ];
+	"fibo-fnd-lng-lr:hasEarlierForm" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-lng-lr:ExtinctLanguage" -> "fibo-fnd-lng-lr:LivingLanguage" [ label = "owl:disjointWith" ];
+	"fibo-fnd-lng-lr:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-fnd-lng-lr:" -> "fibo-fnd-arr-id:" [ label = "owl:imports" ];
+	"fibo-fnd-lng-lr:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fnd-lng-lr:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-lng-lr:" -> "http://spec.edmcouncil.org/fibo/FND/20150501/Languages/LanguageRepresentation/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-lng-lr:" -> "fibo-fnd-arr-cd:" [ label = "owl:imports" ];
+	"fibo-fnd-lng-lr:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fnd-lng-lr:" -> "fibo-fnd-arr-arr:" [ label = "owl:imports" ];
+	"fibo-fnd-lng-lr:CollectiveLanguageCode" -> "fibo-fnd-lng-lr:SpecialPurposeCode" [ label = "owl:disjointWith" ];
+	"fibo-fnd-lng-lr:IndividualLanguageIdentifier" -> "fibo-fnd-lng-lr:MacrolanguageIdentifier" [ label = "owl:disjointWith" ];
+	"fibo-fnd-lng-lr:hasLanguageTag" -> "fibo-fnd-rel-rel:hasUniqueIdentifier" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-lng-lr:hasEnglishName" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-lng-lr:hasGermanName" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fnd-lng-lr:MacrolanguageIdentifier" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:denotes" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-lng-lr:hasFrenchName" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-lng-lr:hasEnglishName" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-lng-lr:Language" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-lng-lr:hasLanguageTag" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-lng-lr:hasAlpha3Code" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:string" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-lng-lr:TerminologyCode" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-aap-agt:identifies" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-utl-bt:text" [ label = "owl:onDataRange" ];
+	"NULL" -> "fibo-fnd-lng-lr:IndividualLanguageIdentifier" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fnd-lng-lr:SpecialPurposeCode" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-lng-lr:TerminologyCode" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-lng-lr:hasFrenchName" -> "fibo-fnd-aap-agt:hasName" [ label = "rdfs:subPropertyOf" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-lng-lr:hasEnglishName" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-lng-lr:hasIndigenousName" ];
+	"fibo-fnd-lng-lr:Language" -> "fibo-fnd-lng-lr:Alpha2Code" [ label = "fibo-fnd-lng-lr:hasAlpha2Code" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-lng-lr:hasGermanName" ];
+	"fibo-fnd-lng-lr:Language" -> "fibo-fnd-lng-lr:Language" [ label = "fibo-fnd-lng-lr:hasEarlierForm" ];
+	"fibo-fnd-lng-lr:LanguageIdentifier" -> "xsd:string" [ label = "fibo-fnd-lng-lr:hasLanguageTag" ];
+	"owl:Thing" -> "fibo-fnd-utl-bt:text" [ label = "fibo-fnd-lng-lr:hasFrenchName" ];
+	"fibo-fnd-lng-lr:Language" -> "fibo-fnd-lng-lr:Alpha3Code" [ label = "fibo-fnd-lng-lr:hasAlpha3Code" ];
+
+}

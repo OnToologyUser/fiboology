@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-plc-loc:RealEstate" "fibo-fnd-plc-loc:PhysicalLocation" "fibo-fnd-plc-loc:Location" ; /*classes style*/
+	"fibo-fnd-plc-loc:PhysicalLocation" -> "fibo-fnd-plc-loc:Location" [ label = "rdfs:subClassOf" ];
+	"fibo-fnd-plc-loc:RealEstate" -> "fibo-fnd-plc-loc:PhysicalLocation" [ label = "rdfs:subClassOf" ];
+
+}

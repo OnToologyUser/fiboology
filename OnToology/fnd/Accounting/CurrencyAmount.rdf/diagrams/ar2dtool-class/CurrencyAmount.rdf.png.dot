@@ -1,0 +1,27 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fnd-acc-cur:MoneyAmount" "fibo-fnd-acc-cur:MonetaryAmount" "fibo-fnd-acc-cur:Currency" ; /*classes style*/
+	"fibo-fnd-acc-cur:hasNotionalAmount" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-acc-cur:hasBaseMoneyUnit" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-acc-cur:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cur:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cur:" -> "http://spec.edmcouncil.org/fibo/FND/20141101/Accounting/CurrencyAmount/" [ label = "owl:versionIRI" ];
+	"fibo-fnd-acc-cur:" -> "fibo-fnd-utl-alx:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cur:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fnd-acc-cur:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"NULL" -> "fibo-fnd-acc-cur:hasBaseMoneyUnit" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cur:hasCurrency" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cur:Currency" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-utl-bt:isPercentageOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-acc-cur:hasAmount" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:decimal" [ label = "owl:allValuesFrom" ];
+	"fibo-fnd-acc-cur:hasCurrency" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fnd-acc-cur:MonetaryAmount" -> "fibo-fnd-acc-cur:Currency" [ label = "fibo-fnd-acc-cur:hasCurrency" ];
+	"fibo-fnd-acc-cur:MoneyAmount" -> "fibo-fnd-acc-cur:Currency" [ label = "fibo-fnd-acc-cur:hasBaseMoneyUnit" ];
+	"owl:Thing" -> "fibo-fnd-acc-cur:MonetaryAmount" [ label = "fibo-fnd-acc-cur:hasNotionalAmount" ];
+	"fibo-fnd-acc-cur:Currency" -> "fibo-fnd-plc-loc:Location" [ label = "fibo-fnd-acc-cur:isTenderIn" ];
+	"owl:Thing" -> "xsd:decimal" [ label = "fibo-fnd-acc-cur:hasAmount" ];
+
+}

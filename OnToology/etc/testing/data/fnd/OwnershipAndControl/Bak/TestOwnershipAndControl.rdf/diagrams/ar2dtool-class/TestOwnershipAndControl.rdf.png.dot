@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-oac:AssociativeControl" -> "fibo-tst-fnd-oac:SecuritiesInc" [ label = "fibo-fnd-ctl:controlOf" ];
+	"fibo-tst-fnd-oac:AssociativeControl" -> "fibo-tst-fnd-oac:CaliforniaBank" [ label = "fibo-fnd-ctl:controlBy" ];
+	"fibo-tst-fnd-oac:BigBankOwnsGoodBankPIR" -> "fibo-tst-fnd-oac:BigBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+	"fibo-tst-fnd-oac:LatticeOwnership" -> "fibo-tst-fnd-oac:GoodBankIsOwnedByBigBankPIR" [ label = "fibo-fnd-oac-own:ownershipOfThing" ];
+	"fibo-tst-fnd-oac:LatticeOwnership" -> "fibo-tst-fnd-oac:BigBankOwnsGoodBankPIR" [ label = "fibo-fnd-oac-own:ownershipByParty" ];
+	"fibo-tst-fnd-oac:BigBankControlsGoodBankPIR" -> "fibo-tst-fnd-oac:BigBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+	"fibo-tst-fnd-oac:GoodBankIsControlledByBigBankPIR" -> "fibo-tst-fnd-oac:GoodBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/TestControl/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/OwnershipAndControlRules/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/OwnershipAndControl/TestOwnership/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-oac:AssociativeOwnership" -> "fibo-tst-fnd-oac:SecuritiesInc" [ label = "fibo-fnd-oac-own:ownershipOf" ];
+	"fibo-tst-fnd-oac:AssociativeOwnership" -> "fibo-tst-fnd-oac:CaliforniaBank" [ label = "fibo-fnd-oac-own:ownershipBy" ];
+	"fibo-tst-fnd-oac:GoodBankIsOwnedByBigBankPIR" -> "fibo-tst-fnd-oac:GoodBank" [ label = "fibo-fnd-pty-rl:hasIdentity" ];
+	"fibo-tst-fnd-oac:LatticeControl" -> "fibo-tst-fnd-oac:GoodBankIsControlledByBigBankPIR" [ label = "fibo-fnd-ctl:controlOfThing" ];
+	"fibo-tst-fnd-oac:LatticeControl" -> "fibo-tst-fnd-oac:BigBankControlsGoodBankPIR" [ label = "fibo-fnd-ctl:controlByParty" ];
+
+}

@@ -1,0 +1,22 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-oac-cctl:DomesticUltimateParent" "fibo-be-oac-cctl:Subsidiary" "fibo-be-oac-cctl:TotalControllingInterestCompany" "fibo-be-oac-cctl:ControlledCompany" "fibo-be-oac-cctl:GlobalUltimateParent" "fibo-be-oac-cctl:SignificantShareholdingCompany" "fibo-be-oac-cctl:OverFiftyPercentControllingInterestCompany" "fibo-be-oac-cctl:JointVenturePartner" "fibo-be-oac-cctl:VotingShareholding" "fibo-be-oac-cctl:VotingShareholder" "fibo-be-oac-cctl:WhollyOwnedSubsidiary" "fibo-be-oac-cctl:NonWhollyOwnedSubsidiary" "fibo-be-oac-cctl:VotingShareholdingCompany" ; /*classes style*/
+	"fibo-be-oac-cctl:VotingShareholding" -> "fibo-be-oac-cown:Shareholding" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:NonWhollyOwnedSubsidiary" -> "fibo-be-oac-cctl:Subsidiary" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:ControlledCompany" -> "fibo-be-oac-cpty:ControlledParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:SignificantShareholdingCompany" -> "fibo-be-oac-cctl:VotingShareholdingCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:SignificantShareholdingCompany" -> "fibo-be-oac-cpty:SignificantControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:OverFiftyPercentControllingInterestCompany" -> "fibo-be-oac-cctl:VotingShareholdingCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:WhollyOwnedSubsidiary" -> "fibo-be-oac-cctl:Subsidiary" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:GlobalUltimateParent" -> "fibo-be-oac-cctl:TotalControllingInterestCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:Subsidiary" -> "fibo-be-oac-cctl:ControlledCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:DomesticUltimateParent" -> "fibo-be-oac-cctl:TotalControllingInterestCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:VotingShareholder" -> "fibo-be-oac-cown:Shareholder" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:VotingShareholder" -> "fibo-be-oac-cpty:DeJureControllingInterestParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:JointVenturePartner" -> "fibo-be-oac-cpty:EntityControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:VotingShareholdingCompany" -> "fibo-be-oac-cctl:VotingShareholder" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:TotalControllingInterestCompany" -> "fibo-be-oac-cctl:OverFiftyPercentControllingInterestCompany" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-cctl:TotalControllingInterestCompany" -> "fibo-be-oac-cpty:TotalOwner" [ label = "rdfs:subClassOf" ];
+
+}

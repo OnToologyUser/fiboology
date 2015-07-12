@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-fnd-dt-oc:OccurrenceBasedDate" ; /*classes style*/
+	"fibo-fnd-dt-oc:OccurrenceBasedDate" -> "fibo-fnd-dt-fd:CalculatedDate" [ label = "rdfs:subClassOf" ];
+
+}

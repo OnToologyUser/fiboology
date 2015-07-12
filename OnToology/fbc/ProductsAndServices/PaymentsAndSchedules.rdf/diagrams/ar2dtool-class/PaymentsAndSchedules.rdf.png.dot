@@ -1,0 +1,41 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "fibo-fbc-pas-psch:PaymentEvent" "fibo-fbc-pas-psch:Payment" "fibo-fbc-pas-psch:Payer" "fibo-fbc-pas-psch:Payee" "fibo-fbc-pas-psch:Obligation" ; /*classes style*/
+	"fibo-fbc-pas-psch:fulfillsObligation" -> "fibo-fnd-rel-rel:refersTo" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-pty-pty:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fbc-pas-pas:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "http://spec.edmcouncil.org/fibo/FBC/20150501/ProductsAndServices/PaymentsAndSchedules/" [ label = "owl:versionIRI" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-dt-fd:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-pty-rl:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-dt-oc:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-agr-ctr:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-law-lcap:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-acc-cur:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-fbc-pas-psch:hasObligation" -> "fibo-fnd-rel-rel:has" [ label = "rdfs:subPropertyOf" ];
+	"fibo-fbc-pas-psch:isObligationOf" -> "fibo-fnd-rel-rel:isConferredOn" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "fibo-fbc-pas-psch:PaymentEvent" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-pas-psch:Obligation" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fnd-pty-pty:isAPartyTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-psch:Payment" [ label = "owl:onClass" ];
+	"NULL" -> "fibo-fbc-pas-psch:isObligationOf" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-psch:Obligation" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-rel-rel:involves" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-psch:hasObligation" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-psch:Payer" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-agr-ctr:Contract" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "fibo-fnd-pty-pty:hasPartyInRole" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:appliesTo" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-psch:fulfillsObligation" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:isConferredBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-pty-rl:isPlayedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fnd-rel-rel:comprises" [ label = "owl:onProperty" ];
+	"NULL" -> "fibo-fbc-pas-psch:Payee" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "fibo-fbc-pas-psch:Payer" [ label = "owl:someValuesFrom" ];
+	"fibo-fnd-pty-pty:PartyInRole" -> "fibo-fbc-pas-psch:Obligation" [ label = "fibo-fbc-pas-psch:hasObligation" ];
+	"fibo-fbc-pas-psch:Obligation" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "fibo-fbc-pas-psch:isObligationOf" ];
+	"fibo-fbc-pas-psch:Payment" -> "fibo-fbc-pas-psch:Obligation" [ label = "fibo-fbc-pas-psch:fulfillsObligation" ];
+
+}

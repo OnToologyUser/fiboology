@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-be-sps-mod:SoleProprietorshipsModule" -> "fibo-be:BESpecification" [ label = "fibo-fnd-rel-rel:isPartOf" ];
+	"fibo-be-sps-mod:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-be-sps-mod:" -> "fibo-be:" [ label = "owl:imports" ];
+	"fibo-be-sps-mod:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-be-sps-mod:" -> "http://spec.edmcouncil.org/fibo/BE/20150501/SoleProprietorships/AboutSoleProprietorships/" [ label = "owl:versionIRI" ];
+	"fibo-be-sps-mod:" -> "sm:MITLicense" [ label = "dct:license" ];
+
+}

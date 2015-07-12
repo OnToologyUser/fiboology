@@ -1,0 +1,30 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-be-oac-exec:ChiefFinancialOfficer" "fibo-be-oac-exec:BoardMember" "fibo-be-oac-exec:CorporateOfficer" "fibo-be-oac-exec:CompanyBylaw" "fibo-be-oac-exec:BoardOfDirectors" "fibo-be-oac-exec:Auditor" "fibo-be-oac-exec:ArticlesOfIncorporation" "fibo-be-oac-exec:ChiefExecutiveOfficer" "fibo-be-oac-exec:CorporateOfficerDuty" "fibo-be-oac-exec:ResponsibleParty" "fibo-be-oac-exec:LegallyDelegatedAuthority" "fibo-be-oac-exec:NonExecutiveBoardMember" "fibo-be-le-cb:InstrumentOfIncorporation" "fibo-be-oac-exec:ExecutiveBoardMember" "fibo-be-oac-exec:CorporateOfficerCapacity" "fibo-be-oac-exec:CompanyStatutoryObligation" "fibo-be-oac-exec:Bylaw" "fibo-be-oac-exec:Executive" "fibo-be-oac-exec:CompanyLaw" "fibo-be-oac-exec:BoardCapacity" "fibo-be-oac-exec:CompanySecretary" ; /*classes style*/
+	"fibo-be-oac-exec:Auditor" -> "fibo-be-oac-exec:ResponsibleParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ResponsibleParty" -> "fibo-fnd-pty-pty:PartyInRole" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ExecutiveBoardMember" -> "fibo-be-oac-exec:Executive" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ExecutiveBoardMember" -> "fibo-be-oac-exec:BoardMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:Bylaw" -> "fibo-fnd-law-cor:Law" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:Executive" -> "fibo-be-oac-exec:LegallyDelegatedAuthority" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:CorporateOfficerCapacity" -> "fibo-fnd-law-lcap:DelegatedLegalAuthority" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:BoardOfDirectors" -> "fibo-be-oac-cpty:EntityControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:NonExecutiveBoardMember" -> "fibo-be-oac-exec:BoardMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ChiefExecutiveOfficer" -> "fibo-be-oac-exec:ExecutiveBoardMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ChiefExecutiveOfficer" -> "fibo-be-oac-exec:CorporateOfficer" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ChiefFinancialOfficer" -> "fibo-be-oac-exec:Executive" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ChiefFinancialOfficer" -> "fibo-be-oac-exec:CorporateOfficer" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:ArticlesOfIncorporation" -> "fibo-be-le-cb:InstrumentOfIncorporation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:CompanyStatutoryObligation" -> "fibo-fnd-law-lcap:StatutoryResponsibility" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:BoardMember" -> "fibo-fnd-pty-pty:OrganizationMember" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:BoardMember" -> "fibo-be-oac-exec:LegallyDelegatedAuthority" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:CompanyLaw" -> "fibo-fnd-law-jur:StatuteLaw" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:CompanySecretary" -> "fibo-be-oac-exec:CorporateOfficer" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:CorporateOfficer" -> "fibo-be-oac-exec:ResponsibleParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:LegallyDelegatedAuthority" -> "fibo-fnd-oac-ctl:ControllingParty" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:CorporateOfficerDuty" -> "fibo-be-oac-exec:CompanyStatutoryObligation" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:CompanyBylaw" -> "fibo-be-oac-exec:Bylaw" [ label = "rdfs:subClassOf" ];
+	"fibo-be-oac-exec:BoardCapacity" -> "fibo-fnd-law-lcap:DelegatedLegalAuthority" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,25 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-org-org:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-plc-adr:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-utl-av:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Places/TestCountries/" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-plc-cty:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-law-jur:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-plc-loc:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-org-fm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-gao-gl:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-utl-bt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-law-cor:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-aap-agt:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "fibo-fnd-rel-rel:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:" -> "sm:" [ label = "owl:imports" ];
+	"fibo-tst-fnd-law-jur:HessenJurisdiction" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Places/TestCountries/HessenState" [ label = "fibo-fnd-law-jur:hasReach" ];
+	"fibo-tst-fnd-law-jur:EnglandAndWalesJurisdiction" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Places/TestCountries/Wales" [ label = "fibo-fnd-law-jur:hasReach" ];
+	"fibo-tst-fnd-law-jur:EnglandAndWalesJurisdiction" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Places/TestCountries/England" [ label = "fibo-fnd-law-jur:hasReach" ];
+	"fibo-tst-fnd-law-jur:NewYorkJurisdiction" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Places/TestCountries/NewYorkState" [ label = "fibo-fnd-law-jur:hasReach" ];
+	"fibo-tst-fnd-law-jur:CaliforniaJurisdiction" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Places/TestCountries/StateOfCalifornia" [ label = "fibo-fnd-law-jur:hasReach" ];
+	"fibo-tst-fnd-law-jur:FranceJurisdiction" -> "http://www.omg.org/spec/EDMC-FIBO/FND/Places/TestCountries/France" [ label = "fibo-fnd-law-jur:hasReach" ];
+
+}

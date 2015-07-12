@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "fibo-ind-ei-pub:EconomicIndicatorPublisher" ; /*classes style*/
+	"fibo-ind-ei-pub:EconomicIndicatorPublisher" -> "fibo-ind-ind-ind:FinancialInformationPublisher" [ label = "rdfs:subClassOf" ];
+
+}
